@@ -102,23 +102,167 @@ Proyecto
 
 ### 2.2.1. Diseño de entrevistas
 
+Segmento 1: Exploradores Gastronómicos (Usuarios de la app móvil)
+
+Objetivo: Entender sus motivaciones, comportamientos y expectativas al usar una app móvil para descubrir comida local auténtica.
+
+Preguntas Segmento 1:
+- ¿Con qué frecuencia usas aplicaciones móvil para buscar lugares para comer fuera de lo común?
+- ¿Cómo sueles descubrir huariques o lugares de comida poco conocidos en la móvil?
+- ¿Qué aspectos valoras más al elegir un lugar para comer usando una app móvil (precio, ubicación, reseñas, fotos, etc.)?
+- ¿Qué dificultades has tenido al usar apps móvil para buscar lugares de comida local?
+- ¿Qué te motivaría a usar una app móvil dedicada exclusivamente a huariques?
+- ¿Qué funcionalidades en la app móvil considerarías imprescindibles para usarla con regularidad?
+- ¿Qué preocupaciones o barreras tendrías al usar una app móvil para descubrir huariques?
+
+Segmento 2: Dueños y Administradores de Huariques (Usuarios que usan la app móvil para gestionar su huarique).
+
+Objetivo: Entender lo que necesita y espera al utilizar la aplicación móvil para gestionar y publicitar sus huariques.
+
+Preguntas Segmento 2:
+- ¿Actualmente usas alguna plataforma móvil o digital para promocionar tu huarique? ¿Cuál?
+- ¿Qué retos has enfrentado al tratar de gestionar tu negocio a través de plataformas digitales?
+- ¿Qué tan cómodo te sientes usando aplicaciones móvil para actualizar la información de tu negocio?
+- ¿Qué características te harían decidirte a usar una app móvil especializada para huariques?
+- ¿Qué tipo de soporte o facilidades esperarías al usar esta app móvil para gestionar tu perfil o negocio?
+- ¿Qué modelo de tarifas o membresías considerarías justo para usar esta plataforma?
+- ¿Qué resultados te gustaría ver después de usar esta aplicación móvil para promocionar tu huarique?
+
 ### 2.2.2. Registro de entrevistas
 
+**Segmento #1: Exploradores Gastronómicos (Usuarios de la app móvil)**
+
+| Número de entrevista | Datos del entrevistado | Evidencia de entrevista |
+| --- | --- | --- |
+|  |  |  |
+
+| Número de entrevista | Datos del entrevistado | Evidencia de entrevista |
+| --- | --- | --- |
+|  |  |  |
+
+| Número de entrevista | Datos del entrevistado | Evidencia de entrevista |
+| --- | --- | --- |
+|  |  |  |
+
+**Segmento #2: Dueños y Administradores de Huariques (Usuarios que usan la app móvil para gestionar su huarique)**
+
+| Número de entrevista | Datos del entrevistado | Evidencia de entrevista |
+| --- | --- | --- |
+|  |  |  |
+
+| Número de entrevista | Datos del entrevistado | Evidencia de entrevista |
+| --- | --- | --- |
+|  |  |  |
+
+| Número de entrevista | Datos del entrevistado | Evidencia de entrevista |
+| --- | --- | --- |
+|  |  |  |
+
 ### 2.2.3. Análisis de entrevistas
+
+**Segmento #1: Exploradores Gastronómicos (Usuarios de la app móvil)**
+
+**Segmento #2: Dueños y Administradores de Huariques**
 
 ## 2.3. Needfinding
 
 ### 2.3.1. User Personas
 
+Se han creado dos perfiles de usuario o personas representativas para entender con mayor precisión las motivaciones, necesidades y conductas de los usuarios principales de PuntoSabor. Estos perfiles resumen los rasgos, metas y desafíos comunes de los segmentos principales, lo que simplifica el desarrollo de la plataforma al diseñarla con enfoque en el usuario y tomar decisiones estratégicas.
+
+![alt text](assets/UserPersonaSeg1.jpg)
+
+- Persona 2: Don Luis, dueño de huarique tradicional
+Don Luis representa a los dueños de huariques y a los emprendedores pequeños que buscan una forma simple de dar a conocer su negocio. No tiene mucha experiencia con tecnología, por lo que necesita herramientas fáciles de usar y que no impliquen gastos altos.
+
+![alt text](assets/UserPersonaSeg2.jpg)
+
 ### 2.3.2. User Task Matrix
+
+![alt text](assets/UserTaskMatrix-PuntoSabor.jpg)
+
+Los perfiles de usuario en PuntoSabor presentan diferencias notables en sus tareas habituales, dependiendo de las necesidades y el rol de cada uno. Como exploradora gastronómica, Carla Dípes emplea la aplicación móvil de manera continua y activa para buscar huariques, leer reseñas y utilizar la función de mapas con geolocalización. Para ella, estas actividades son fundamentales para su experiencia. Por otro lado, Don Luis Pérez, propietario de huarique, no suele emplear la aplicación para buscar o ver mapas; su interés principal es actualizar la información de su huarique, tarea que lleva a cabo con frecuencia y considera esencial. Los dos individuos se comunican de vez en cuando utilizando la función de responder reseñas y compartir fotografías u opiniones, aunque Don Luis lo hace con menos frecuencia, pero sigue siendo significativo en términos de importancia.
+
+Coincidencias:
+- Ambos utilizan, en menor medida, la función de responder reseñas, considerándola de importancia media.
+
+- Carla tiene una frecuencia más alta que los demás en lo que respecta a compartir fotos y opiniones, aunque todos comparten una actitud media hacia la importancia de hacerlo.
+
+- Para los dos perfiles, las funciones que tienen que ver con la interacción social y la comunidad son de importancia media.
+  
+Diferencias:
+- Carla usa con frecuencia la búsqueda de huariques y el mapa, mientras que Don Luis casi no utiliza estas funciones debido a su enfoque más administrativo.
+
+- La actualización de la información de su huarique es una tarea que Carla no lleva a cabo, pero Don Luis invierte más tiempo y la considera importante.
+
+- Carla presenta un alto nivel de interacción con funciones de exploración, mientras que Don Luis tiene una participación menor en este aspecto.
 
 ### 2.3.3. User Journey Mapping
 
+Segmento 1
+
+Con el uso de este artefacto se analizará y entenderá cómo los usuarios del segmento 1 (Exploradores Gastronómicos) llevan a cabo sus tareas con el fin de lograr sus metas desde su punto de vista. Este segmento está constituido por individuos que persiguen vivencias gastronómicas auténticas y asequibles, indagando en huariques menos conocidos y apreciando los datos fidedignos suministrados por medio de imágenes, mapas de localización y reseñas.
+
+![alt text](assets/Carla_Dipes.png)
+
+Segmento 2
+
+Este artefacto permitirá explicar y entender la manera en que los usuarios del segmento 2 (dueños y administradores de huariques) llevan a cabo sus actividades para lograr sus metas desde su punto de vista. Este segmento está conformado por pequeños empresarios que buscan promover su empresa, incrementar su visibilidad y captar nuevos clientes a través de una plataforma fácil de administrar y accesible, sin requerir conocimientos técnicos sofisticados.
+
+![alt text](assets/Don_Luis.jpg)
+
 ### 2.3.4. Empathy Mapping
+
+Los siguientes mapas de empatía corresponden a los dos perfiles principales de usuarios de PuntoSabor: Carla Dípes, la exploradora de la gastronomía, y Don Luis Pérez, propietario de un huarique tradicional. Estos mapas posibilitan entender a fondo sus sentimientos, pensamientos, necesidades y conductas, lo que contribuye a que el diseño esté orientado hacia el usuario.
+
+- Segmento 1:
+
+La carta de empatía de Carla revela que es una clienta que desea experiencias culinarias locales únicas y autenticidad. Considera que es fácil hallar información fiable y se siente frustrada por la abundancia de opciones genéricas en otras plataformas.
+![alt text](assets/EmphatyMap_CarlaDipes.png)
+
+- Segmento 2:
+
+El mapa de empatía de Don Luis muestra a un empresario con restricciones tecnológicas, que requiere una herramienta simple para administrar su huarique y expandir su clientela. Busque apoyo y soluciones asequibles que le permitan tener presencia en línea sin altos costos.
+![alt text](assets/EmphatyMap_DonLuisPerez.png)
 
 ### 2.3.5. As-is Scenario Mapping
 
+**As-is Scenario Mapping**
+Segmento 1
+
+Con este artefacto, se ha desarrollado el As-is Scenario Mapping para la primera franja (Exploradores Gastronómicos). Este panorama muestra la manera en que los usuarios que desean descubrir huariques llevan a cabo sus actividades hoy en día, los obstáculos a los que se enfrentan al buscar alternativas económicas y auténticas, además de las sensaciones y percepciones que sienten en cada fase de su recorrido.
+
+![alt text](assets/Segmento1_AsIs.png)
+
+Segmento 2
+
+Con este instrumento se ha realizado el As-is Scenario Mapping para el segundo grupo (los propietarios y administradores de huariques). Esta situación muestra la manera en que los emprendedores de pequeña escala administran hoy en día la promoción y organización de sus negocios, destacando las limitaciones tecnológicas, los procesos manuales y las emociones relacionadas con su necesidad de atraer nuevos clientes y obtener más visibilidad.
+
+![alt text](assets/Segmento2_AsIs.png)
+
 ## 2.4. Ubiquitous Language
+
+En esta parte se muestra el glosario de términos fundamentales del ámbito de PuntoSabor, que están escritos en inglés y acompañados de su traducción al español entre paréntesis. Cada definición tiene como objetivo que la comunicación entre todos los miembros del equipo y los interesados sea coherente y clara, así como eliminar ambigüedades y alinear el lenguaje de la empresa.
+
+Glosario:
+
+- Huarique (Huarique): Restaurante peruano tradicional, que normalmente es familiar o local, famoso por su cocina auténtica, accesible y casera. Es el núcleo de la propuesta de PuntoSabor.
+
+- Gastronomic Explorer (Explorador culinario): Persona interesada en descubrir nuevas experiencias gastronómicas, especialmente huariques auténticos, económicos y poco conocidos.
+
+- Huarique Owner (Propietario de Huarique): Persona encargada de administrar un huarique, que incluye la elaboración de los platos, la atención al cliente y la gestión general del negocio.
+
+- Review (reseña): Opinión o valoración escrita por un consumidor acerca de su vivencia en un huarique, que contiene observaciones sobre la calidad de los platos, el servicio y el ambiente.
+
+- Recommendation (Recomendación): Recomendación hecha por un cliente para que otros visitantes tengan la oportunidad de conocer o probar un huarique específico.
+
+- Favorite (Favorito): Huarique es un cliente que recuerda o enfatiza como favorito debido a la calidad de su experiencia, y al que desea volver a visitar o sugerir.
+
+- Culinary Tradition (Tradición Culinaria): Conjunto de hábitos, recetas y prácticas culinarias típicas de los huariques, que enriquecen culturalmente la vivencia gastronómica.
+
+- Community Interaction (Interacción Comunitaria): Interacción entre los clientes y los propietarios de huariques a través del intercambio de experiencias, reseñas, sugerencias y conversaciones que aumentan la confianza y el reconocimiento de sus empresas.
+  
+- Membership (Membresía): Plan o suscripción que permite a los propietarios obtener mayor visibilidad y beneficios dentro de la plataforma.
 
 # Capítulo III: Requirements Specification
 
