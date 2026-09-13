@@ -212,17 +212,206 @@ Proyecto
 
 ## 5.1. Software Configuration Management
 
+En esta sección se detalla cómo se implementa, organiza y publica HuariApp, compuesto por tres componentes principales:
+
+1. **Landing Page (HTML/CSS/JS estático):** publicada en GitHub Pages.
+2. **Backend (C#/.NET 8):** API REST desplegada en Railway.
+3. **Aplicación Móvil (Android/Kotlin con Jetpack Compose):** la interfaz principal del usuario, con las pantallas core de la plataforma.
+
+El objetivo es mantener la consistencia del desarrollo entre los tres componentes y documentar las convenciones de código para futuras iteraciones.
+
 ### 5.1.1. Software Development Environment Configuration
+
+**Landing Page (HuariqueHub-Landing)**
+- Tecnologías: HTML5, CSS3, JavaScript (vanilla).
+- Responsive Web Design: CSS (Flexbox/Grid + media queries).
+- Editor: Visual Studio Code.
+- Control de versiones: Git + GitHub.
+- Plataforma de despliegue: GitHub Pages.
+
+Estructura:
+- `index.html` (página principal)
+- `css/style.css` (hoja de estilos)
+- `img/` (recursos de imágenes)
+
+**Backend (HuariqueHub-Backend)**
+- Framework: .NET 8
+- Lenguaje: C#
+- IDE: Visual Studio 2022 o Visual Studio Code con extensión C#.
+- Control de versiones: Git + GitHub.
+- Plataforma de despliegue: Railway (contenedor Docker + base de datos MySQL 8).
+- **URL pública del backend:** <https://huariquehub-backend.up.railway.app>
+- **Documentación de la API (Swagger / OpenAPI):** <https://huariquehub-backend.up.railway.app/swagger>
+
+**Aplicación Móvil (HuariqueHub-App)**
+- Lenguaje: Kotlin
+- Framework UI: Jetpack Compose
+- Nombre del proyecto: `HuariqueHub-Mobile`
+- IDE: Android Studio.
+- Control de versiones: Git + GitHub.
 
 ### 5.1.2. Source Code Management
 
+**Repositorios GitHub (actual)**
+- `HuariqueHub-Landing` (Landing Page estática HTML/CSS/JS, desplegada en GitHub Pages).
+- `HuariqueHub-Backend` (API REST en C#/.NET 8, desplegada en Railway).
+- `HuariqueHub-App` (Aplicación móvil Android/Kotlin con Jetpack Compose).
+
+**Flujo de trabajo (GitFlow ligero)**
+- **Ramas principales**
+  - `main`: versión estable publicada.
+  - `develop`: integración previa a publicación.
+- **Ramas de apoyo**
+  - `feature/*`: nuevas funcionalidades o mejoras (p. ej., `feature/US01-home-screen`, `feature/auth-login`).
+  - `hotfix/*`: correcciones urgentes sobre `main`.
+
+**Versionado Semántico**
+- **X (major)**: cambios incompatibles (reestructura global de navegación/archivos).
+- **Y (minor)**: nuevas secciones o funcionalidades compatibles.
+- **Z (patch)**: correcciones menores (estilos, textos, enlaces).
+- Ejemplos: `v1.0`, `v1.1`.
+
+**Conventional Commits**
+
+Formato general:
+```
+<type>[scope]: <descripción>
+```
+Ejemplos:
+- `feat: agregar pantalla de home con lista de huariques`
+- `feat(auth): implementar pantalla de login con Jetpack Compose`
+- `fix(api): corregir endpoint de búsqueda por distrito`
+- `docs: actualizar pasos de despliegue en README`
+
 ### 5.1.3. Source Code Style Guide & Conventions
 
+**Landing Page -HTML**
+- Estructura semántica: `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`.
+- Imágenes siempre con `alt`.
+- Enlaces relativos y consistentes entre páginas.
+- Scripts JS al final del `body` cuando corresponda.
+
+**Landing Page -CSS**
+- Uso de variables CSS (`:root { --color... }`) para colores y espaciados.
+- Convención de clases en kebab-case (ej.: `.hero-title`, `.card-grid`).
+- Layout con Flexbox y/o Grid.
+- Media queries para puntos de quiebre (ej.: 960px, 760px, 560px).
+- Estados y accesibilidad: `:hover`, `:focus-visible`, contraste adecuado.
+
+**Landing Page -JavaScript**
+- `const` / `let` (evitar `var`), funciones pequeñas y claras.
+- Separar lógica de interacción del DOM cuando sea posible.
+- Uso moderado de `localStorage` solo para preferencias/estado del cliente (si aplica).
+
+**Backend -C# / .NET 8**
+- Nombres en PascalCase para clases, métodos y propiedades.
+- Estructura de capas: Domain, Application, Infrastructure, Presentation.
+- Inyección de dependencias mediante el contenedor DI nativo de .NET.
+- Métodos asíncronos con `async/await` (Task/Task<T>) para operaciones I/O.
+- Documentación con comentarios XML (`///`) en métodos y clases públicas.
+
+**Aplicación Móvil -Kotlin / Jetpack Compose**
+- Variables y funciones en camelCase; clases y Composables en PascalCase.
+- Composables pequeños, reutilizables y sin estado cuando sea posible.
+- Navegación centralizada mediante `AppNavigation.kt` con Jetpack Compose Navigation.
+- Corrutinas de Kotlin para operaciones asíncronas.
+- Separación clara entre UI (`ui/screens/`) y datos (`data/model/`).
+
 ### 5.1.4. Software Deployment Configuration
+
+Para la configuración del despliegue de PuntoSabor, se consideraron los entornos necesarios para publicar y ejecutar tanto la landing page como la aplicación móvil. El objetivo de esta configuración es permitir que el producto pueda ser probado por los usuarios y revisado por el equipo durante el avance del proyecto.
+
+En esta etapa, la landing page se despliega como un sitio web estático, mientras que la aplicación móvil se ejecuta desde el entorno de desarrollo utilizando Android Studio. Esto permite validar la navegación, las pantallas principales y las funcionalidades implementadas durante el sprint.
+
+#### Entorno de despliegue de la Landing Page
+
+La landing page de PuntoSabor se publica mediante GitHub Pages, ya que esta herramienta permite alojar sitios estáticos de manera sencilla y accesible. Para ello, se utiliza el repositorio del proyecto, donde se almacenan los archivos HTML, CSS, JavaScript e imágenes necesarias para la presentación del producto.
+
+Pasos considerados para el despliegue:
+
+1. Subir los archivos de la landing page al repositorio de GitHub.
+2. Verificar que la estructura de archivos sea correcta.
+3. Activar GitHub Pages desde la configuración del repositorio.
+4. Seleccionar la rama correspondiente para la publicación.
+5. Validar que el sitio se visualice correctamente desde el enlace generado.
+6. Revisar que las secciones principales sean accesibles desde el navegador.
+
+#### Entorno de ejecución de la Aplicación Móvil
+
+La aplicación móvil se desarrolla utilizando Kotlin y Jetpack Compose dentro de Android Studio. Para su ejecución, se utiliza un emulador Android o un dispositivo físico conectado al equipo de desarrollo.
+
+Pasos considerados para la ejecución:
+
+1. Clonar o descargar el repositorio del proyecto.
+2. Abrir el proyecto en Android Studio.
+3. Sincronizar las dependencias de Gradle.
+4. Seleccionar un emulador o dispositivo Android.
+5. Ejecutar la aplicación desde Android Studio.
+6. Verificar el funcionamiento de las pantallas implementadas.
+
+#### Consideraciones del despliegue
+
+- La landing page debe mantenerse actualizada con la información principal del producto.
+- La aplicación móvil debe ejecutarse correctamente en el entorno de pruebas.
+- Los cambios deben registrarse mediante commits en GitHub.
+- Las evidencias del despliegue deben incluir capturas de pantalla del sitio publicado y de la aplicación en ejecución.
+- En futuras iteraciones, se podrá integrar un backend o servicios externos si el alcance del proyecto lo requiere.
 
 ## 5.2. Product Implementation & Deployment
 
 ### 5.2.1. Sprint Backlogs
+
+Para el Sprint 1 se seleccionaron las historias de usuario más importantes para construir una primera versión funcional de PuntoSabor. Se priorizaron historias relacionadas con la presentación del producto, la búsqueda inicial de huariques y las primeras interacciones del usuario dentro de la aplicación móvil.
+
+Las historias seleccionadas permiten mostrar un avance inicial tanto de la landing page como de la aplicación, manteniendo relación directa con los requisitos definidos previamente en la sección de User Stories.
+
+| ID | User Story | Tipo | Epic relacionada | Responsable | Estado |
+|---|---|---|---|---|---|
+| US09 | Presentación de beneficios | Landing Page | EP04 | Becerra Llempen, Fabiola Dayane | Completado |
+| US10 | Formulario de contacto | Landing Page | EP04 | Delgado Carrasco, Schneider | Completado |
+| US01 | Búsqueda avanzada | App móvil | EP01 | Tumi Oliden, Manuel Ignacio | Completado |
+| US02 | Visualización en mapa | App móvil | EP01 | Lopez Goitia, Carlos Alberto | Completado |
+| US03 | Guardar favoritos | App móvil | EP01 | Vasquez Goicochea, Erick Alessander | Completado |
+| US04 | Registro de nuevo huarique | App móvil | EP02 | Lopez Goitia, Carlos Alberto | Completado |
+| US07 | Envío de reseñas | App móvil | EP03 | Becerra Llempen, Fabiola Dayane | Completado |
+| US15 | Registro y login seguro | App móvil | EP07 | Tumi Oliden, Manuel Ignacio | Completado |
+
+![alt text](assets/sprint_!.png)
+
+El objetivo principal del Sprint 2 fue habilitar el flujo completo de PuntoSabor conectado al backend real, incorporando funcionalidades de gestión del propietario, preferencias, notificaciones, membresías y promociones. La gestión del avance se realizó en el tablero de Trello del equipo, donde cada tarea se movió por los estados To-Do → In-Process → To-Review → Done.
+
+- **Tablero de Trello (Sprint 2):** https://trello.com/invite/b/6a3b6709fd34f6edb2cc21af/ATTI7be4b37d5e727ef6f2e8092804bf2c3192D51CB7/puntosabor-app
+
+Tablero del Sprint 2 en Trello
+
+![alt text](assets/trello_sprint2.png)
+
+| Sprint # | User Story | | Work-Item / Task | | | | |
+|---|---|---|---|---|---|---|---|
+| | **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| Sprint 2 | US05 | Actualizar información del huarique | T-01 | Conectar formulario de edición a `PATCH /huariques/{id}` | Implementar pantalla CreateEditHuariqueScreen con integración al endpoint de actualización del backend | 5 | Vasquez Goicochea, Erick Alessander | Done |
+| Sprint 2 | US11 | Configurar notificaciones | T-02 | Implementar pantalla de preferencias de notificaciones | Desarrollar NotificationsScreen con opciones para activar/desactivar tipos de notificaciones del usuario | 4 | Tumi Oliden, Manuel Ignacio | Done |
+| Sprint 2 | US12 | Recibir notificaciones de nuevas reseñas | T-03 | Integrar `GET /notifications` y `PATCH /notifications/{id}/read` | Conectar la pantalla de notificaciones al backend para listar alertas y marcarlas como leídas | 4 | Becerra Llempen, Fabiola Dayane | Done |
+| Sprint 2 | US16 | Recuperar contraseña | T-04 | Implementar ForgotPasswordScreen con `POST /auth/forgot-password` | Desarrollar pantalla de recuperación de contraseña integrada con el endpoint del backend | 3 | Vasquez Goicochea, Erick Alessander | Done |
+| Sprint 2 | US17 | Guardar preferencias del usuario | T-05 | Integrar `GET /preferences` y `PUT /preferences` en PreferencesScreen | Implementar pantalla de preferencias con persistencia de tipo de comida, rango de precios y zona en el backend | 4 | Lopez Goitia, Carlos Alberto | Done |
+| Sprint 2 | US18 | Sugerir huariques automáticamente | T-06 | Integrar `GET /huariques/suggestions` en HomeScreen | Conectar el endpoint de sugerencias para mostrar huariques personalizados según historial del usuario | 4 | Delgado Carrasco, Schneider | Done |
+| Sprint 2 | US21 | Reportar información incorrecta | T-07 | Implementar `POST /reports` en HuariqueDetailScreen | Agregar opción de reporte en la pantalla de detalle del huarique integrada con el endpoint del backend | 3 | Tumi Oliden, Manuel Ignacio | Done |
+| Sprint 2 | US23 | Seleccionar planes de membresía | T-08 | Integrar `GET /plans` y `POST /subscriptions` en SubscriptionScreen | Implementar pantalla de suscripción mostrando planes desde el backend con opción de activar membresía | 3 | Becerra Llempen, Fabiola Dayane | Done |
+| Sprint 2 | US26 | Publicar promociones destacadas | T-09 | Integrar CRUD de promos en OwnerPromosScreen y CreateEditPromoScreen | Implementar gestión completa de promociones del propietario conectada a los endpoints `GET/POST/PATCH/DELETE /promos` | 5 | Vasquez Goicochea, Erick Alessander | Done |
+
+Este Sprint Backlog permitió organizar el trabajo inicial del equipo y relacionar las tareas desarrolladas con las historias de usuario ya definidas en el proyecto. De esta manera, el avance del sprint mantiene coherencia con los requisitos funcionales de PuntoSabor.
+
+El Sprint Backlog 3 se organizó tomando las funcionalidades pendientes del Product Backlog. Se priorizaron historias que completan la experiencia del usuario y del propietario dentro de PuntoSabor.
+
+| ID | User Story | Descripción | Responsable | Estado |
+|---|---|---|---|---|
+| US20 | Horario verificado | Mostrar información actualizada sobre los horarios de atención del huarique. | Delgado Carrasco, Schneider | Done |
+| US22 | Estado abierto/cerrado | Mostrar si un huarique se encuentra abierto o cerrado según su horario. | Becerra Llempen, Fabiola Dayane | Done |
+| US24 | Pagar suscripción | Permitir al propietario seleccionar y pagar una membresía. | Lopez Goitia, Carlos Alberto | Done |
+| US25 | Comprobantes | Permitir consultar la información relacionada con el pago realizado. | Vasquez Goicochea, Erick Alessander | Done |
+| US26 | Promociones destacadas | Mejorar la visibilidad de las promociones dentro de los listados de la aplicación. | Tumi Oliden, Manuel Ignacio | Done |
+
+Durante el sprint, las tareas fueron organizadas y revisadas de acuerdo con su avance. El equipo utilizó GitHub para registrar los cambios y mantener separados los avances realizados en la aplicación móvil y el backend.
 
 ### 5.2.2. Implemented Landing Page Evidence
 
