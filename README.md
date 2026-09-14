@@ -339,6 +339,8 @@ Prototipo de la aplicación móvil PuntoSabor en figma: https://www.figma.com/pr
 
 ## 4.8. Domain-Driven Software Architecture
 
+Esta sección presenta la arquitectura de software de PuntoSabor utilizando el modelo C4, el cual permite representar el sistema en distintos niveles de abstracción. Se inicia con el diagrama de contexto, que ubica a PuntoSabor dentro de su entorno y sus principales actores, para luego profundizar en el diagrama de contenedores, que detalla los componentes tecnológicos (aplicación móvil, backend, base de datos) y cómo interactúan entre sí para soportar el modelo de negocio.
+
 ### 4.8.1. Software Architecture Context Diagram
 
 El diagrama de contexto muestra a PuntoSabor como sistema central interactuando con sus dos tipos de usuarios principales:
@@ -366,11 +368,465 @@ El diagrama de contenedores muestra los componentes internos del sistema PuntoSa
 
 ### 4.9.1. Class Diagrams
 
+El siguiente diagrama de clases representa el modelo de dominio del backend de PuntoSabor, implementado en ASP.NET Core con Entity Framework Core. Todas las entidades principales heredan de la clase abstracta `AuditableEntity`, que centraliza los campos de auditoría (`Id`, `CreatedAt`, `UpdatedAt`). Se identifican las relaciones entre `User` (usuarios exploradores y dueños), `Huarique` (locales gastronómicos), `Category`, `Review`, `Favorite`, `Promo`, `Report`, `UserPreference`, y el módulo de membresías compuesto por `Plan` y `Subscription`.
+
+```mermaid
+classDiagram
+    class AuditableEntity {
+        <<abstract>>
+        +int Id
+        +DateTime CreatedAt
+        +DateTime? UpdatedAt
+    }
+
+    class UserRole {
+        <<enumeration>>
+        Consumer
+        Owner
+    }
+
+    class User {
+        +string Name
+        +string Email
+        +string PasswordHash
+        +UserRole Role
+    }
+
+    class Huarique {
+        +string Name
+        +string Category
+        +int CategoryId
+        +decimal Price
+        +double Rating
+        +string District
+        +bool Near
+        +double? Latitude
+        +double? Longitude
+        +int? OwnerId
+        +string? Address
+        +string? Phone
+        +string? Description
+        +string? ImageUrl
+        +byte[]? ImageData
+        +string? ImageContentType
+        +string? OpenAt
+        +string? CloseAt
+        +bool DeliveryAvailable
+        +bool TakeawayAvailable
+        +bool DineInAvailable
+    }
+
+    class Category {
+        +string Name
+    }
+
+    class Review {
+        +int HuariqueId
+        +int UserId
+        +int Rating
+        +string Comment
+        +DateTime CreatedAtReview
+    }
+
+    class Favorite {
+        +int UserId
+        +int HuariqueId
+    }
+
+    class Plan {
+        +string Id
+        +string Name
+        +decimal Price
+    }
+
+    class Subscription {
+        +int UserId
+        +string PlanId
+        +DateTime StartDate
+        +DateTime? EndDate
+        +string Status
+        +bool IsActive
+    }
+
+    class Promo {
+        +string Title
+        +string Note
+        +string Type
+        +int Discount
+        +string? Code
+        +DateTime? StartDate
+        +DateTime? EndDate
+        +int? MaxUses
+        +int CurrentUses
+        +int? HuariqueId
+        +string? ImageUrl
+        +bool IsActive
+    }
+
+    class Notification {
+        +int UserId
+        +string Title
+        +string Body
+        +bool IsRead
+    }
+
+    class Report {
+        +int HuariqueId
+        +int UserId
+        +string Reason
+        +string Status
+    }
+
+    class UserPreference {
+        +int UserId
+        +string? PreferredCategory
+        +decimal? MaxBudget
+        +string? PreferredDistrict
+        +bool NotificationsEnabled
+    }
+
+    AuditableEntity <|-- User
+    AuditableEntity <|-- Huarique
+    AuditableEntity <|-- Category
+    AuditableEntity <|-- Review
+    AuditableEntity <|-- Favorite
+    AuditableEntity <|-- Subscription
+    AuditableEntity <|-- Promo
+    AuditableEntity <|-- Notification
+    AuditableEntity <|-- Report
+    AuditableEntity <|-- UserPreference
+
+    User "1" *-- "1" UserRole : role
+    User "1" --> "0..*" Huarique : owns
+    User "1" --> "0..*" Review : writes
+    User "1" --> "0..*" Favorite : marks
+    User "1" --> "0..*" Subscription : subscribes
+    User "1" --> "0..*" Notification : receives
+    User "1" --> "0..*" Report : submits
+    User "1" --> "0..1" UserPreference : configures
+
+    Huarique "1" --> "0..*" Review : receives
+    Huarique "1" --> "0..*" Favorite : saved as
+    Huarique "1" --> "0..*" Promo : offers
+    Huarique "1" --> "0..*" Report : reported in
+    Category "1" --> "0..*" Huarique : classifies
+
+    Plan "1" --> "0..*" Subscription : subscribed via
+```
+
+**Notas sobre el diseño:**
+
+- `User.Role` distingue entre dos tipos de usuario (`Consumer` y `Owner`) dentro de la misma entidad, en lugar de usar herencia, ya que un usuario puede cambiar de rol sin perder su historial (reseñas, favoritos, suscripciones).
+- `Huarique.OwnerId` es opcional (`int?`) porque un huarique puede registrarse antes de asociarse formalmente a un dueño verificado.
+- `Plan` no hereda de `AuditableEntity`: su identificador es un `string` (slug del plan, p. ej. `"premium"`) en lugar de un `int` autogenerado, ya que los planes son un catálogo fijo definido por el negocio, no registros creados dinámicamente por usuarios.
+- `Subscription.IsActive` y `Promo.IsActive` son propiedades calculadas (no almacenadas en base de datos), derivadas de las fechas de vigencia y el estado, evitando inconsistencias entre el estado guardado y la fecha actual.
+
 ### 4.9.2. Class Dictionary
+
+A continuación se describe cada clase del modelo de dominio junto con sus atributos, tipo de dato y una breve descripción de su propósito.
+
+**AuditableEntity** *(clase abstracta)*
+
+| Atributo | Tipo | Descripción |
+| --- | --- | --- |
+| Id | int | Identificador único autogenerado del registro. |
+| CreatedAt | DateTime | Fecha y hora de creación del registro (UTC). |
+| UpdatedAt | DateTime? | Fecha y hora de la última actualización del registro; nulo si nunca fue modificado. |
+
+**User**
+
+| Atributo | Tipo | Descripción |
+| --- | --- | --- |
+| Name | string | Nombre visible del usuario dentro de la plataforma. |
+| Email | string | Correo electrónico único, utilizado como credencial de autenticación. |
+| PasswordHash | string | Contraseña del usuario cifrada con BCrypt; nunca se almacena en texto plano. |
+| Role | UserRole | Rol asignado al usuario: `Consumer` (explorador) u `Owner` (dueño de huarique). |
+
+**UserRole** *(enumeración)*
+
+| Valor | Descripción |
+| --- | --- |
+| Consumer | Usuario explorador que busca, reseña y guarda huariques como favoritos. |
+| Owner | Usuario propietario que registra y gestiona uno o más huariques. |
+
+**Huarique**
+
+| Atributo | Tipo | Descripción |
+| --- | --- | --- |
+| Name | string | Nombre comercial del huarique mostrado a los exploradores. |
+| Category | string | Nombre de la categoría gastronómica (denormalizado para lecturas rápidas). |
+| CategoryId | int | Identificador de la categoría asociada (`Category`). |
+| Price | decimal | Precio referencial o ticket promedio del huarique. |
+| Rating | double | Calificación promedio calculada a partir de las reseñas recibidas. |
+| District | string | Distrito donde se ubica el huarique. |
+| Near | bool | Indica si el huarique se muestra como cercano según la ubicación del usuario. |
+| Latitude | double? | Coordenada de latitud, usada para mapas y cálculo de rutas. |
+| Longitude | double? | Coordenada de longitud, usada para mapas y cálculo de rutas. |
+| OwnerId | int? | Identificador del usuario dueño del huarique; nulo si aún no fue reclamado. |
+| Address | string? | Dirección textual del local. |
+| Phone | string? | Número de contacto del huarique. |
+| Description | string? | Descripción libre del negocio, redactada por el dueño. |
+| ImageUrl | string? | URL externa de una imagen representativa del huarique. |
+| ImageData | byte[]? | Contenido binario de una imagen almacenada directamente en la base de datos (LONGBLOB). |
+| ImageContentType | string? | Tipo MIME de `ImageData` (p. ej. `image/jpeg`). |
+| OpenAt | string? | Hora de apertura del local. |
+| CloseAt | string? | Hora de cierre del local. |
+| DeliveryAvailable | bool | Indica si el huarique ofrece servicio de delivery. |
+| TakeawayAvailable | bool | Indica si el huarique ofrece servicio para llevar. |
+| DineInAvailable | bool | Indica si el huarique permite consumo en el local. |
+
+**Category**
+
+| Atributo | Tipo | Descripción |
+| --- | --- | --- |
+| Name | string | Nombre de la categoría gastronómica (p. ej. "Pollería", "Marina"). |
+
+**Review**
+
+| Atributo | Tipo | Descripción |
+| --- | --- | --- |
+| HuariqueId | int | Identificador del huarique reseñado. |
+| UserId | int | Identificador del usuario autor de la reseña. |
+| Rating | int | Calificación numérica otorgada por el usuario (rango típico 1 a 5). |
+| Comment | string | Comentario escrito describiendo la experiencia del usuario. |
+| CreatedAtReview | DateTime | Fecha y hora en la que se registró la reseña. |
+
+**Favorite**
+
+| Atributo | Tipo | Descripción |
+| --- | --- | --- |
+| UserId | int | Identificador del usuario que marcó el huarique como favorito. |
+| HuariqueId | int | Identificador del huarique guardado como favorito. |
+
+**Plan**
+
+| Atributo | Tipo | Descripción |
+| --- | --- | --- |
+| Id | string | Identificador del plan de membresía (slug fijo, p. ej. `"premium"`). |
+| Name | string | Nombre comercial del plan. |
+| Price | decimal | Precio del plan de membresía. |
+
+**Subscription**
+
+| Atributo | Tipo | Descripción |
+| --- | --- | --- |
+| UserId | int | Identificador del usuario suscrito. |
+| PlanId | string | Identificador del plan contratado (`Plan`). |
+| Plan | Plan? | Propiedad de navegación hacia el plan asociado. |
+| StartDate | DateTime | Fecha de inicio de la suscripción. |
+| EndDate | DateTime? | Fecha de finalización de la suscripción; nulo si no tiene vencimiento. |
+| Status | string | Estado de la suscripción: `active`, `cancelled` o `expired`. |
+| IsActive | bool | Propiedad calculada que indica si la suscripción está vigente según `Status` y `EndDate`. |
+
+**Promo**
+
+| Atributo | Tipo | Descripción |
+| --- | --- | --- |
+| Title | string | Título de la promoción mostrado al usuario. |
+| Note | string | Nota o condición adicional de la promoción. |
+| Type | string | Tipo de promoción: `2x1`, `descuento`, `menu`, `happy-hour` u `otro`. |
+| Discount | int | Porcentaje de descuento; cero si no aplica. |
+| Code | string? | Código de canje opcional de la promoción. |
+| StartDate | DateTime? | Fecha desde la cual la promoción está activa. |
+| EndDate | DateTime? | Fecha en la que la promoción expira. |
+| MaxUses | int? | Número máximo de usos permitidos; nulo significa ilimitado. |
+| CurrentUses | int | Número de veces que la promoción ha sido utilizada. |
+| HuariqueId | int? | Identificador del huarique al que pertenece la promoción. |
+| ImageUrl | string? | URL opcional del banner promocional. |
+| IsActive | bool | Propiedad calculada que indica si la promoción está vigente según fechas y usos disponibles. |
+
+**Notification**
+
+| Atributo | Tipo | Descripción |
+| --- | --- | --- |
+| UserId | int | Identificador del usuario que recibe la notificación. |
+| Title | string | Título breve que resume el contenido de la notificación. |
+| Body | string | Mensaje detallado de la notificación. |
+| IsRead | bool | Indica si el usuario ya leyó la notificación. |
+
+**Report**
+
+| Atributo | Tipo | Descripción |
+| --- | --- | --- |
+| HuariqueId | int | Identificador del huarique reportado. |
+| UserId | int | Identificador del usuario que envía el reporte. |
+| Reason | string | Descripción de la información incorrecta encontrada en el huarique. |
+| Status | string | Estado del reporte: `pending` o `reviewed`. |
+
+**UserPreference**
+
+| Atributo | Tipo | Descripción |
+| --- | --- | --- |
+| UserId | int | Identificador del usuario propietario de las preferencias. |
+| PreferredCategory | string? | Categoría de cocina preferida por el usuario. |
+| MaxBudget | decimal? | Presupuesto máximo por persona que el usuario está dispuesto a gastar. |
+| PreferredDistrict | string? | Distrito preferido para recibir recomendaciones. |
+| NotificationsEnabled | bool | Indica si el usuario tiene activadas las notificaciones. |
 
 ## 4.10. Database Design
 
+PuntoSabor utiliza una base de datos relacional MySQL, gestionada mediante Entity Framework Core con el enfoque `Database.EnsureCreated()` (sin migraciones formales). Debido a esto, la mayoría de las relaciones entre entidades se implementan como columnas enteras de referencia (p. ej. `HuariqueId`, `UserId`) sin claves foráneas físicas impuestas por el motor de base de datos, salvo en los casos donde el equipo definió explícitamente la relación mediante Fluent API. A continuación se presenta el diagrama relacional y el detalle de las restricciones aplicadas.
+
 ### 4.10.1. Relational/Non-Relational Database Diagram
+
+```mermaid
+erDiagram
+    USERS ||--o{ HUARIQUES : owns
+    USERS ||--o{ REVIEWS : writes
+    USERS ||--o{ FAVORITES : marks
+    USERS ||--o{ SUBSCRIPTIONS : subscribes
+    USERS ||--o{ NOTIFICATIONS : receives
+    USERS ||--o{ REPORTS : submits
+    USERS ||--o| USER_PREFERENCES : configures
+
+    CATEGORIES ||--o{ HUARIQUES : classifies
+    HUARIQUES ||--o{ REVIEWS : receives
+    HUARIQUES ||--o{ FAVORITES : "saved as"
+    HUARIQUES ||--o{ PROMOS : offers
+    HUARIQUES ||--o{ REPORTS : "reported in"
+
+    PLANS ||--o{ SUBSCRIPTIONS : "subscribed via"
+
+    USERS {
+        int Id PK
+        varchar Name
+        varchar Email UK
+        varchar PasswordHash
+        int Role
+        datetime CreatedAt
+        datetime UpdatedAt
+    }
+
+    CATEGORIES {
+        int Id PK
+        varchar Name
+        datetime CreatedAt
+        datetime UpdatedAt
+    }
+
+    HUARIQUES {
+        int Id PK
+        varchar Name
+        varchar Category
+        int CategoryId FK
+        decimal Price
+        double Rating
+        varchar District
+        boolean Near
+        double Latitude
+        double Longitude
+        int OwnerId FK
+        varchar Address
+        varchar Phone
+        varchar Description
+        varchar ImageUrl
+        longblob ImageData
+        varchar ImageContentType
+        varchar OpenAt
+        varchar CloseAt
+        boolean DeliveryAvailable
+        boolean TakeawayAvailable
+        boolean DineInAvailable
+        datetime CreatedAt
+        datetime UpdatedAt
+    }
+
+    REVIEWS {
+        int Id PK
+        int HuariqueId FK
+        int UserId FK
+        int Rating
+        varchar Comment
+        datetime CreatedAtReview
+        datetime CreatedAt
+        datetime UpdatedAt
+    }
+
+    FAVORITES {
+        int Id PK
+        int UserId FK
+        int HuariqueId FK
+        datetime CreatedAt
+        datetime UpdatedAt
+    }
+
+    PLANS {
+        varchar Id PK
+        varchar Name
+        decimal Price
+    }
+
+    SUBSCRIPTIONS {
+        int Id PK
+        int UserId FK
+        varchar PlanId FK
+        datetime StartDate
+        datetime EndDate
+        varchar Status
+        datetime CreatedAt
+        datetime UpdatedAt
+    }
+
+    PROMOS {
+        int Id PK
+        varchar Title
+        varchar Note
+        varchar Type
+        int Discount
+        varchar Code
+        datetime StartDate
+        datetime EndDate
+        int MaxUses
+        int CurrentUses
+        int HuariqueId FK
+        varchar ImageUrl
+        datetime CreatedAt
+        datetime UpdatedAt
+    }
+
+    NOTIFICATIONS {
+        int Id PK
+        int UserId FK
+        varchar Title
+        varchar Body
+        boolean IsRead
+        datetime CreatedAt
+        datetime UpdatedAt
+    }
+
+    REPORTS {
+        int Id PK
+        int HuariqueId FK
+        int UserId FK
+        varchar Reason
+        varchar Status
+        datetime CreatedAt
+        datetime UpdatedAt
+    }
+
+    USER_PREFERENCES {
+        int Id PK
+        int UserId FK
+        varchar PreferredCategory
+        decimal MaxBudget
+        varchar PreferredDistrict
+        boolean NotificationsEnabled
+        datetime CreatedAt
+        datetime UpdatedAt
+    }
+```
+
+**Restricciones e índices aplicados por EF Core (Fluent API):**
+
+| Tabla | Restricción | Descripción |
+| --- | --- | --- |
+| `Plans` | Clave primaria `Id` (string, máx. 50 caracteres) | El plan usa un identificador tipo slug en lugar de un entero autoincremental. |
+| `Subscriptions` | FK real `PlanId` → `Plans.Id`, `OnDelete: Restrict` | Es la única relación con clave foránea físicamente impuesta; impide eliminar un plan que tenga suscripciones asociadas. |
+| `Favorites` | Índice único compuesto (`UserId`, `HuariqueId`) | Evita que un mismo usuario marque el mismo huarique como favorito más de una vez. |
+| `UserPreferences` | Índice único en `UserId` | Garantiza una única fila de preferencias por usuario (relación 1 a 1 con `Users`). |
+| `Huariques.ImageData` | Tipo de columna `LONGBLOB` | Permite almacenar la imagen del huarique directamente en la base de datos en lugar de un storage externo. |
+
+**Nota sobre integridad referencial:** columnas como `Huariques.OwnerId`, `Huariques.CategoryId`, `Reviews.HuariqueId`, `Reviews.UserId`, `Reports.HuariqueId`, `Reports.UserId`, `Promos.HuariqueId` y `Notifications.UserId` se comportan como claves foráneas a nivel lógico/de negocio, pero **no** están declaradas como Foreign Key constraints en el motor MySQL, ya que el modelo de dominio no define propiedades de navegación (`ICollection<T>` u objetos relacionados) para esas entidades, y el proyecto no usa migraciones formales de EF Core. La consistencia de estos datos depende de la lógica de validación en los Controllers del backend, no de restricciones a nivel de base de datos.
 
 # Capítulo V: Product Implementation
 
