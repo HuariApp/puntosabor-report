@@ -147,16 +147,16 @@ Preguntas Segmento 2:
 
 - Entrevista 2:
 
-| Campo | Detalle |
+Campo | Detalle |
 | --- | --- |
-| **Nombre entrevistado** | - |
-| **Edad** | - |
-| **Departamento** | - |
-| **Inicio del video** | - |
-| **Fin del video** | - |
-| **Link del video** | - |
-| **Foto entrevista** | - |
-| **Resumen** | - |
+| **Nombre entrevistado** | Gonzalo Ríos |
+| **Edad** | 24 años |
+| **Departamento / Distrito** | Lima / Jesús María |
+| **Inicio del video** | 00:00 |
+| **Fin del video** | 08:18 |
+| **Link del video** | https://youtu.be/8Y9OF3IWt-I |
+| **Foto entrevista** | <img src="./assets/chapter-2/entrevista seg1/gonzalo rios seg-1.png" alt="Entrevista a Gonzalo" width="500"/> |
+| **Resumen** | El entrevistado utiliza aplicaciones móviles de 3 a 4 veces por semana para descubrir lugares nuevos de comida. Su proceso actual involucra ver videos en TikTok e Instagram y luego buscar manualmente la ubicación en Google Maps, lo cual considera fragmentado. Expresó gran frustración con las apps tradicionales debido al favorecimiento publicitario de grandes cadenas y a la presencia de información desactualizada (horarios y precios). Valora principalmente el presupuesto/rango de precios, fotos reales de clientes y la geolocalización clara. Expresó que usaría PuntoSabor si ofrece un mapa interactivo con función "Cerca de mí", filtros por precio/categoría, lista de favoritos y reseñas comunitarias. Como barreras de adopción mencionó la necesidad de contar con una buena cantidad inicial de huariques registrados y la importancia de un registro de usuario rápido e intuitivo. |
 
 - Entrevista 3:
 
