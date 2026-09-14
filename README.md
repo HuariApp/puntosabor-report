@@ -79,14 +79,52 @@ Mediante una interfaz intuitiva, la herramienta permite a la comunidad descubrir
 ### 1.1.1. Descripción de la Startup
 
 ### 1.1.2. Perfiles de integrantes del equipo
+<table border="1">
+  <thead>
+    <tr>
+      <th>Foto</th>
+      <th>Nombre completo</th>
+      <th>Código</th>
+      <th>Carrera</th>
+      <th>Habilidades técnicas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+  <img src="assets/chapter-1/members/schneider.jpeg"
+       alt="Schneider Carlos Alberto Delgado Carrasco">
+</td>
+      <td>Schneider Carlos Alberto Delgado Carrasco</td>
+      <td>u202321843</td>
+      <td>Ingeniería de Software</td>
+      <td>Soy estudiante de Ingeniería de Software en la UPC, con conocimientos en programación y bases de datos. Me interesa la tecnología, la innovación y el desarrollo de soluciones digitales que mejoren la vida de las personas. Estoy comprometido con mi formación y busco nuevos retos que me permitan crecer a nivel académico y personal.</td>
+    </tr>
+  </tbody>
+</table>
 
-| Foto | Nombre | Descripción |
-| --- | --- | --- |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+
 
 ## 1.2. Solution Profile
 
