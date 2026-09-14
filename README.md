@@ -132,31 +132,85 @@ Preguntas Segmento 2:
 
 **Segmento #1: Exploradores Gastronómicos (Usuarios de la app móvil)**
 
-| Número de entrevista | Datos del entrevistado | Evidencia de entrevista |
-| --- | --- | --- |
-|  |  |  |
+- Entrevista 1:
 
-| Número de entrevista | Datos del entrevistado | Evidencia de entrevista |
-| --- | --- | --- |
-|  |  |  |
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** | - |
+| **Edad** | - |
+| **Departamento** | - |
+| **Inicio del video** | - |
+| **Fin del video** | - |
+| **Link del video** | - |
+| **Foto entrevista** | - |
+| **Resumen** | - |
 
-| Número de entrevista | Datos del entrevistado | Evidencia de entrevista |
-| --- | --- | --- |
-|  |  |  |
+- Entrevista 2:
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** | - |
+| **Edad** | - |
+| **Departamento** | - |
+| **Inicio del video** | - |
+| **Fin del video** | - |
+| **Link del video** | - |
+| **Foto entrevista** | - |
+| **Resumen** | - |
+
+- Entrevista 3:
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** | - |
+| **Edad** | - |
+| **Departamento** | - |
+| **Inicio del video** | - |
+| **Fin del video** | - |
+| **Link del video** | - |
+| **Foto entrevista** | - |
+| **Resumen** | - |
 
 **Segmento #2: Dueños y Administradores de Huariques (Usuarios que usan la app móvil para gestionar su huarique)**
 
-| Número de entrevista | Datos del entrevistado | Evidencia de entrevista |
-| --- | --- | --- |
-|  |  |  |
+- Entrevista 1:
 
-| Número de entrevista | Datos del entrevistado | Evidencia de entrevista |
-| --- | --- | --- |
-|  |  |  |
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** | Katerin |
+| **Edad** | 33 años |
+| **Departamento** | Comas |
+| **Inicio del video** | 00:00 |
+| **Fin del video** | 9:00 |
+| **Link del video** | https://drive.google.com/drive/folders/1ZdixRXBDLk5fCKho-r2dA9DhSVKnbbb2?usp=drive_link |
+| **Foto entrevista** | <img src="assets/chapter-2/entrevista%20seg2/Katerin%20seg-2.png" alt="Entrevista a Katerin" width="500"> |
+| **Resumen** | La entrevistada comentó que utiliza principalmente Instagram, Facebook y WhatsApp para promocionar su negocio y comunicarse con sus clientes. Indicó que una de sus principales dificultades es encontrar tiempo para mantener actualizadas varias plataformas al mismo tiempo. Considera importante que una aplicación para huariques sea sencilla de utilizar y permita gestionar información como horarios, precios, fotografías, menú y promociones. También valoraría funciones como reseñas, estadísticas sobre las visitas al negocio, mapas para facilitar la ubicación y soporte para resolver dudas. Respecto al modelo de pago, considera conveniente contar con una versión gratuita y una membresía opcional con beneficios adicionales. Finalmente, espera que una aplicación de este tipo le permita obtener mayor visibilidad, atraer nuevos clientes y aumentar el alcance de sus promociones. |
 
-| Número de entrevista | Datos del entrevistado | Evidencia de entrevista |
-| --- | --- | --- |
-|  |  |  |
+- Entrevista 2:
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** | - |
+| **Edad** | - |
+| **Departamento** | - |
+| **Inicio del video** | - |
+| **Fin del video** | - |
+| **Link del video** | - |
+| **Foto entrevista** | - |
+| **Resumen** | - |
+
+- Entrevista 3:
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** | - |
+| **Edad** | - |
+| **Departamento** | - |
+| **Inicio del video** | - |
+| **Fin del video** | - |
+| **Link del video** | - |
+| **Foto entrevista** | - |
+| **Resumen** | - |
 
 ### 2.2.3. Análisis de entrevistas
 
