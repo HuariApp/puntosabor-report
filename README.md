@@ -321,9 +321,13 @@ Representaciones visuales de alta fidelidad que integran la identidad de marca, 
 
 ### 4.5.1. Android Mobile Applications Prototyping
 
+Prototipo de la aplicación móvil PuntoSabor en figma:
+https://www.figma.com/proto/lT88eEZFP7G86QwYXq59Lc/PuntoSabor?node-id=570-2838&t=T0bd28Ud2NsPdeny-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=570%3A3528&show-proto-sidebar=1
+
 ### 4.5.2. iOS Mobile Applications Prototyping
 
-Prototipo de la aplicación móvil PuntoSabor en figma: https://www.figma.com/proto/lT88eEZFP7G86QwYXq59Lc/PuntoSabor?node-id=479-3247&t=ye1K7Dvu4kkj6fuI-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=60%3A349&show-proto-sidebar=1
+Prototipo de la aplicación móvil PuntoSabor en figma: 
+https://www.figma.com/proto/lT88eEZFP7G86QwYXq59Lc/PuntoSabor?node-id=483-3288&t=4X6zOIJLPjQSTqRs-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=479%3A3247&show-proto-sidebar=1
 
 ## 4.6. Web Applications UX/UI Design
 
