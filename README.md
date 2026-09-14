@@ -136,14 +136,14 @@ Preguntas Segmento 2:
 
 | Campo | Detalle |
 | --- | --- |
-| **Nombre entrevistado** | - |
-| **Edad** | - |
-| **Departamento** | - |
-| **Inicio del video** | - |
-| **Fin del video** | - |
-| **Link del video** | - |
-| **Foto entrevista** | - |
-| **Resumen** | - |
+| **Nombre entrevistado** | Nicolás Valenzuela |
+| **Edad** | 22 años |
+| **Departamento** | Lima / Jesús María |
+| **Inicio del video** | 00:00 |
+| **Fin del video** | 04:37 |
+| **Link del video** | https://youtu.be/L_R3LSYC_Vs |
+| **Foto entrevista** | <img src="./assets/chapter-2/entrevista seg1/Nicolas Valenzuela seg-1.png" alt="Entrevista a Nicolás" width="500"/> |
+| **Resumen** | El entrevistado utiliza aplicaciones móviles de 2 a 3 veces por semana para buscar lugares de comida fuera de lo común. Su proceso actual involucra enterarse de estos lugares a través de TikTok, Instagram o recomendaciones directas de amigos, ya que las apps de comida tradicionales como Google Maps tienden a mostrarle siempre las mismas opciones. Expresó frustración con estas plataformas debido a que priorizan restaurantes grandes y cadenas conocidas, dejando poca o nula información confiable sobre lugares más auténticos, además de reseñas que percibe como poco creíbles. Valora principalmente las reseñas y fotos reales del lugar, así como la cercanía geográfica, ya que no está dispuesto a desplazarse mucho para probar algo nuevo. Expresó que usaría una app dedicada exclusivamente a huariques si le da la seguridad de que los lugares son auténticos y recomendados por personas que realmente los visitaron, evitándole el esfuerzo de filtrar entre opciones genéricas. Como funcionalidades imprescindibles, mencionó un mapa que indique la cercanía del lugar, fotos actuales de los platos y un sistema de reseñas confiable. Como barrera de adopción, señaló la preocupación de que la app cuente con pocos lugares registrados al inicio o con información desactualizada, lo cual lo llevaría a dejar de usarla rápidamente. |
 
 - Entrevista 2:
 
