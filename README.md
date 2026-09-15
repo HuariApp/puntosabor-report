@@ -105,11 +105,12 @@ Mediante una interfaz intuitiva, la herramienta permite a la comunidad descubrir
       <td></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><img src="assets/chapter-1/members/Bruno.jpg"
+       alt="Schneider Carlos Alberto Delgado Carrasco"></td>
+      <td>Bruno Rodolfo Montalván Palomino</td>
+      <td>u202411282</td>
+      <td>Ingeniería de Software</td>
+      <td>Soy un estudiante de Ingeniería de Software, con conocimientos en programación con Python, desarrollo Full Stack, bases de datos SQL y MongoDB, diseño y consumo de APIs, arquitectura de software, Git y control de versiones. Habilidades en análisis y resolución de problemas, diseño de soluciones, desarrollo de aplicaciones y trabajo colaborativo.</td>
     </tr>
     <tr>
       <td>
