@@ -162,14 +162,14 @@ Campo | Detalle |
 
 | Campo | Detalle |
 | --- | --- |
-| **Nombre entrevistado** | - |
-| **Edad** | - |
-| **Departamento** | - |
-| **Inicio del video** | - |
-| **Fin del video** | - |
-| **Link del video** | - |
-| **Foto entrevista** | - |
-| **Resumen** | - |
+| **Nombre entrevistado** | Diego Fernández Salinas |
+| **Edad** | 21 años |
+| **Departamento** | Lima / San Miguel |
+| **Inicio del video** | 00:00 |
+| **Fin del video** | 03:55 |
+| **Link del video** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312700_upc_edu_pe/IQDPpW2YWrHAR4FoibiKd8SmAQzBRwC57OVeMuBkeDhyyRM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=cdOhqB |
+| **Foto entrevista** | <img src="./assets/chapter-2/entrevista seg1/Carlos.png" alt="Entrevista a Diego" width="500"/> |
+| **Resumen** | El entrevistado utiliza redes sociales como TikTok e Instagram para descubrir lugares nuevos de comida, con una frecuencia de dos a tres veces por semana. Su proceso actual combina estas recomendaciones con las de amigos, ya que apps como Google Maps tienden a mostrarle siempre las mismas cadenas conocidas y ofrecen poca información confiable sobre huariques auténticos. Expresó frustración con las reseñas de estas plataformas, a las que percibe como poco genuinas. Valora principalmente que las fotos sean reales del lugar y los platos, reseñas confiables de personas que realmente visitaron el sitio, y la cercanía geográfica. Manifestó que usaría una app dedicada a huariques si le ofrece un mapa con la distancia al lugar, fotos reales y filtros por precio o tipo de comida. Como barrera de adopción, señaló que una baja cantidad de lugares registrados al inicio o información desactualizada (horarios, cierres) lo llevaría a desconfiar y dejar de usarla. |
 
 **Segmento #2: Dueños y Administradores de Huariques (Usuarios que usan la app móvil para gestionar su huarique)**
 
