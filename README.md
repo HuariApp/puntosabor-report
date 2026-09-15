@@ -150,21 +150,29 @@ La identidad gráfica utiliza una apariencia cálida, amigable y moderna, pensad
 
 ##### Typography
 
-Para la tipografía de PuntoSabor, se seleccionó una combinación que prioriza la legibilidad, la modernidad y la claridad dentro de la aplicación móvil. La tipografía Poppins se utiliza principalmente en títulos y encabezados, ya que aporta un estilo amigable y permite resaltar información importante para el usuario.
+Cada plataforma de PuntoSabor adopta una combinación tipográfica acorde a su contexto de uso:
 
-Para textos descriptivos, botones, formularios y elementos de la interfaz, se emplea Inter, debido a su buena lectura en pantallas móviles y su apariencia ordenada. Esta combinación permite que la app mantenga una experiencia visual coherente, accesible y fácil de navegar.
+| Plataforma | Fuente de títulos | Fuente de cuerpo | Fuente: verificado en |
+|---|---|---|---|
+| Landing (web marketing) | Fraunces (serif editorial) | DM Sans | `css/style.css`, `index.html` (Google Fonts) |
+| Front (web app / dashboard) | Inter (Poppins referenciado en el CSS del logo, pero no cargado como recurso - cae en fallback) | Inter | `src/style.css` |
+| App Android nativo (Kotlin) | System Serif (equivalente a Fraunces/Instrument Serif) | Roboto (sistema) | `ui/theme/Type.kt` |
+| AppFlutter (iOS + Android) | Roboto | Roboto | `core/theme/app_theme.dart` (`fontFamily: 'Roboto'`) |
 
-A continuación, se detallan las tipografías adoptadas para PuntoSabor considerando color, peso, tamaño, interlineado y alineación:
-
-![alt text](assets/Typography.png)
+El par **Fraunces + DM Sans** se usa en superficies "editoriales" orientadas a storytelling de marca como (Landing), mientras que las apps operativas (Front, AppFlutter, App nativo) priorizan **tipografías de sistema (Roboto/Inter)** por rendimiento, legibilidad en pantallas pequeñas y consistencia con los componentes nativos de cada plataforma.
 
 ##### Colors
 
-La paleta de colores de PuntoSabor fue definida para transmitir autenticidad, cercanía y dinamismo dentro de la aplicación móvil. Los tonos principales, asociados al rojo, verde y amarillo, buscan representar el sabor, la frescura y la identidad gastronómica local de los huariques.
-
-Estos colores se aplican de forma estratégica en botones, íconos, estados, fondos y elementos destacados de la interfaz, permitiendo guiar la atención del usuario y mantener una experiencia visual amigable, moderna y coherente en todas las pantallas de la app.
-
-![alt text](assets/colors.png)
+La paleta de PuntoSabor se basa en una **familia de colores cálidos (naranja/marrón/terracota)**, con una variación tonal propia en cada plataforma:
+ 
+| Uso | Landing | Front | App Android nativo | AppFlutter |
+|---|---|---|---|---|
+| Acento primario | Cocoa `#CA6527` | Naranja `#E3891B` | Naranja `#C5481E` | Naranja `#E8571A` |
+| Acento secundario/oscuro | Russet `#914C23` | Marrón `#6F4228` | Marrón `#382B1F` | Naranja oscuro `#C04010` |
+| Texto/marca oscura | Seal Brown `#57331F` | — (texto `#1D1D1F`) | Marrón `#382B1F` | Marrón `#3B1F0A` |
+| Fondo principal | Light `#FAFAF8` | Verde oliva claro `#E4F0BD` | Crema `#FAF7F2` | Blanco cálido `#FAF7F4` |
+| Estado de alerta/error | — | — | Rojo `#B84028` | Rojo `#D32F2F` |
+| Estado destacado (rating/estrellas) | Saffron `#F6C553` | — | Amarillo `#FFC107` | Amarillo `#FFC107` |
 
 ##### Spacing
 
@@ -176,11 +184,32 @@ Para conservar consistencia en las pantallas de la aplicación, se utiliza una e
 
 ### 4.1.2. Web Style Guidelines
 
+Para las interfaces web responsive de PuntoSabor, definimos un sistema de diseño adaptable que se ajusta de forma fluida entre dispositivos móviles y de escritorio, diferenciando dos contextos: la landing page de marketing y la plataforma/dashboard web.
+
+En la landing page trabajamos con un enfoque mobile-first, escalonando el diseño en cinco puntos de quiebre (1200px, 1024px, 900px, 768px y 480px) para asegurar una lectura cómoda en cualquier tamaño de pantalla, sobre un ancho máximo de contenido de 1400px. En la plataforma web (dashboard), en cambio, optamos por un grid de 12 columnas con tres puntos de quiebre estructurales principales (1024px, 920px y 640px) -complementados con algunos ajustes puntuales por componente en otros anchos intermedios-, sobre un ancho máximo de 1200px. En ambos casos el contenido se centra en pantalla para evitar líneas de texto o layouts demasiado extendidos en monitores grandes. En la plataforma web además incorporamos espaciado fluido mediante clamp(), de modo que los márgenes y separaciones entre elementos crecen o se reducen suavemente según el ancho de pantalla, sin saltos bruscos entre breakpoints.
+
+A nivel de componentes, en la plataforma web (dashboard) usamos un radio de borde estándar de 18px para cards, paneles y botones grandes, reforzando una apariencia suave y moderna. Aplicamos sombras en dos niveles de profundidad: una sutil para el estado de reposo y una más pronunciada para hover o elevación, lo que ayuda a comunicar interactividad. La barra de navegación se mantiene fija en la parte superior con un efecto de desenfoque de fondo sobre un color marrón semitransparente, y las transiciones de hover en botones, enlaces y cards son rápidas (entre 0.12s y 0.3s) para que la interfaz se sienta ágil.
+
+En la landing page, en cambio, los radios de borde varían según el tipo de elemento: 8px en cards, 12px en inputs, y formas tipo píldora (50px/999px) en botones - una decisión que refuerza el carácter más editorial y cálido de esta superficie. Las sombras también se trabajan en tres niveles de intensidad, pero con un tinte cálido (en tonos marrón) en lugar de negro puro, coherente con la identidad visual de la marca. La iconografía se resuelve con FontAwesome, y se respeta la preferencia de accesibilidad prefers-reduced-motion, reduciendo animaciones para usuarios que así lo configuren en su sistema.
+
+
 ### 4.1.3. Mobile Style Guidelines
+
+Para las aplicaciones móviles, la app desarrollada en Flutter es la que concentra el desarrollo activo del producto, ya que cubre iOS y Android desde una sola base de código. De forma complementaria, existe un prototipo nativo en Android (Kotlin + Jetpack Compose) que documentamos como referencia histórica del proceso de diseño, aunque no es la versión que se sigue desarrollando.
 
 #### 4.1.3.1. iOS Mobile Style Guidelines
 
+Para iOS, decidimos no implementar componentes Cupertino: mantenemos **Material Design 3 de forma consistente tanto en iOS como en Android**, priorizando que la marca se vea y se sienta igual en ambos sistemas operativos por sobre replicar al detalle las convenciones nativas de Apple (Human Interface Guidelines).
+
+Aun así, cuidamos que los elementos se sientan naturales dentro de ese entorno: usamos bordes redondeados generosos (`12px` en botones e inputs, hasta `20-24px` en elementos destacados), botones de ancho completo con una altura mínima de `52px` -que cumple holgadamente el mínimo táctil recomendado de 44pt de Apple- y dejamos que el manejo de las áreas seguras (safe areas) lo resuelva automáticamente el `Scaffold` de Flutter, sin necesidad de ajustes manuales adicionales. En cuanto a tipografía, optamos por Roboto en lugar de San Francisco, un trade-off consciente en favor de mantener una única fuente cross-platform.
+
 #### 4.1.3.2. Android Mobile Style Guidelines
+
+Para Android trabajamos sobre Material Design 3, generando todo el esquema de color de forma dinámica a partir de un color semilla (el naranja de marca), de modo que la escala tonal completa de la app se deriva automáticamente de esa decisión inicial. La barra superior (AppBar) usa un fondo marrón oscuro con texto blanco y sin elevación, buscando una estética flat y moderna.
+
+En los componentes, mantenemos consistencia con el resto del sistema: botones con radio de 12px y altura mínima de 52px, texto en 16sp con peso semibold; cards con elevación baja (2) y radio de 14px; e inputs con bordes de 12px de radio, que cambian a color naranja primario con mayor grosor cuando están enfocados.
+
+El prototipo nativo en Kotlin/Compose sigue esta misma lógica de diseño para sus componentes base (inputs con 12dp de radio, igual que en Flutter), aunque con su propia variación tonal (más hacia terracota y marrón oscuro, según se detalla en la tabla de colores del apartado 4.1.1), tipografía serif en los títulos, y un contenedor tipo card que envuelve todo el formulario de login/registro con un radio mayor (24dp) y elevación propia — un patrón visual que la versión en Flutter no replica, ya que esta última presenta los campos directamente sobre el fondo de la pantalla, sin card contenedora. Mantenemos esta documentación como referencia del proceso exploratorio de diseño, dado que el desarrollo activo del producto continúa en la app Flutter.
 
 ## 4.2. Information Architecture
 
