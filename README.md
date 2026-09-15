@@ -98,15 +98,16 @@ Mediante una interfaz intuitiva, la herramienta permite a la comunidad descubrir
       <td></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><img src="assets/chapter-1/members/Matias.png"
+       alt="Matias Francesco Razuri Alvarez"></td>
+      <td>Matias Francesco Razuri Alvarez</td>
+      <td>u202410772</td>
+      <td>Ingeniería de Software</td>
+      <td>Soy un estudiante de Ingeniería de Software, tengo conocimientos en lenguaje C++, Python, tecnologías web (HTML/CSS), bases de datos SQL y NoSQL (MongoDB), integración de APIs, patrones de diseño de software y metodologías ágiles (Scrum). Tengo varias habilidades en trabajo en equipo, resolución de problemas, organización orientada a entregas anticipadas y apertura para incorporar diversos aportes en proyectos de software.</td>
     </tr>
     <tr>
       <td><img src="assets/chapter-1/members/Bruno.jpg"
-       alt="Schneider Carlos Alberto Delgado Carrasco"></td>
+       alt="Bruno Rodolfo Montalván Palomino"></td>
       <td>Bruno Rodolfo Montalván Palomino</td>
       <td>u202411282</td>
       <td>Ingeniería de Software</td>
