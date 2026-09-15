@@ -337,7 +337,6 @@ El diseño de la aplicación web de PuntoSabor se desarrolló optimizando la exp
 
 **Figma — Web Applications UX/UI Design (Wireframes, Wireflows, Mock-ups y User Flows):** [https://www.figma.com/design/AKqMCrB8xN4vMEqAGNSIfO/Untitled?node-id=10-2271&t=AivyibA2a90zkzyR-1]
 
----
 
 ### 4.6.1. Web Applications Wireframes
 
@@ -357,7 +356,6 @@ Se elaboraron wireframes para las seis vistas principales de la aplicación web:
 
 6. **Sign In:** Tarjeta centrada sobre fondo de la app con campos de email y contraseña, botón primario "Sign in", y links a registro y recuperación de contraseña.
 
----
 
 ### 4.6.2. Web Applications Wireflow Diagrams
 
@@ -408,7 +406,6 @@ User goal: El usuario autenticado visualiza huariques sugeridos según sus prefe
 **Wireflow 15 — Cerrar sesión / Sign out (EP07)**
 User goal: El usuario autenticado cierra su sesión de forma segura desde cualquier pantalla.
 
----
 
 ### 4.6.3. Web Applications Mock-ups
 
@@ -428,7 +425,6 @@ Se elaboraron mock-ups para las mismas seis vistas definidas en los wireframes:
 
 6. **Sign In:** Card blanca con `border-radius: 20px` y sombra sutil, inputs pill con íconos de prefijo, botón naranja de ancho completo y links en naranja `#E8920A` para Sign up y recuperación de contraseña.
 
----
 
 ### 4.6.4. Web Applications User Flow Diagrams
 
@@ -459,7 +455,6 @@ User goal: El usuario explorador aplica filtros de categoría, precio y distrito
 | 3 | Explore | Escribe en el buscador | Lista se filtra en tiempo real por nombre |
 | 4 | Explore | Clic en ítem de la lista | Tarjeta de detalle aparece en zona inferior |
 
----
 
 **User Flow 03 — Visualizar huarique en mapa e ir al detalle (US02 / EP01)**
 User goal: El usuario hace clic en un marcador del mapa, ve el popup con info básica y navega al perfil completo del huarique.
@@ -485,7 +480,6 @@ User goal: El usuario autenticado lee las reseñas de un huarique y publica la s
 | 3b | Detalle | Usuario no autenticado intenta publicar | Redirige a Sign In, luego retorna al detalle |
 | 3c | Detalle | Reseña vacía o sin calificación | Error de validación, no se envía |
 
----
 
 **User Flow 05 — Registro de huarique / propietario (US04 / EP02)**
 User goal: El propietario registra su huarique con datos básicos (nombre, dirección, categoría, horario, foto) para aparecer en la plataforma.
@@ -498,7 +492,6 @@ User goal: El propietario registra su huarique con datos básicos (nombre, direc
 | 3b | Formulario | Campos inválidos o vacíos | Errores resaltados por campo, no se envía |
 | 4 | Panel propietario | Confirmación exitosa | Toast de confirmación, huarique aparece en el panel |
 
----
 
 **User Flow 06 — Ver planes y suscribirse (EP10 / EP02)**
 User goal: El dueño del huarique compara los planes disponibles y se suscribe al que mejor se adapta a sus necesidades y presupuesto.
@@ -511,7 +504,6 @@ User goal: El dueño del huarique compara los planes disponibles y se suscribe a
 | 3b | Plans | Usuario no autenticado hace clic en CTA | Redirige a Sign In, luego retorna a Plans |
 | 4 | Plans | Clic en "Contact us →" | Navega a Contact para consulta personalizada |
 
----
 
 **User Flow 07 — Guardar y gestionar huariques favoritos (EP01 / EP07)**
 User goal: El usuario guarda un huarique como favorito desde su detalle y consulta después su lista personalizada de favoritos.
@@ -524,7 +516,6 @@ User goal: El usuario guarda un huarique como favorito desde su detalle y consul
 | 3 | Favoritos | Clic en un huarique | Navega al detalle |
 | 3b | Favoritos | Lista vacía | Estado vacío con sugerencia de explorar |
 
----
 
 **User Flow 08 — Ver y editar perfil de usuario (EP07)**
 User goal: El usuario actualiza su nombre, foto de perfil y preferencias de cuenta desde la sección de perfil.
@@ -536,7 +527,6 @@ User goal: El usuario actualiza su nombre, foto de perfil y preferencias de cuen
 | 3 | Perfil edición | Modifica datos → "Guardar" | Cambios guardados, toast de confirmación |
 | 3b | Perfil edición | Datos inválidos | Error por campo, no se guarda |
 
----
 
 **User Flow 09 — Crear y publicar promoción (EP10)**
 User goal: El dueño crea una promoción (2x1, descuento, combo) que aparece en la sección Promos visible para todos los exploradores.
@@ -548,7 +538,6 @@ User goal: El dueño crea una promoción (2x1, descuento, combo) que aparece en 
 | 2b | Formulario | Campos incompletos | Error por campo, no se publica |
 | 3 | Promos | Promo aparece en grid de exploradores | Acceso público a "See details" |
 
----
 
 **User Flow 10 — Enviar mensaje de contacto (EP04)**
 User goal: El visitante completa el formulario de la sección Contact y recibe confirmación de que su mensaje fue enviado correctamente.
@@ -559,7 +548,6 @@ User goal: El visitante completa el formulario de la sección Contact y recibe c
 | 2 | Contact | Completa nombre, email y mensaje → "Send" | Mensaje enviado, toast de confirmación |
 | 2b | Contact | Campos vacíos o email inválido | Error por campo, no se envía |
 
----
 
 **User Flow 11 — Buscar huarique por nombre (US01 / EP01)**
 User goal: El usuario escribe el nombre de un huarique en el buscador principal del Home y accede directamente a su perfil en Explore.
@@ -571,7 +559,6 @@ User goal: El usuario escribe el nombre de un huarique en el buscador principal 
 | 2b | Explore | Sin coincidencias | Estado vacío "No results found" |
 | 3 | Explore | Clic en ítem | Tarjeta de detalle visible |
 
----
 
 **User Flow 12 — Consultar horario y estado del huarique (EP09)**
 User goal: El usuario verifica si el huarique está abierto en este momento y consulta su horario semanal completo antes de ir.
@@ -582,7 +569,6 @@ User goal: El usuario verifica si el huarique está abierto en este momento y co
 | 2 | Detalle | Clic en "Ver horario" | Modal con horario completo Lun–Dom |
 | 2b | Detalle | Horario no cargado | Mensaje "Horario no disponible" |
 
----
 
 **User Flow 13 — Editar información del huarique / propietario (US04 / EP02)**
 User goal: El propietario actualiza la descripción, foto u horario de su huarique ya publicado desde su panel de dueño.
@@ -594,7 +580,6 @@ User goal: El propietario actualiza la descripción, foto u horario de su huariq
 | 2b | Formulario edición | Campos inválidos | Error por campo, no se guarda |
 | 3 | Explore | Perfil del huarique refleja los cambios | Información actualizada visible para exploradores |
 
----
 
 **User Flow 14 — Ver recomendaciones personalizadas (EP08)**
 User goal: El usuario autenticado visualiza huariques sugeridos en el Home según sus preferencias e historial de visitas.
@@ -605,7 +590,6 @@ User goal: El usuario autenticado visualiza huariques sugeridos en el Home segú
 | 2 | Home | Clic en tarjeta recomendada | Navega al detalle del huarique con badge "Recomendado para ti" |
 | 2b | Home | Sin preferencias configuradas | Sección muestra huariques populares generales |
 
----
 
 **User Flow 15 — Cerrar sesión / Sign out (EP07)**
 User goal: El usuario autenticado finaliza su sesión de forma segura desde cualquier pantalla confirmando la acción.
@@ -615,6 +599,7 @@ User goal: El usuario autenticado finaliza su sesión de forma segura desde cual
 | 1 | Cualquier vista | Clic en avatar → "Sign out" | Diálogo de confirmación de cierre de sesión |
 | 2 | Diálogo | Confirma "Cerrar sesión" | Sesión cerrada, redirige a Home sin sesión |
 | 2b | Diálogo | Clic en "Cancelar" | Diálogo se cierra, sesión sigue activa |
+
 ## 4.7. Web Applications Prototyping
 
 ## 4.8. Domain-Driven Software Architecture
