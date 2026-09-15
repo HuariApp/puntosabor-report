@@ -124,6 +124,38 @@ Proyecto
 
 ## 3.1. To-Be Scenario Mapping
 
+Para la elaboración del To-Be Scenario Mapping, el equipo siguió un proceso estructurado en cuatro etapas. Primero, en la etapa de **preparación**, se revisaron los As-Is Scenario Mapping ya construidos para ambos segmentos, identificando los puntos de fricción marcados en las filas de Thinking y Feeling como los elementos prioritarios a transformar. Luego, en la **lluvia de ideas individual**, cada integrante propuso de forma independiente cómo debería sentirse y pensar el usuario en cada fase si PuntoSabor ya existiera y resolviera esas fricciones, apoyándose en las funcionalidades definidas en el Solution Profile. Posteriormente, en la etapa de **revisión**, el equipo consolidó las propuestas individuales, descartando duplicados y unificando el lenguaje. Finalmente, se procedió a la **identificación y nombramiento de fases como columnas**, manteniendo la misma cantidad y secuencia de fases del As-Is para facilitar la comparación directa entre ambos mapas.
+
+Acá se muestran las capturas del To-Be Scenario Mapping de cada segmento objetivo.
+
+#### To-Be Scenario Mapping — Segmento 1: Exploradores Gastronómicos
+
+<img src="./assets/ToBeScenarioMapping_seg-1.png" alt="To-Be Scenario seg-1" width="1000px">  
+
+**Comparación con el As-Is y cambios que ofrece el To-Be:**
+- En **Descubrimiento**, el As-Is mostraba frustración por no encontrar nada distinto a las cadenas grandes; el To-Be elimina esa fricción mediante un buscador especializado exclusivamente en huariques.
+- En **Selección inicial**, la desconfianza hacia reseñas potencialmente falsas se transforma en confianza, gracias a un sistema de reseñas verificadas propio de la plataforma (no disperso entre redes sociales).
+- En **Visita**, la duda de "ojalá sea tan bueno como en las fotos" disminuye porque la información proviene de una comunidad especializada y no de publicidad pagada de grandes cadenas.
+- En **Evaluación posterior**, el deseo insatisfecho de "un espacio especializado solo para huariques" pasa a estar resuelto: PuntoSabor es exactamente ese espacio, y el usuario ahora contribuye activamente a él.
+
+#### To-Be Scenario Mapping — Segmento 2: Dueños de Huariques
+
+<img src="./assets/ToBeScenarioMapping_seg-2.png" alt="To-Be Scenario seg-2" width="1000px">
+
+**Comparación con el As-Is y cambios que ofrece el To-Be:**
+- En **Promoción**, la sensación de no poder competir con restaurantes grandes se reemplaza por una herramienta diseñada específicamente para negocios pequeños, sin costos ni complejidad técnica.
+- En **Registro de información**, el proceso manual en cuadernos/Excel (que generaba estrés y cansancio) se sustituye por un registro digital simple desde el propio celular del propietario.
+- En **Visibilidad online**, la frustración de "casi nadie me sigue" se transforma en aparición activa dentro de las búsquedas de usuarios reales interesados en huariques, sin depender de saber usar redes sociales.
+- En **Relación con clientes**, la impotencia por falta de herramientas da paso a una comunicación directa y bidireccional mediante reseñas y notificaciones, algo que antes no existía en su proceso.
+
+**Resumen de fases:**
+
+| Segmento | Fases As-Is | Fases To-Be |
+|---|---|---|
+| Exploradores Gastronómicos | Descubrimiento de opciones, Selección inicial, Visita al huarique, Evaluación posterior | Se mantienen las mismas 4 fases; cambia la experiencia dentro de cada una |
+| Dueños de Huariques | Promoción tradicional, Registro de información, Visibilidad online, Relación con clientes, | Se mantienen las mismas 4 fases |
+
+
 ## 3.2. User Stories
 
 En esta sección se presentan los requisitos definidos para PuntoSabor, expresados mediante User Stories y Epics. La tabla sigue la **plantilla oficial del enunciado**, dedicando una fila a cada Epic y a cada User Story, con las columnas **Story ID, Usuario, Prioridad, Epic, Título, Descripción y Criterios de Aceptación**. Cada User Story incluye criterios de aceptación claros y comprobables, redactados en tiempo presente y tercera persona, siguiendo la estructura Gherkin (Given-When-Then). Se consideran User Stories de la aplicación móvil, del sitio web estático (Landing Page, rol *Visitante*) y **Technical Stories** para el RESTful API (rol *Developer*).
