@@ -96,7 +96,42 @@ Proyecto
 
 ### 2.1.1. Análisis competitivo
 
+Actualmente existen varias plataformas que permiten a los usuarios buscar lugares para comer, como Google Maps, Uber Eats, Yelp o Rappi. Estas aplicaciones ofrecen una gran variedad de opciones, pero en la mayoría de casos dan mayor visibilidad a restaurantes conocidos o cadenas, dejando de lado a negocios más pequeños como los huariques.
+
+En ese sentido, muchos de estos locales no logran aparecer fácilmente en los resultados o no cuentan con suficiente información para generar confianza en los usuarios. Esto hace que las personas tengan dificultades para descubrir nuevas opciones fuera de lo común.
+
+Frente a esta situación, PuntoSabor propone un enfoque diferente, ya que se centra únicamente en huariques. Esto permite ofrecer una experiencia más específica y enfocada en comida local auténtica, algo que las plataformas tradicionales no priorizan.
+
+Además, al incluir funciones pensadas para este tipo de negocios, como la gestión directa del perfil y un sistema de reseñas más enfocado, se genera una mejor conexión entre usuarios y dueños. Por eso, se puede ver que existe una oportunidad clara para diferenciarse en el mercado.
+
+![alt text](assets/AnalisisCompetitivo_PuntoSabor.png)
+![alt text](assets/FODA_PuntoSabor.png)
+
+PuntoSabor se distingue por su enfoque exclusivo en huariques, brindando un lugar especializado para pequeños establecimientos de comida tradicional que normalmente no son resaltados en otras plataformas. Asimismo, incluye funciones concretas como la administración directa de huariques por sus propietarios, un sistema de reseñas y evaluaciones enfocado en estos establecimientos y un modelo de membresía para aumentar la visibilidad.
+
 ### 2.1.2. Estrategias y tácticas frente a competidores
+
+Con el fin de diferenciar a PuntoSabor de otras plataformas más grandes y posicionarse dentro del mercado de huariques, se plantean las siguientes estrategias y tácticas:
+
+Estrategias:
+
+- Enfocar la plataforma en huariques y pequeños negocios de comida local poco conocidos, permitiendo ofrecer una experiencia más auténtica que no suele encontrarse en aplicaciones tradicionales.
+
+- Incentivar la participación de usuarios y propietarios mediante reseñas, recomendaciones y contenido real, con el objetivo de generar mayor confianza dentro de la plataforma.
+
+- Implementar un modelo de ingresos basado en membresías y publicidad accesible, pensado para que los dueños de huariques puedan promocionarse sin necesidad de realizar grandes inversiones.
+
+Tácticas:
+
+- Utilizar publicidad en redes sociales y buscadores, enfocada en zonas urbanas donde existe presencia de huariques, para atraer tanto usuarios como propietarios.
+
+- Establecer alianzas con ferias, eventos y organizaciones gastronómicas para dar mayor visibilidad a la plataforma e incorporar nuevos huariques.
+
+- Asegurar que la aplicación sea fácil de usar, rápida y accesible, incluyendo herramientas simples para registrar y actualizar información, así como un sistema de mapas intuitivo.
+
+- Promover la participación mediante incentivos como descuentos, beneficios o reconocimientos para usuarios y dueños que interactúan activamente.
+
+- Implementar un sistema de retroalimentación que permita recoger sugerencias y mejorar la plataforma de manera continua.
 
 ## 2.2. Entrevistas
 
