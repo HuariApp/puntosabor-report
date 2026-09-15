@@ -331,14 +331,290 @@ https://www.figma.com/proto/lT88eEZFP7G86QwYXq59Lc/PuntoSabor?node-id=483-3288&t
 
 ## 4.6. Web Applications UX/UI Design
 
+## 4.6. Web Applications UX/UI Design
+
+El diseño de la aplicación web de PuntoSabor se desarrolló optimizando la experiencia de usuario para pantallas de escritorio, utilizando Vue con la biblioteca de componentes PrimeVue y siguiendo la identidad gráfica de la marca: tipografía Poppins/Inter, paleta marrón `#5C2E00` / naranja `#E8920A` / verde claro `#D8E8B0`, y espaciado modular de 8dp. Las decisiones de diseño responden a los dos segmentos objetivo: el **Explorador** (usuario que busca huariques) y el **Propietario** (dueño que gestiona su negocio).
+
+**Figma — Web Applications UX/UI Design (Wireframes, Wireflows, Mock-ups y User Flows):** [https://www.figma.com/design/AKqMCrB8xN4vMEqAGNSIfO/Untitled?node-id=10-2271&t=AivyibA2a90zkzyR-1]
+
+---
+
 ### 4.6.1. Web Applications Wireframes
+
+Los wireframes representan la estructura y jerarquía visual de cada vista en escala de grises, sin aplicar color ni imágenes reales, con el fin de validar la arquitectura de información y la disposición de los componentes antes de la etapa de diseño visual.
+
+Se elaboraron wireframes para las seis vistas principales de la aplicación web:
+
+1. **Home:** Navbar superior con logo, links de navegación, selector de idioma y botón Sign in. Hero en tarjeta blanca con título principal, barra de búsqueda y quick-tags de categorías. Grid de cuatro tarjetas de categorías (Pollo, Marina, Criolla, Chifa) con imagen, nombre y botón de acceso.
+
+2. **Explore:** Filtros de categoría en chips horizontales y buscador por nombre en la parte superior. Layout de dos columnas: zona principal con mapa interactivo y tarjeta de detalle del huarique seleccionado; lista lateral scrolleable con todos los resultados. La tarjeta de detalle muestra nombre, badges de categoría y precio, descripción, horario con estado abierto/cerrado, y acciones (View menu, Directions, Call, Share).
+
+3. **Promotions:** Grid de 3×2 tarjetas de promociones activas, cada una con imagen del local, título de la promo en overlay inferior, descripción breve y botón "See details".
+
+4. **Plans:** Tres columnas comparativas de planes de membresía (Basic, Premium, Exclusive) con precio, descripción, lista de features en chips y CTA primario. El plan Premium destacado con borde y badge "Popular".
+
+5. **Contact:** Layout de dos columnas — formulario con campos de nombre, email y mensaje a la izquierda; panel "Find us" con mapa embebido e información de contacto (dirección, teléfono, email, horario) a la derecha.
+
+6. **Sign In:** Tarjeta centrada sobre fondo de la app con campos de email y contraseña, botón primario "Sign in", y links a registro y recuperación de contraseña.
+
+---
 
 ### 4.6.2. Web Applications Wireflow Diagrams
 
+Los wireflow diagrams combinan las pantallas en escala de grises con las rutas de navegación, mostrando cómo cambia el estado de la interfaz ante cada acción del usuario. Se definió un wireflow por cada User Goal principal identificado en el proyecto. Las flechas en negro representan el **happy path** y las flechas en rojo los **unhappy paths**.
+
+**Wireflow 01 — Registro y Sign In de usuario (US15 / EP07)**
+User goal: El usuario se registra o inicia sesión para acceder a las funciones personalizadas de PuntoSabor.
+
+**Wireflow 02 — Búsqueda y filtrado de huariques (US01 / EP01)**
+User goal: El usuario explorador aplica filtros de categoría, precio y distrito para obtener resultados relevantes.
+
+**Wireflow 03 — Visualizar huarique en mapa (US02 / EP01)**
+User goal: El usuario ve la ubicación de huariques en el mapa y selecciona uno para ver su detalle.
+
+**Wireflow 04 — Ver detalle de huarique y publicar reseña (US07 / EP03)**
+User goal: El usuario autenticado consulta el perfil de un huarique, lee reseñas existentes y publica la suya con calificación.
+
+**Wireflow 05 — Registro de huarique (US04 / EP02)**
+User goal: El propietario registra su huarique con datos básicos (nombre, dirección, categoría, horario) para aparecer en la plataforma.
+
+**Wireflow 06 — Ver planes y suscribirse (EP10 / EP02)**
+User goal: El dueño del huarique revisa los planes disponibles y se suscribe al plan que mejor se adapte a sus necesidades.
+
+**Wireflow 07 — Ver y gestionar favoritos (EP01 / EP07)**
+User goal: El usuario guarda un huarique como favorito y accede a su lista personalizada de favoritos.
+
+**Wireflow 08 — Ver y editar perfil de usuario (EP07)**
+User goal: El usuario actualiza su información de perfil (nombre, foto, preferencias) dentro de su cuenta.
+
+**Wireflow 09 — Ver y gestionar promociones del huarique (EP10)**
+User goal: El dueño crea y publica una promoción visible para los exploradores en la sección Promos.
+
+**Wireflow 10 — Contactar al equipo de PuntoSabor (EP04)**
+User goal: El visitante envía un mensaje de contacto a través del formulario de la sección Contact.
+
+**Wireflow 11 — Buscar huarique por nombre (US01 / EP01)**
+User goal: El usuario escribe el nombre de un huarique en el buscador y accede directamente a su perfil.
+
+**Wireflow 12 — Ver horario y estado del huarique (EP09)**
+User goal: El usuario verifica si un huarique está abierto en este momento y consulta su horario completo.
+
+**Wireflow 13 — Editar información del huarique (US04 / EP02)**
+User goal: El dueño actualiza la información de su huarique ya registrado (descripción, fotos, horario).
+
+**Wireflow 14 — Ver recomendaciones personalizadas (EP08)**
+User goal: El usuario autenticado visualiza huariques sugeridos según sus preferencias y ubicación.
+
+**Wireflow 15 — Cerrar sesión / Sign out (EP07)**
+User goal: El usuario autenticado cierra su sesión de forma segura desde cualquier pantalla.
+
+---
+
 ### 4.6.3. Web Applications Mock-ups
+
+Los mock-ups de alta fidelidad aplican la paleta de color oficial, la tipografía Poppins/Inter, los componentes de PrimeVue y contenido visual representativo, reflejando la apariencia final de la aplicación web tal como fue implementada.
+
+Se elaboraron mock-ups para las mismas seis vistas definidas en los wireframes:
+
+1. **Home:** Fondo verde claro `#D8E8B0`, hero en tarjeta blanca con título en Poppins Bold 38px, barra de búsqueda con fondo crema y botón naranja `#E8920A`, quick-tags con borde `#DDD8CC`, e ilustración del logo de PointFlavor a la derecha. Grid de categorías con gradientes representativos de cada tipo de comida, label semitransparente en overlay y botón "View" naranja.
+
+2. **Explore:** Navbar marrón `#5C2E00` con logo pin naranja. Chip activo en naranja sólido, resto en crema con borde sutil. Mapa con popup flotante del huarique seleccionado. Lista lateral con ítem activo resaltado en `#FFF6E8`. Tarjeta de detalle con badges de categoría, precio, rating en naranja y badge "Open now" en verde.
+
+3. **Promotions:** Grid 3×2 con imágenes representativas por tipo de comida (pollo a la brasa, mariscos, café, parrilla, postres, criollo), label de promo en overlay semitransparente blanco y botón "See details" naranja.
+
+4. **Plans:** Cards blancas sobre fondo verde; card Premium con borde naranja de 2px y badge "Popular". Precio en Poppins Bold 38px, features en chips crema con borde `#E8DFC8`, CTA naranja de ancho completo.
+
+5. **Contact:** Inputs con fondo crema `#F8F4EE` y bordes `#E8DFC8`, mapa con grid de calles y popup de ubicación, filas de información de contacto con íconos y fondo `#FDFAF5`.
+
+6. **Sign In:** Card blanca con `border-radius: 20px` y sombra sutil, inputs pill con íconos de prefijo, botón naranja de ancho completo y links en naranja `#E8920A` para Sign up y recuperación de contraseña.
+
+---
 
 ### 4.6.4. Web Applications User Flow Diagrams
 
+Los User Flow Diagrams presentan los mock-ups de alta fidelidad conectados mediante rutas de navegación, especificando el **happy path** (ruta esperada en azul/negro) y los **unhappy paths** (rutas alternativas en rojo ante errores o condiciones distintas). Se elaboró un User Flow por cada uno de los 15 User Goals identificados.
+
+**User Flow 01 — Registro y Sign In de usuario (US15 / EP07)**
+User goal: El usuario se autentica o crea una cuenta nueva para acceder a funciones personalizadas de PuntoSabor.
+
+| Paso | Pantalla | Acción | Resultado |
+|------|----------|--------|-----------|
+| 1 | Home | Clic en "Sign in" del navbar | Navega a Sign In |
+| 2 | Sign In | Ingresa credenciales válidas → clic "Sign in" | Redirige a Home con sesión activa y toast "Bienvenido" |
+| 2b | Sign In | Credenciales incorrectas | Muestra error en el formulario, permite reintentar |
+| 3 | Sign In | Clic en "Sign up" | Navega a Register |
+| 4 | Register | Completa datos → "Create account" | Cuenta creada, redirige a Home autenticado |
+| 4b | Register | Datos inválidos o email ya registrado | Error por campo, formulario no se envía |
+
+---
+
+**User Flow 02 — Búsqueda y filtrado de huariques (US01 / EP01)**
+User goal: El usuario explorador aplica filtros de categoría, precio y distrito para obtener la lista de huariques que coinciden.
+
+| Paso | Pantalla | Acción | Resultado |
+|------|----------|--------|-----------|
+| 1 | Home | Clic en "Explore" del navbar | Navega a Explore |
+| 2 | Explore | Selecciona chip de categoría | Lista y mapa se actualizan filtrando esa categoría |
+| 2b | Explore | Categoría sin resultados | Estado vacío "No results found" con sugerencia de ampliar filtro |
+| 3 | Explore | Escribe en el buscador | Lista se filtra en tiempo real por nombre |
+| 4 | Explore | Clic en ítem de la lista | Tarjeta de detalle aparece en zona inferior |
+
+---
+
+**User Flow 03 — Visualizar huarique en mapa e ir al detalle (US02 / EP01)**
+User goal: El usuario hace clic en un marcador del mapa, ve el popup con info básica y navega al perfil completo del huarique.
+
+| Paso | Pantalla | Acción | Resultado |
+|------|----------|--------|-----------|
+| 1 | Explore | Visualiza mapa con marcadores | Marcadores visibles por categoría |
+| 2 | Explore | Clic en marcador del mapa | Popup flotante con nombre, categoría y rating |
+| 3 | Explore | Clic en popup | Tarjeta de detalle aparece en zona inferior |
+| 3b | Explore | Marcador sin datos disponibles | Popup con mensaje "Info no disponible" |
+| 4 | Explore | Clic en "View menu" o "Directions" | Abre menú o dirección en mapa externo |
+
+---
+
+**User Flow 04 — Ver detalle de huarique y publicar reseña (US07 / EP03)**
+User goal: El usuario autenticado lee las reseñas de un huarique y publica la suya con calificación por estrellas y comentario.
+
+| Paso | Pantalla | Acción | Resultado |
+|------|----------|--------|-----------|
+| 1 | Explore | Selecciona un huarique | Tarjeta de detalle con rating, horario y descripción |
+| 2 | Detalle | Clic en sección de reseñas | Despliega reseñas existentes |
+| 3 | Detalle | Usuario autenticado escribe reseña y calificación → "Publicar" | Reseña publicada, rating actualizado |
+| 3b | Detalle | Usuario no autenticado intenta publicar | Redirige a Sign In, luego retorna al detalle |
+| 3c | Detalle | Reseña vacía o sin calificación | Error de validación, no se envía |
+
+---
+
+**User Flow 05 — Registro de huarique / propietario (US04 / EP02)**
+User goal: El propietario registra su huarique con datos básicos (nombre, dirección, categoría, horario, foto) para aparecer en la plataforma.
+
+| Paso | Pantalla | Acción | Resultado |
+|------|----------|--------|-----------|
+| 1 | Home (autenticado) | Accede al panel de propietario | Navega al dashboard del propietario |
+| 2 | Panel propietario | Clic en "Registrar huarique" | Abre formulario de registro |
+| 3 | Formulario | Completa todos los campos → "Guardar" | Huarique registrado y visible en Explore |
+| 3b | Formulario | Campos inválidos o vacíos | Errores resaltados por campo, no se envía |
+| 4 | Panel propietario | Confirmación exitosa | Toast de confirmación, huarique aparece en el panel |
+
+---
+
+**User Flow 06 — Ver planes y suscribirse (EP10 / EP02)**
+User goal: El dueño del huarique compara los planes disponibles y se suscribe al que mejor se adapta a sus necesidades y presupuesto.
+
+| Paso | Pantalla | Acción | Resultado |
+|------|----------|--------|-----------|
+| 1 | Cualquier vista | Clic en "Plans" del navbar | Navega a Membership Plans |
+| 2 | Plans | Revisa las tres opciones (Basic, Premium, Exclusive) | Visualiza features y precios comparativos |
+| 3 | Plans | Clic en CTA del plan elegido (autenticado) | Inicia flujo de suscripción |
+| 3b | Plans | Usuario no autenticado hace clic en CTA | Redirige a Sign In, luego retorna a Plans |
+| 4 | Plans | Clic en "Contact us →" | Navega a Contact para consulta personalizada |
+
+---
+
+**User Flow 07 — Guardar y gestionar huariques favoritos (EP01 / EP07)**
+User goal: El usuario guarda un huarique como favorito desde su detalle y consulta después su lista personalizada de favoritos.
+
+| Paso | Pantalla | Acción | Resultado |
+|------|----------|--------|-----------|
+| 1 | Detalle | Clic en ícono de favorito (autenticado) | Huarique guardado en favoritos, ícono activado |
+| 1b | Detalle | Usuario no autenticado intenta guardar | Redirige a Sign In |
+| 2 | Perfil | Accede a sección "Favoritos" | Lista de huariques guardados |
+| 3 | Favoritos | Clic en un huarique | Navega al detalle |
+| 3b | Favoritos | Lista vacía | Estado vacío con sugerencia de explorar |
+
+---
+
+**User Flow 08 — Ver y editar perfil de usuario (EP07)**
+User goal: El usuario actualiza su nombre, foto de perfil y preferencias de cuenta desde la sección de perfil.
+
+| Paso | Pantalla | Acción | Resultado |
+|------|----------|--------|-----------|
+| 1 | Navbar (autenticado) | Clic en avatar / nombre | Navega a perfil de usuario |
+| 2 | Perfil | Clic en "Editar perfil" | Habilita campos editables |
+| 3 | Perfil edición | Modifica datos → "Guardar" | Cambios guardados, toast de confirmación |
+| 3b | Perfil edición | Datos inválidos | Error por campo, no se guarda |
+
+---
+
+**User Flow 09 — Crear y publicar promoción (EP10)**
+User goal: El dueño crea una promoción (2x1, descuento, combo) que aparece en la sección Promos visible para todos los exploradores.
+
+| Paso | Pantalla | Acción | Resultado |
+|------|----------|--------|-----------|
+| 1 | Panel propietario | Clic en "Crear promoción" | Abre formulario de promoción |
+| 2 | Formulario | Completa título, descripción, imagen y vigencia → "Publicar" | Promo publicada y visible en Promos |
+| 2b | Formulario | Campos incompletos | Error por campo, no se publica |
+| 3 | Promos | Promo aparece en grid de exploradores | Acceso público a "See details" |
+
+---
+
+**User Flow 10 — Enviar mensaje de contacto (EP04)**
+User goal: El visitante completa el formulario de la sección Contact y recibe confirmación de que su mensaje fue enviado correctamente.
+
+| Paso | Pantalla | Acción | Resultado |
+|------|----------|--------|-----------|
+| 1 | Cualquier vista | Clic en "Contact" del navbar | Navega a Contact Us |
+| 2 | Contact | Completa nombre, email y mensaje → "Send" | Mensaje enviado, toast de confirmación |
+| 2b | Contact | Campos vacíos o email inválido | Error por campo, no se envía |
+
+---
+
+**User Flow 11 — Buscar huarique por nombre (US01 / EP01)**
+User goal: El usuario escribe el nombre de un huarique en el buscador principal del Home y accede directamente a su perfil en Explore.
+
+| Paso | Pantalla | Acción | Resultado |
+|------|----------|--------|-----------|
+| 1 | Home | Escribe nombre en buscador hero → "Explore" | Navega a Explore con resultados filtrados |
+| 2 | Explore | Lista muestra huariques que coinciden con el nombre | Selecciona uno de la lista |
+| 2b | Explore | Sin coincidencias | Estado vacío "No results found" |
+| 3 | Explore | Clic en ítem | Tarjeta de detalle visible |
+
+---
+
+**User Flow 12 — Consultar horario y estado del huarique (EP09)**
+User goal: El usuario verifica si el huarique está abierto en este momento y consulta su horario semanal completo antes de ir.
+
+| Paso | Pantalla | Acción | Resultado |
+|------|----------|--------|-----------|
+| 1 | Explore | Selecciona huarique de la lista | Tarjeta de detalle con badge "Open now" o "Closed" |
+| 2 | Detalle | Clic en "Ver horario" | Modal con horario completo Lun–Dom |
+| 2b | Detalle | Horario no cargado | Mensaje "Horario no disponible" |
+
+---
+
+**User Flow 13 — Editar información del huarique / propietario (US04 / EP02)**
+User goal: El propietario actualiza la descripción, foto u horario de su huarique ya publicado desde su panel de dueño.
+
+| Paso | Pantalla | Acción | Resultado |
+|------|----------|--------|-----------|
+| 1 | Panel propietario | Clic en "Editar huarique" | Abre formulario pre-llenado con datos actuales |
+| 2 | Formulario edición | Modifica campos → "Guardar" | Cambios guardados, toast "Información actualizada" |
+| 2b | Formulario edición | Campos inválidos | Error por campo, no se guarda |
+| 3 | Explore | Perfil del huarique refleja los cambios | Información actualizada visible para exploradores |
+
+---
+
+**User Flow 14 — Ver recomendaciones personalizadas (EP08)**
+User goal: El usuario autenticado visualiza huariques sugeridos en el Home según sus preferencias e historial de visitas.
+
+| Paso | Pantalla | Acción | Resultado |
+|------|----------|--------|-----------|
+| 1 | Home (autenticado) | Sección "Para ti" visible en el Home | Grid de huariques recomendados |
+| 2 | Home | Clic en tarjeta recomendada | Navega al detalle del huarique con badge "Recomendado para ti" |
+| 2b | Home | Sin preferencias configuradas | Sección muestra huariques populares generales |
+
+---
+
+**User Flow 15 — Cerrar sesión / Sign out (EP07)**
+User goal: El usuario autenticado finaliza su sesión de forma segura desde cualquier pantalla confirmando la acción.
+
+| Paso | Pantalla | Acción | Resultado |
+|------|----------|--------|-----------|
+| 1 | Cualquier vista | Clic en avatar → "Sign out" | Diálogo de confirmación de cierre de sesión |
+| 2 | Diálogo | Confirma "Cerrar sesión" | Sesión cerrada, redirige a Home sin sesión |
+| 2b | Diálogo | Clic en "Cancelar" | Diálogo se cierra, sesión sigue activa |
 ## 4.7. Web Applications Prototyping
 
 ## 4.8. Domain-Driven Software Architecture
