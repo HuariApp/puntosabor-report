@@ -590,20 +590,31 @@ El diagrama de contexto muestra a PuntoSabor como sistema central interactuando 
 - **Explorador gastronómico:** usuario que busca y descubre huariques auténticos.
 - **Dueño de restaurante:** usuario que publica su huarique y gestiona su membresía.
 
-![Software Architecture Context Level Diagram](assets/structurizr-punto_context.png)
+![Software Architecture Context Level Diagram](assets/SystemContext-dark.png)
 
 ### 4.8.2. Software Architecture Container Diagrams
 
 El diagrama de contenedores muestra los componentes internos del sistema PuntoSabor:
 
-- **Aplicación Móvil (Android/Kotlin):** interfaz principal del usuario, construida con Jetpack Compose.
-- **Landing Page (HTML/CSS/JS):** sitio estático desplegado en GitHub Pages.
-- **Backend API (C#/.NET 8):** servidor de aplicaciones que expone endpoints REST y gestiona la lógica de negocio.
-- **Base de datos (MySQL):** almacena usuarios, huariques, reseñas, planes y suscripciones.
-
-![Software Architecture Container Level Diagram](assets/structurizr-c2_puntosabor.png)
+![Software Architecture Container Level Diagram](assets/Containers-dark.png)
 
 ### 4.8.3. Software Architecture Components Diagrams
+
+![Software Architecture Container Level Diagram](assets/PromotionsServiceComponents-dark.png)
+
+![Software Architecture Container Level Diagram](assets/AuthServiceComponents-dark.png)
+
+![Software Architecture Container Level Diagram](assets/APIGatewayComponents-dark.png)
+
+![Software Architecture Container Level Diagram](assets/CategoriesServiceComponents-dark.png)
+
+![Software Architecture Container Level Diagram](assets/ContactServiceComponents-dark.png)
+
+![Software Architecture Container Level Diagram](assets/PlansServiceComponents-dark.png)
+
+![Software Architecture Container Level Diagram](assets/ProfileServiceComponents-dark.png)
+
+![Software Architecture Container Level Diagram](assets/ZonesServiceComponents-dark.png)
 
 ## 4.9. Software Object-Oriented Design
 
