@@ -225,14 +225,14 @@ Campo | Detalle |
 
 | Campo | Detalle |
 | --- | --- |
-| **Nombre entrevistado** | - |
-| **Edad** | - |
-| **Departamento** | - |
-| **Inicio del video** | - |
-| **Fin del video** | - |
-| **Link del video** | - |
-| **Foto entrevista** | - |
-| **Resumen** | - |
+| **Nombre entrevistado** | Nicolas Castro |
+| **Edad** | 26 |
+| **Departamento** | Lince |
+| **Inicio del video** | 0:00 |
+| **Fin del video** | 6:48 |
+| **Link del video** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d995_upc_edu_pe/IQCktyuodBQgSIde1SKOZZsyAX9FpAbF3gfr-IFp2nTi-VE?e=uUPB2F&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| **Foto entrevista** | <img src="./assets/chapter-2/entrevista seg2/Nicolas seg-2.png" alt="Entrevista a Nicolas" width="500"/> |
+| **Resumen** | El entrevistado comento que usa principalmente WhatsApp como herramienta digital para comunicarle a clientes frecuentes que esta vendiendo, que hay en el menú y si hay ofertas. Nos comento que para el es difícil manejar herramientas digitales modernas como podrían ser instagram y que se le es complicado llegar a nuevo publico ajeno a sus caseros. Para el una aplicación que lo ayude a llegar a más publico seria importante ya que así podría incrementar su clientela y consecuentemente sus ventas. El valora funciones de la aplicación como reseñas para poder recibir feedback de sus consumidores y que se pueda gestionar su negocio como colocar que menús están disponibles y que ofertas. El considera que la aplicación debería ser gratuita para que no le cobre comisiones por venta pero aceptaría un sistema de suscripciones de pago que ofrezca beneficios extra para el y su negocio. |
 
 - Entrevista 3:
 
