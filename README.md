@@ -307,6 +307,30 @@ Representación esquemática de la estructura y flujo de navegación de la aplic
 
 ### 4.4.2. Mobile Applications Wireflow Diagrams
 
+**Segmento 1**
+
+![alt text](<assets/Mobile app wireflow seg 1-1.png>)
+
+![alt text](<assets/Mobile app wireflow seg 1-2.png>)
+
+![alt text](<assets/Mobile app wireflow seg 1-3.png>)
+
+![alt text](<assets/Mobile app wireflow seg 1-4.png>)
+
+![alt text](<assets/Mobile app wireflow seg 1-5.png>)
+
+**Segmento 2**
+
+![alt text](<assets/Mobile app wireflow seg 2-1.png>)
+
+![alt text](<assets/Mobile app wireflow seg 2-2.png>)
+
+![alt text](<assets/Mobile app wireflow seg 2-3.png>)
+
+![alt text](<assets/Mobile app wireflow seg 2-4.png>)
+
+![alt text](<assets/Mobile app wireflow seg 2-5.png>)
+
 ### 4.4.3. Mobile Applications Mock-ups
 
 Representaciones visuales de alta fidelidad que integran la identidad de marca, incluyendo la paleta de colores, tipografía e iconografía final, para simular la apariencia real y estética de la interfaz en dispositivos móviles.
@@ -331,8 +355,6 @@ https://www.figma.com/proto/lT88eEZFP7G86QwYXq59Lc/PuntoSabor?node-id=483-3288&t
 
 ## 4.6. Web Applications UX/UI Design
 
-## 4.6. Web Applications UX/UI Design
-
 El diseño de la aplicación web de PuntoSabor se desarrolló optimizando la experiencia de usuario para pantallas de escritorio, utilizando Vue con la biblioteca de componentes PrimeVue y siguiendo la identidad gráfica de la marca: tipografía Poppins/Inter, paleta marrón `#5C2E00` / naranja `#E8920A` / verde claro `#D8E8B0`, y espaciado modular de 8dp. Las decisiones de diseño responden a los dos segmentos objetivo: el **Explorador** (usuario que busca huariques) y el **Propietario** (dueño que gestiona su negocio).
 
 **Figma — Web Applications UX/UI Design (Wireframes, Wireflows, Mock-ups y User Flows):** [https://www.figma.com/design/AKqMCrB8xN4vMEqAGNSIfO/Untitled?node-id=10-2271&t=AivyibA2a90zkzyR-1]
@@ -342,89 +364,43 @@ El diseño de la aplicación web de PuntoSabor se desarrolló optimizando la exp
 
 Los wireframes representan la estructura y jerarquía visual de cada vista en escala de grises, sin aplicar color ni imágenes reales, con el fin de validar la arquitectura de información y la disposición de los componentes antes de la etapa de diseño visual.
 
-Se elaboraron wireframes para las seis vistas principales de la aplicación web:
+![alt text](<assets/web applications wireframe desktop 1.png>)
 
-1. **Home:** Navbar superior con logo, links de navegación, selector de idioma y botón Sign in. Hero en tarjeta blanca con título principal, barra de búsqueda y quick-tags de categorías. Grid de cuatro tarjetas de categorías (Pollo, Marina, Criolla, Chifa) con imagen, nombre y botón de acceso.
-
-2. **Explore:** Filtros de categoría en chips horizontales y buscador por nombre en la parte superior. Layout de dos columnas: zona principal con mapa interactivo y tarjeta de detalle del huarique seleccionado; lista lateral scrolleable con todos los resultados. La tarjeta de detalle muestra nombre, badges de categoría y precio, descripción, horario con estado abierto/cerrado, y acciones (View menu, Directions, Call, Share).
-
-3. **Promotions:** Grid de 3×2 tarjetas de promociones activas, cada una con imagen del local, título de la promo en overlay inferior, descripción breve y botón "See details".
-
-4. **Plans:** Tres columnas comparativas de planes de membresía (Basic, Premium, Exclusive) con precio, descripción, lista de features en chips y CTA primario. El plan Premium destacado con borde y badge "Popular".
-
-5. **Contact:** Layout de dos columnas — formulario con campos de nombre, email y mensaje a la izquierda; panel "Find us" con mapa embebido e información de contacto (dirección, teléfono, email, horario) a la derecha.
-
-6. **Sign In:** Tarjeta centrada sobre fondo de la app con campos de email y contraseña, botón primario "Sign in", y links a registro y recuperación de contraseña.
-
+![alt text](<assets/web applications wireframe desktop 2.png>)
 
 ### 4.6.2. Web Applications Wireflow Diagrams
 
-Los wireflow diagrams combinan las pantallas en escala de grises con las rutas de navegación, mostrando cómo cambia el estado de la interfaz ante cada acción del usuario. Se definió un wireflow por cada User Goal principal identificado en el proyecto. Las flechas en negro representan el **happy path** y las flechas en rojo los **unhappy paths**.
+**Segmento 1**
 
-**Wireflow 01 — Registro y Sign In de usuario (US15 / EP07)**
-User goal: El usuario se registra o inicia sesión para acceder a las funciones personalizadas de PuntoSabor.
+![alt text](<assets/Web app wireflow seg1 - 1.png>)
 
-**Wireflow 02 — Búsqueda y filtrado de huariques (US01 / EP01)**
-User goal: El usuario explorador aplica filtros de categoría, precio y distrito para obtener resultados relevantes.
+![alt text](<assets/Web app wireflow seg1 - 2.png>)
 
-**Wireflow 03 — Visualizar huarique en mapa (US02 / EP01)**
-User goal: El usuario ve la ubicación de huariques en el mapa y selecciona uno para ver su detalle.
+![alt text](<assets/Web app wireflow seg1 - 3.png>)
 
-**Wireflow 04 — Ver detalle de huarique y publicar reseña (US07 / EP03)**
-User goal: El usuario autenticado consulta el perfil de un huarique, lee reseñas existentes y publica la suya con calificación.
+![alt text](<assets/Web app wireflow seg1 - 4.png>)
 
-**Wireflow 05 — Registro de huarique (US04 / EP02)**
-User goal: El propietario registra su huarique con datos básicos (nombre, dirección, categoría, horario) para aparecer en la plataforma.
+![alt text](<assets/Web app wireflow seg1 - 5.png>)
 
-**Wireflow 06 — Ver planes y suscribirse (EP10 / EP02)**
-User goal: El dueño del huarique revisa los planes disponibles y se suscribe al plan que mejor se adapte a sus necesidades.
+**Segmento 2**
 
-**Wireflow 07 — Ver y gestionar favoritos (EP01 / EP07)**
-User goal: El usuario guarda un huarique como favorito y accede a su lista personalizada de favoritos.
+![alt text](<assets/Web app wireflow seg2 - 1.png>)
 
-**Wireflow 08 — Ver y editar perfil de usuario (EP07)**
-User goal: El usuario actualiza su información de perfil (nombre, foto, preferencias) dentro de su cuenta.
+![alt text](<assets/Web app wireflow seg2 - 2.png>)
 
-**Wireflow 09 — Ver y gestionar promociones del huarique (EP10)**
-User goal: El dueño crea y publica una promoción visible para los exploradores en la sección Promos.
+![alt text](<assets/Web app wireflow seg2 - 3.png>)
 
-**Wireflow 10 — Contactar al equipo de PuntoSabor (EP04)**
-User goal: El visitante envía un mensaje de contacto a través del formulario de la sección Contact.
+![alt text](<assets/Web app wireflow seg2 - 4.png>)
 
-**Wireflow 11 — Buscar huarique por nombre (US01 / EP01)**
-User goal: El usuario escribe el nombre de un huarique en el buscador y accede directamente a su perfil.
-
-**Wireflow 12 — Ver horario y estado del huarique (EP09)**
-User goal: El usuario verifica si un huarique está abierto en este momento y consulta su horario completo.
-
-**Wireflow 13 — Editar información del huarique (US04 / EP02)**
-User goal: El dueño actualiza la información de su huarique ya registrado (descripción, fotos, horario).
-
-**Wireflow 14 — Ver recomendaciones personalizadas (EP08)**
-User goal: El usuario autenticado visualiza huariques sugeridos según sus preferencias y ubicación.
-
-**Wireflow 15 — Cerrar sesión / Sign out (EP07)**
-User goal: El usuario autenticado cierra su sesión de forma segura desde cualquier pantalla.
-
+![alt text](<assets/Web app wireflow seg2 - 5.png>)
 
 ### 4.6.3. Web Applications Mock-ups
 
 Los mock-ups de alta fidelidad aplican la paleta de color oficial, la tipografía Poppins/Inter, los componentes de PrimeVue y contenido visual representativo, reflejando la apariencia final de la aplicación web tal como fue implementada.
 
-Se elaboraron mock-ups para las mismas seis vistas definidas en los wireframes:
+![alt text](<assets/Web applications Mock-ups desktop.1.png>)
 
-1. **Home:** Fondo verde claro `#D8E8B0`, hero en tarjeta blanca con título en Poppins Bold 38px, barra de búsqueda con fondo crema y botón naranja `#E8920A`, quick-tags con borde `#DDD8CC`, e ilustración del logo de PointFlavor a la derecha. Grid de categorías con gradientes representativos de cada tipo de comida, label semitransparente en overlay y botón "View" naranja.
-
-2. **Explore:** Navbar marrón `#5C2E00` con logo pin naranja. Chip activo en naranja sólido, resto en crema con borde sutil. Mapa con popup flotante del huarique seleccionado. Lista lateral con ítem activo resaltado en `#FFF6E8`. Tarjeta de detalle con badges de categoría, precio, rating en naranja y badge "Open now" en verde.
-
-3. **Promotions:** Grid 3×2 con imágenes representativas por tipo de comida (pollo a la brasa, mariscos, café, parrilla, postres, criollo), label de promo en overlay semitransparente blanco y botón "See details" naranja.
-
-4. **Plans:** Cards blancas sobre fondo verde; card Premium con borde naranja de 2px y badge "Popular". Precio en Poppins Bold 38px, features en chips crema con borde `#E8DFC8`, CTA naranja de ancho completo.
-
-5. **Contact:** Inputs con fondo crema `#F8F4EE` y bordes `#E8DFC8`, mapa con grid de calles y popup de ubicación, filas de información de contacto con íconos y fondo `#FDFAF5`.
-
-6. **Sign In:** Card blanca con `border-radius: 20px` y sombra sutil, inputs pill con íconos de prefijo, botón naranja de ancho completo y links en naranja `#E8920A` para Sign up y recuperación de contraseña.
-
+![alt text](<assets/Web applications Mock-ups desktop.2.png>)
 
 ### 4.6.4. Web Applications User Flow Diagrams
 
