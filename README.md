@@ -240,8 +240,8 @@ Estructura:
 - IDE: Visual Studio 2022 o Visual Studio Code con extensión C#.
 - Control de versiones: Git + GitHub.
 - Plataforma de despliegue: Railway (contenedor Docker + base de datos MySQL 8).
-- **URL pública del backend:** <https://huariquehub-backend.up.railway.app>
-- **Documentación de la API (Swagger / OpenAPI):** <https://huariquehub-backend.up.railway.app/swagger>
+- **URL pública del backend:** <[https://huariquehub-backend.up.railway.app](https://puntosabor-backend-production-91fb.up.railway.app)>
+- **Documentación de la API (Swagger / OpenAPI):** <[https://huariquehub-backend.up.railway.app/swagger](https://puntosabor-backend-production-91fb.up.railway.app/swagger/index.html)>
 
 **Aplicación Móvil (HuariqueHub-App)**
 - Lenguaje: Kotlin
@@ -415,9 +415,37 @@ Durante el sprint, las tareas fueron organizadas y revisadas de acuerdo con su a
 
 ### 5.2.2. Implemented Landing Page Evidence
 
+Se ha hecho una landing page para la aplicación enfocandonos en que cumplan con las historias de usuario establecidas. Está landing page servira como punto de partidua para que nuevos usuarios usen nuestra aplicación.
+
+El deploy de la landing page se hizo mediante GithubPages.
+
+link: https://huariapp.github.io/PuntoSabor-Landing/
+
+![alt text](assets/Landing_Page1.png)
+
+![alt text](assets/Landing_Page2.png)
+
+![alt text](assets/Landing_Page3.png)
+
+![alt text](assets/Landing_Page4.png)
+
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 
+El FrontEnd fue realizado teniendo en cuenta los modelos hechos en los wireframes y mock-ups e igualmente se tomaron en cuenta las historias de usuarios.
+
+link: https://punto-sabor-front.vercel.app
+
+![alt text](assets/FrontEnd_1.png)
+
+![alt text](assets/FrontEnd_2.png)
+
+![alt text](assets/FrontEnd_3.png)
+
+![alt text](assets/FrontEnd_4.png)
+
 ### 5.2.4. Acuerdo de Servicio - SaaS
+
+
 
 ### 5.2.5. Implemented Native-Mobile Application Evidence
 
