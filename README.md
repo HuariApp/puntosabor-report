@@ -421,13 +421,91 @@ Durante el sprint, las tareas fueron organizadas y revisadas de acuerdo con su a
 
 ### 5.2.5. Implemented Native-Mobile Application Evidence
 
+La aplicación móvil de PuntoSabor fue desarrollada de forma incremental a lo largo de tres sprints:
+ 
+**Sprint 1 — Pantallas core:**
+- Login (correo y contraseña)
+- Home con búsqueda, filtro por categorías y huariques destacados
+- Detalle de huarique (categoría, dirección, teléfono, horario, descripción, valoración)
+- Registro de reseñas (calificación + comentario)
+- Marcado de favoritos
+**Sprint 2 — Integración real con backend público (Railway):**
+- Autenticación con JWT (login + registro con auto-login)
+- Descubrimiento de huariques consumiendo `GET /huariques` (datos reales, ya no locales)
+- Gestión del propietario: crear/editar huarique (`POST`/`PATCH /huariques`)
+- Preferencias de usuario (`GET`/`PUT /preferences`)
+- Notificaciones (`GET /notifications`, `PATCH /notifications/{id}/read`)
+- Recuperación de contraseña (`POST /auth/forgot-password`)
+- Suscripción a membresías (`GET /plans`, `POST /subscriptions`)
+- Gestión de promociones del propietario (CRUD completo)
+- Reporte de información incorrecta (`POST /reports`)
+- Sugerencias personalizadas (`GET /huariques/suggestions`)
+Durante esta etapa se detectaron y corrigieron bugs de contrato entre app y backend (verbo HTTP incorrecto en edición, falta de `categoryId`, ausencia de token tras registro).
+ 
+**Sprint 3 — Cierre funcional:**
+- Visualización de horario verificado del huarique
+- Estado abierto/cerrado según horario
+- Flujo de pago de suscripción (membresías)
+- Comprobantes de pago
+- Promociones destacadas con mayor visibilidad en los listados
+**Evidencia de ejecución (emulador Android):**
+ 
+| Funcionalidad | Evidencia |
+|---|---|
+| Login / Registro con JWT | Capturas de autenticación contra `/auth/login` y `/users` |
+| Home con datos reales | Búsqueda, categorías y huariques destacados |
+| Detalle + reseñas | Lectura y publicación de reseñas vía API |
+| Gestión del propietario | Creación y edición de huarique conectada al backend |
+| Horarios y estado | Visualización de horario y estado abierto/cerrado |
+| Membresías y comprobantes | Flujo de suscripción y comprobante de pago |
+| Promociones | Visualización de promociones destacadas |
+ 
+**Repositorios:**
+- App (nativa/Kotlin, Sprint 1-2): `HuariqueHub/HuariqueHub-App`
+- App (Flutter, cross-platform): `HuariqueHub/HuariqueHub-AppFlutter`
+---
+
 ### 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
 
+El backend de PuntoSabor está desarrollado en **.NET 8 / C#**, desplegado al **100% en Railway** (contenedor Docker + base de datos MySQL 8), accesible públicamente.
+ 
+| Servicio | Endpoints principales | Estado |
+|---|---|---|
+| Auth | `POST /auth/login`, `POST /auth/forgot-password` | Integrado |
+| Users | `POST /users`, `GET /users`, `GET/PATCH/DELETE /auth/users/{id}` | Integrado |
+| Huariques | `GET /huariques`, `GET /huariques/{id}`, `POST`, `PATCH`, `DELETE /huariques/{id}`, `GET /huariques/suggestions` | Integrado |
+| Categories | `GET /categories` | Integrado |
+| Reviews | `GET /reviews`, `POST /reviews` | Integrado |
+| Preferences | `GET /preferences`, `PUT /preferences` | Integrado |
+| Notifications | `GET /notifications`, `PATCH /notifications/{id}/read` | Integrado |
+| Plans / Subscriptions | `GET /plans`, `GET/POST /subscriptions` | Integrado |
+| Promos | `GET/POST/PATCH/DELETE /promos`, `POST /promos/{id}/use` | Integrado |
+| Reports | `POST /reports` | Integrado |
+ 
+**Evidencia de despliegue:**
+- Backend público: https://huariquehub-backend.up.railway.app
+- Repositorio: https://github.com/HuariqueHub/HuariqueHub-Backend
+---
+
 ### 5.2.7. RESTful API documentation
+
+La documentación de la API está publicada mediante **Swagger/OpenAPI**, accesible directamente desde el navegador:
+ 
+📄 **Swagger:** https://huariquehub-backend.up.railway.app/swagger
+ 
+Esta documentación cubre todos los servicios integrados durante los tres sprints: huariques, usuarios, categorías, reseñas, preferencias, notificaciones, planes, suscripciones, promociones y reportes — permitiendo consultar contratos, parámetros y respuestas de cada endpoint.
 
 ### 5.2.8. Team Collaboration Insights
 
 ## 5.3. Video About-the-Product
+
+En esta sección se presenta la primera versión del video About-the-Product de PuntoSabor, orientado a los visitantes del Landing Page y usuarios potenciales de la aplicación.
+
+![alt text](assets/aboutProduct.png)
+
+**URL del video:** https://drive.google.com/drive/folders/1Iqb5Lz3YxKQMyos2Oyqczd73CZMvspKV?usp=drive_link
+
+**Duración:** 2 minutos
 
 # Capítulo VI: Product Verification & Validation
 
