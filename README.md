@@ -445,7 +445,69 @@ link: https://punto-sabor-front.vercel.app
 
 ### 5.2.4. Acuerdo de Servicio - SaaS
 
+El presente Acuerdo de Servicio establece los derechos, obligaciones y restricciones aplicables a los usuarios de **PuntoSabor**, plataforma tecnológica desarrollada por el equipo **HuariApp** en el marco de un proyecto académico. Su objetivo es garantizar transparencia en el uso del servicio, tanto para los usuarios que buscan huariques (Exploradores Gastronómicos) como para los propietarios que registran y gestionan su negocio (Dueños de Huarique). Este documento se integra públicamente en la sección "Términos y Condiciones" del Landing Page, enlazada desde el pie de página (footer) del sitio, así como desde el flujo de registro de la aplicación móvil (`TermsConditionsScreen` en AppFlutter), unificando y ampliando el contenido ya esbozado en dicha pantalla con el detalle completo de derechos, obligaciones, planes de membresía y política de cancelación que exige este acuerdo. Su redacción sigue los principios de responsabilidad ética y profesional del código de ética de la ingeniería de software de ACM/IEEE y del Colegio de Ingenieros del Perú (CIP), priorizando la claridad hacia el usuario por sobre el interés unilateral de la plataforma.
 
+**1. Aceptación del Acuerdo**
+
+Al crear una cuenta, registrar un huarique o utilizar cualquier funcionalidad de PuntoSabor (web, aplicación móvil o landing page), el usuario declara haber leído, entendido y aceptado los términos aquí descritos. Si el usuario no está de acuerdo con alguna disposición, debe abstenerse de utilizar la plataforma.
+
+**2. Descripción del Servicio**
+
+PuntoSabor es una plataforma que conecta a Exploradores Gastronómicos con huariques (negocios de comida tradicional), permitiendo la búsqueda geolocalizada de locales, la publicación y consulta de reseñas, la gestión de perfiles de negocio, y el acceso a planes de membresía para incrementar la visibilidad de un huarique dentro de la plataforma.
+
+**3. Cuentas de Usuario**
+
+- 3.1. Para acceder a las funcionalidades personalizadas de la plataforma, el usuario debe registrar una cuenta con un correo electrónico válido y una contraseña, la cual se almacena de forma cifrada y nunca en texto plano.
+- 3.2. El usuario es responsable de mantener la confidencialidad de sus credenciales y de toda actividad realizada desde su cuenta.
+- 3.3. El usuario puede solicitar la eliminación de su cuenta en cualquier momento desde la sección de perfil, lo cual cierra su sesión de forma permanente.
+**4. Derechos y Obligaciones del Explorador Gastronómico**
+
+- 4.1. El explorador puede buscar, filtrar y visualizar huariques, guardar favoritos, publicar reseñas y calificaciones, y configurar sus preferencias de recomendación.
+- 4.2. Las reseñas publicadas deben reflejar experiencias reales del usuario y no deben contener lenguaje ofensivo, contenido falso o información que perjudique injustamente a un negocio. PuntoSabor se reserva el derecho de moderar o retirar reseñas que incumplan esta condición.
+- 4.3. El explorador puede reportar información incorrecta sobre un huarique (horarios, ubicación, datos de contacto), reporte que será revisado por el equipo antes de reflejarse como cambio en la plataforma.
+**5. Derechos y Obligaciones del Dueño de Huarique**
+
+- 5.1. El dueño puede registrar uno o más huariques, incluyendo nombre, categoría, ubicación, horarios, fotografías y descripción del negocio.
+- 5.2. El dueño es responsable de la veracidad de la información publicada sobre su negocio (precios, horarios de atención, disponibilidad de delivery/takeaway/dine-in).
+- 5.3. El dueño puede responder a las reseñas recibidas y recibir notificaciones cuando su huarique reciba nuevas calificaciones o comentarios.
+- 5.4. El dueño puede optar por un plan de membresía (ver sección 6) para acceder a beneficios adicionales de visibilidad.
+**6. Planes de Membresía y Pagos**
+
+PuntoSabor ofrece tres planes dirigidos a los Dueños de Huarique:
+
+| Plan | Precio | Beneficios principales |
+|---|---|---|
+| **Básico** | Gratis | Perfil de negocio completo, aparición en búsquedas, reseñas de clientes, galería de fotos, horarios y ubicación. |
+| **Premium** | $35/mes (15 días de prueba gratuita) | Todo lo del plan Básico, destacado en búsquedas, promociones destacadas, estadísticas detalladas, soporte prioritario, 3 publicaciones mensuales. |
+| **Exclusivo** | $50/mes | Todo lo del plan Premium, posición #1 en resultados, publicidad en home, gestión de eventos, consultoría personalizada, publicaciones ilimitadas. |
+
+- 6.1. Los pagos de los planes Premium y Exclusivo se procesan mediante tarjeta o billetera digital dentro de la plataforma, y generan un comprobante descargable por parte del dueño.
+- 6.2. **Cancelación:** el dueño puede cancelar su membresía en cualquier momento desde su panel. Al cancelar, el plan permanece activo con todos sus beneficios hasta el final del periodo ya pagado; al concluir dicho periodo, la suscripción no se renueva automáticamente y el perfil del negocio vuelve a las condiciones del plan Básico.
+- 6.3. **Reembolsos:** PuntoSabor no realiza reembolsos parciales ni totales por cancelaciones realizadas dentro de un periodo de facturación ya iniciado.
+- 6.4. El incumplimiento de pago de un periodo vigente puede resultar en la suspensión de los beneficios del plan contratado hasta la regularización del mismo.
+**7. Contenido Generado por el Usuario**
+
+Al publicar reseñas, fotografías o cualquier otro contenido en PuntoSabor, el usuario otorga a la plataforma una licencia no exclusiva para mostrar dicho contenido dentro del servicio, con el único fin de operar y promocionar la plataforma. El usuario mantiene la titularidad de su contenido y puede solicitar su eliminación.
+
+**8. Privacidad y Protección de Datos**
+
+El tratamiento de los datos personales de los usuarios se rige según lo descrito en la Política de Privacidad de PuntoSabor, disponible en el mismo footer del Landing Page, cumpliendo con los principios de la Ley N° 29733, Ley de Protección de Datos Personales del Perú.
+
+**9. Limitación de Responsabilidad**
+
+PuntoSabor actúa como intermediario tecnológico entre exploradores y huariques; no participa directamente en la preparación de alimentos ni en la atención presencial de los negocios listados, por lo que no es responsable de la calidad del servicio, higiene o experiencia brindada por cada huarique. La plataforma tampoco garantiza la disponibilidad ininterrumpida del servicio, al tratarse de un producto en desarrollo continuo dentro de un contexto académico.
+
+**10. Modificaciones al Acuerdo**
+
+PuntoSabor podrá actualizar este Acuerdo de Servicio en cualquier momento para reflejar cambios en la plataforma o en la normativa aplicable. Las modificaciones relevantes serán comunicadas mediante un aviso visible en el Landing Page y/o la aplicación.
+
+**11. Legislación Aplicable**
+
+Este Acuerdo se rige por las leyes de la República del Perú. Cualquier controversia derivada de su interpretación o cumplimiento será resuelta conforme a la legislación peruana vigente.
+
+**12. Contacto**
+
+Para consultas relacionadas con este Acuerdo de Servicio, el usuario puede escribir a **contacto@puntosabor.com** o comunicarse al **+51 963 179 684**.
 
 ### 5.2.5. Implemented Native-Mobile Application Evidence
 
