@@ -53,7 +53,11 @@ Proyecto
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | --- | --- | --- | --- |
-|  |  |  |  |
+| 0.1.0 | 09/09/206 | @CesarJrCR | docs: Agregar todos los puntos del informe |
+| 0.1.1 | 13/09/206 | @CesarJrCR | docs: Agregar contenido para todos los capitulos |
+| 0.1.2 | 13/09/206 | @CarlosAlb101 | docs: Agregar diagramas de clase de base de datos |
+| 0.1.3 | 13/09/206 | @u202410772 | docs: Agregar userflows |
+| 0.1.4 | 15/09/206 | @br1rodolfo| docs: Agragar style guidelines |
 
 # Project Report Collaboration Insights
 
