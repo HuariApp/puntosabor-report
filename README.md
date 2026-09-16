@@ -1,2 +1,742 @@
-# puntosabor-report
-Deocumentation of PuntoSabor
+
+<div align="center">
+  
+<img src="./assets/upc-logo.png" alt="UPC Logo" width="150px">  
+
+
+
+Universidad Peruana de Ciencias Aplicadas
+
+Carrera de Ingeniería de Software
+
+**1ASI0732**
+
+**Diseño de Experimentos de Ingeniería de Software**
+
+NRC
+
+**9112**
+
+**Informe del Trabajo Final**
+
+Docente
+
+**Lennin Percy Cenas Vasquez**
+
+Equipo
+
+**HuariApp**
+
+Proyecto
+
+**PuntoSabor**
+
+**Integrantes**
+
+| Código | Apellidos y Nombres |
+| --- | --- |
+| u20241d995 | Cesar Jair Contreras Rojas |
+| u202321843 | Delgado Carrasco, Schneider |
+| u202312700 | Lopez Goitia, Carlos Alberto |
+| u202411282 | Montalván Palomino, Bruno Rodolfo |
+| u202410772 | Razuri Alvarez, Matias Francesco |
+
+**Período 202602**
+
+**Setiembre 2026**
+
+</div>
+
+---
+
+# Registro de versiones del informe
+
+| Versión | Fecha | Autor | Descripción de modificación |
+| --- | --- | --- | --- |
+| 0.1.0 | 09/09/206 | @CesarJrCR | docs: Agregar todos los puntos del informe |
+| 0.1.1 | 13/09/206 | @CesarJrCR | docs: Agregar contenido para todos los capitulos |
+| 0.1.2 | 13/09/206 | @CarlosAlb101 | docs: Agregar diagramas de clase de base de datos |
+| 0.1.3 | 13/09/206 | @u202410772 | docs: Agregar userflows |
+| 0.1.4 | 15/09/206 | @br1rodolfo| docs: Agragar style guidelines |
+
+# Project Report Collaboration Insights
+
+**Repositorio de la documentación del proyecto:** https://github.com/HuariApp/puntosabor-report.git
+
+<img src="assets/Insight.png" alt="Collaboration Insigths">
+
+# Contenido
+
+- [Capítulo I: Introducción](#capítulo-i-introducción)
+    - [1.1. Startup Profile](#11-startup-profile)
+        - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
+        - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
+    - [1.2. Solution Profile](#12-solution-profile)
+        - [1.2.1. Antecedentes y problemática](#121-antecedentes-y-problemática)
+        - [1.2.2. Lean UX Process](#122-lean-ux-process)
+            - [1.2.2.1. Lean UX Problem Statements](#1221-lean-ux-problem-statements)
+            - [1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)
+            - [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
+            - [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
+    - [1.3. Segmentos objetivo](#13-segmentos-objetivo)
+- [Capítulo II: Requirements Elicitation & Analysis](#capítulo-ii-requirements-elicitation--analysis)
+    - [2.1. Competidores](#21-competidores)
+        - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
+        - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
+    - [2.2. Entrevistas](#22-entrevistas)
+        - [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
+        - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
+        - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
+    - [2.3. Needfinding](#23-needfinding)
+        - [2.3.1. User Personas](#231-user-personas)
+        - [2.3.2. User Task Matrix](#232-user-task-matrix)
+        - [2.3.3. User Journey Mapping](#233-user-journey-mapping)
+        - [2.3.4. Empathy Mapping](#234-empathy-mapping)
+        - [2.3.5. As-is Scenario Mapping](#235-as-is-scenario-mapping)
+    - [2.4. Ubiquitous Language](#24-ubiquitous-language)
+- [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification)
+    - [3.1. To-Be Scenario Mapping](#31-to-be-scenario-mapping)
+    - [3.2. User Stories](#32-user-stories)
+    - [3.3. Product Backlog](#33-product-backlog)
+    - [3.4. Impact Mapping](#34-impact-mapping)
+- [Capítulo IV: Product Design](#capítulo-iv-product-design)
+    - [4.1. Style Guidelines](#41-style-guidelines)
+        - [4.1.1. General Style Guidelines](#411-general-style-guidelines)
+        - [4.1.2. Web Style Guidelines](#412-web-style-guidelines)
+        - [4.1.3. Mobile Style Guidelines](#413-mobile-style-guidelines)
+            - [4.1.3.1. iOS Mobile Style Guidelines](#4131-ios-mobile-style-guidelines)
+            - [4.1.3.2. Android Mobile Style Guidelines](#4132-android-mobile-style-guidelines)
+    - [4.2. Information Architecture](#42-information-architecture)
+        - [4.2.1. Organization Systems](#421-organization-systems)
+        - [4.2.2. Labeling Systems](#422-labeling-systems)
+        - [4.2.3. SEO Tags and Meta Tags](#423-seo-tags-and-meta-tags)
+        - [4.2.4. Searching Systems](#424-searching-systems)
+        - [4.2.5. Navigation Systems](#425-navigation-systems)
+    - [4.3. Landing Page UI Design](#43-landing-page-ui-design)
+        - [4.3.1. Landing Page Wireframe](#431-landing-page-wireframe)
+        - [4.3.2. Landing Page Mock-up](#432-landing-page-mock-up)
+    - [4.4. Mobile Applications UX/UI Design](#44-mobile-applications-uxui-design)
+        - [4.4.1. Mobile Applications Wireframes](#441-mobile-applications-wireframes)
+        - [4.4.2. Mobile Applications Wireflow Diagrams](#442-mobile-applications-wireflow-diagrams)
+        - [4.4.3. Mobile Applications Mock-ups](#443-mobile-applications-mock-ups)
+        - [4.4.4. Mobile Applications User Flow Diagrams](#444-mobile-applications-user-flow-diagrams)
+    - [4.5. Mobile Applications Prototyping](#45-mobile-applications-prototyping)
+        - [4.5.1. Android Mobile Applications Prototyping](#451-android-mobile-applications-prototyping)
+        - [4.5.2. iOS Mobile Applications Prototyping](#452-ios-mobile-applications-prototyping)
+    - [4.6. Web Applications UX/UI Design](#46-web-applications-uxui-design)
+        - [4.6.1. Web Applications Wireframes](#461-web-applications-wireframes)
+        - [4.6.2. Web Applications Wireflow Diagrams](#462-web-applications-wireflow-diagrams)
+        - [4.6.3. Web Applications Mock-ups](#463-web-applications-mock-ups)
+        - [4.6.4. Web Applications User Flow Diagrams](#464-web-applications-user-flow-diagrams)
+    - [4.7. Web Applications Prototyping](#47-web-applications-prototyping)
+    - [4.8. Domain-Driven Software Architecture](#48-domain-driven-software-architecture)
+        - [4.8.1. Software Architecture Context Diagram](#481-software-architecture-context-diagram)
+        - [4.8.2. Software Architecture Container Diagrams](#482-software-architecture-container-diagrams)
+        - [4.8.3. Software Architecture Components Diagrams](#483-software-architecture-components-diagrams)
+    - [4.9. Software Object-Oriented Design](#49-software-object-oriented-design)
+        - [4.9.1. Class Diagrams](#491-class-diagrams)
+        - [4.9.2. Class Dictionary](#492-class-dictionary)
+    - [4.10. Database Design](#410-database-design)
+        - [4.10.1. Relational/Non-Relational Database Diagram](#4101-relationalnon-relational-database-diagram)
+- [Capítulo V: Product Implementation](#capítulo-v-product-implementation)
+    - [5.1. Software Configuration Management](#51-software-configuration-management)
+        - [5.1.1. Software Development Environment Configuration](#511-software-development-environment-configuration)
+        - [5.1.2. Source Code Management](#512-source-code-management)
+        - [5.1.3. Source Code Style Guide & Conventions](#513-source-code-style-guide--conventions)
+        - [5.1.4. Software Deployment Configuration](#514-software-deployment-configuration)
+    - [5.2. Product Implementation & Deployment](#52-product-implementation--deployment)
+        - [5.2.1. Sprint Backlogs](#521-sprint-backlogs)
+        - [5.2.2. Implemented Landing Page Evidence](#522-implemented-landing-page-evidence)
+        - [5.2.3. Implemented Frontend-Web Application Evidence](#523-implemented-frontend-web-application-evidence)
+        - [5.2.4. Acuerdo de Servicio - SaaS](#524-acuerdo-de-servicio---saas)
+        - [5.2.5. Implemented Native-Mobile Application Evidence](#525-implemented-native-mobile-application-evidence)
+        - [5.2.6. Implemented RESTful API and/or Serverless Backend Evidence](#526-implemented-restful-api-andor-serverless-backend-evidence)
+        - [5.2.7. RESTful API documentation](#527-restful-api-documentation)
+        - [5.2.8. Team Collaboration Insights](#528-team-collaboration-insights)
+    - [5.3. Video About-the-Product](#53-video-about-the-product)
+- [Capítulo VI: Product Verification & Validation](#capítulo-vi-product-verification--validation)
+    - [6.1. Testing Suites & Validation](#61-testing-suites--validation)
+        - [6.1.1. Core Entities Unit Tests](#611-core-entities-unit-tests)
+        - [6.1.2. Core Integration Tests](#612-core-integration-tests)
+        - [6.1.3. Core Behavior-Driven Development](#613-core-behavior-driven-development)
+        - [6.1.4. Core System Tests](#614-core-system-tests)
+    - [6.2. Static testing & Verification](#62-static-testing--verification)
+        - [6.2.1. Static Code Analysis](#621-static-code-analysis)
+            - [6.2.1.1. Coding standard & Code conventions](#6211-coding-standard--code-conventions)
+            - [6.2.1.2. Code Quality & Code Security](#6212-code-quality--code-security)
+        - [6.2.2. Reviews](#622-reviews)
+    - [6.3. Validation Interviews](#63-validation-interviews)
+        - [6.3.1. Diseño de Entrevistas](#631-diseño-de-entrevistas)
+        - [6.3.2. Registro de Entrevistas](#632-registro-de-entrevistas)
+        - [6.3.3. Evaluaciones según heurísticas](#633-evaluaciones-según-heurísticas)
+    - [6.4. Auditoría de Experiencias de Usuario](#64-auditoría-de-experiencias-de-usuario)
+        - [6.4.1. Auditoría realizada](#641-auditoría-realizada)
+            - [6.4.1.1. Información del grupo auditado](#6411-información-del-grupo-auditado)
+            - [6.4.1.2. Cronograma de auditoría realizada](#6412-cronograma-de-auditoría-realizada)
+            - [6.4.1.3. Contenido de auditoría realizada](#6413-contenido-de-auditoría-realizada)
+        - [6.4.2. Auditoría recibida](#642-auditoría-recibida)
+            - [6.4.2.1. Información del grupo auditor](#6421-información-del-grupo-auditor)
+            - [6.4.2.2. Cronograma de auditoría recibida](#6422-cronograma-de-auditoría-recibida)
+            - [6.4.2.3. Contenido de auditoría recibida](#6423-contenido-de-auditoría-recibida)
+            - [6.4.2.4. Resumen de modificaciones para subsanar hallazgos](#6424-resumen-de-modificaciones-para-subsanar-hallazgos)
+- [Capítulo VII: DevOps Practices](#capítulo-vii-devops-practices)
+    - [7.1. Continuous Integration](#71-continuous-integration)
+        - [7.1.1. Tools and Practices](#711-tools-and-practices)
+        - [7.1.2. Build & Test Suite Pipeline Components](#712-build--test-suite-pipeline-components)
+    - [7.2. Continuous Delivery](#72-continuous-delivery)
+        - [7.2.1. Tools and Practices](#721-tools-and-practices)
+        - [7.2.2. Stages Deployment Pipeline Components](#722-stages-deployment-pipeline-components)
+    - [7.3. Continuous deployment](#73-continuous-deployment)
+        - [7.3.1. Tools and Practices](#731-tools-and-practices)
+        - [7.3.2. Production Deployment Pipeline Components](#732-production-deployment-pipeline-components)
+    - [7.4. Continuous Monitoring](#74-continuous-monitoring)
+        - [7.4.1. Tools and Practices](#741-tools-and-practices)
+        - [7.4.2. Monitoring Pipeline Components](#742-monitoring-pipeline-components)
+        - [7.4.3. Alerting Pipeline Components](#743-alerting-pipeline-components)
+        - [7.4.4. Notification Pipeline Components](#744-notification-pipeline-components)
+- [Capítulo VIII: Experiment-Driven Development](#capítulo-viii-experiment-driven-development)
+    - [8.1. Experiment Planning](#81-experiment-planning)
+        - [8.1.1. As-Is Summary](#811-as-is-summary)
+        - [8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims](#812-raw-material-assumptions-knowledge-gaps-ideas-claims)
+        - [8.1.3. Experiment-Ready Questions](#813-experiment-ready-questions)
+        - [8.1.4. Question Backlog](#814-question-backlog)
+        - [8.1.5. Experiment Cards](#815-experiment-cards)
+    - [8.2. Experiment Design](#82-experiment-design)
+        - [8.2.1. Hypotheses](#821-hypotheses)
+        - [8.2.2. Domain Business Metrics](#822-domain-business-metrics)
+        - [8.2.3. Measures](#823-measures)
+        - [8.2.4. Conditions](#824-conditions)
+        - [8.2.5. Scale Calculations and Decisions](#825-scale-calculations-and-decisions)
+        - [8.2.6. Methods Selection](#826-methods-selection)
+        - [8.2.7. Data Analytics: Goals, KPIs and Metrics Selection](#827-data-analytics-goals-kpis-and-metrics-selection)
+        - [8.2.8. Web and Mobile Tracking Plan](#828-web-and-mobile-tracking-plan)
+    - [8.3. Experimentation](#83-experimentation)
+        - [8.3.1. To-Be User Stories](#831-to-be-user-stories)
+        - [8.3.2. To-Be Product Backlog](#832-to-be-product-backlog)
+        - [8.3.3. Pipeline-supported, Experiment-Driven To-Be Software Platform Lifecycle](#833-pipeline-supported-experiment-driven-to-be-software-platform-lifecycle)
+            - [8.3.3.1. To-Be Sprint Backlogs](#8331-to-be-sprint-backlogs)
+            - [8.3.3.2. Implemented To-Be Landing Page Evidence](#8332-implemented-to-be-landing-page-evidence)
+            - [8.3.3.3. Implemented To-Be Frontend-Web Application Evidence](#8333-implemented-to-be-frontend-web-application-evidence)
+            - [8.3.3.4. Implemented To-Be Native-Mobile Application Evidence](#8334-implemented-to-be-native-mobile-application-evidence)
+            - [8.3.3.5. Implemented To-Be RESTful API and/or Serverless Backend Evidence](#8335-implemented-to-be-restful-api-andor-serverless-backend-evidence)
+            - [8.3.3.6. Team Collaboration Insights](#8336-team-collaboration-insights)
+            - [Matriz de Evaluación Ética y de Impacto](#matriz-de-evaluación-ética-y-de-impacto)
+        - [8.3.4. To-Be Validation Interviews](#834-to-be-validation-interviews)
+            - [8.3.4.1. Diseño de Entrevistas](#8341-diseño-de-entrevistas)
+            - [8.3.4.2. Registro de Entrevistas](#8342-registro-de-entrevistas)
+    - [8.4. Experiment Aftermath & Analysis](#84-experiment-aftermath--analysis)
+        - [8.4.1. Analysis and Interpretation of Results](#841-analysis-and-interpretation-of-results)
+        - [8.4.2. Re-scored and Re-prioritized Question Backlog](#842-re-scored-and-re-prioritized-question-backlog)
+    - [8.5. Continuous Learning](#85-continuous-learning)
+        - [8.5.1. Shareback Session Artifacts: Learning Workflow](#851-shareback-session-artifacts-learning-workflow)
+    - [8.6. To-Be Software Platform Pre-launch](#86-to-be-software-platform-pre-launch)
+        - [8.6.1. About-the-Product Intro Video](#861-about-the-product-intro-video)
+        - [8.6.2. Resumen usando Gees FrameWork](#862-resumen-usando-gees-framework)
+- [Conclusiones](#conclusiones)
+
+# Student Outcome
+
+| Criterio específico | Acciones realizadas | Conclusiones |
+| --- | --- | --- |
+| Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software | **Cesar Jair Contreras Rojas:** Realicé el procesamiento y análisis sistemático de las entrevistas a los segmentos objetivo (Exploradores Gastronómicos y Dueños de Huariques), garantizando el tratamiento confidencial y transparente de los datos recolectados, así como la interpretación objetiva de los puntos de dolor reportados por los usuarios.<br><br>**Bruno Rodolfo Montalván Palomino:** Redacté el Acuerdo de Servicio - SaaS (5.2.4), estableciendo de forma transparente los derechos y obligaciones de los usuarios, incluyendo la política de cancelación de membresías sin cláusulas ambiguas ni abusivas. También verifiqué que la documentación de Style Guidelines (4.1) reflejara con precisión el código real de las cuatro plataformas, corrigiendo datos (colores, tipografías, radios de componentes) que no coincidían con la implementación real.<br><br>**Matias Francesco Razuri Alvarez:** Se elaboraron los Wireframes, Wireflow Diagrams, Mock-ups y User Flow Diagrams de la aplicación web PuntoSabor, aplicando principios de diseño inclusivo y asegurando que las interfaces reflejen información veraz y accesible para los usuarios. Se respetaron convenciones de usabilidad y se documentaron los flujos con happy paths y unhappy paths, reconociendo que un diseño incorrecto puede generar experiencias engañosas o perjudiciales para el usuario final. Asimismo, se mejoró la documentación de secciones previas del informe para garantizar mayor claridad y coherencia en la información presentada.<br><br>**Lopez Goitia, Carlos Alberto:** Elaboré el apartado de seguridad y privacidad para la gestión de usuarios, garantizando que el almacenamiento de credenciales y datos sensibles de los dueños de huariques cumpla con estándares de encriptación y protección de datos personales.<br><br>**Delgado Carrasco, Schneider:** Diseñé los modelos de base de datos relacionales y no relacionales asegurando la integridad referencial y estableciendo restricciones de acceso éticas para proteger las métricas comerciales internas de cada negocio frente a terceros. | **AV1:** En conjunto, el equipo ha definido la problemática del negocio y los perfiles de solución garantizando el manejo ético y confidencial de la información obtenida en las entrevistas a los segmentos objetivo, delimitando con honestidad técnica el alcance de la plataforma. |
+| Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales | **Cesar Jair Contreras Rojas:** Sinteticé las necesidades, frustraciones y expectativas clave identificadas en el análisis de entrevistas para evaluar el impacto socioeconómico que genera la plataforma en la visibilización de pequeños huariques y en la mejora de la experiencia de descubrimiento gastronómico.<br><br>**Bruno Rodolfo Montalván Palomino:** Al definir la política de cancelación y reembolsos en el Acuerdo de Servicio, evalué su impacto económico sobre los dueños de huarique, un segmento con recursos limitados, buscando que la condición fuera razonable y no perjudicara a los pequeños emprendedores que el proyecto busca beneficiar.<br><br>**Matias Francesco Razuri Alvarez:** Al diseñar los User Flow Diagrams y Wireflow Diagrams, se consideró el impacto social de la plataforma PuntoSabor en comunidades locales, dado que la solución busca visibilizar y apoyar a pequeños negocios gastronómicos (huariques) que operan en contextos económicos vulnerables. Se diseñaron flujos para el segmento propietario que facilitan el acceso a herramientas digitales sin requerir conocimientos técnicos avanzados, contribuyendo a la inclusión digital de emprendedores locales.<br><br>**Lopez Goitia, Carlos Alberto:** Evalué el impacto de la latencia y el consumo de datos móviles en la app, optimizando las peticiones al servidor para que los usuarios finales con planes de datos limitados puedan navegar por el catálogo sin un consumo excesivo de recursos.<br><br>**Delgado Carrasco, Schneider:** Analicé la viabilidad técnica y el costo de infraestructura en la nube para el despliegue del backend, asegurando que los costos operativos permitan mantener tarifas accesibles para los microempresarios gastronómicos. | **AV1:** De forma colaborativa, el equipo evaluó el impacto socioeconómico y ambiental de la solución mediante el análisis competitivo, el desarrollo del Lean UX Canvas y la definición de escenarios As-Is y To-Be orientados a optimizar recursos. |
+| Participa en equipos multidisciplinarios con eficacia, eficiencia y objetividad, en el marco de un proyecto en soluciones de sistemas de información | **Cesar Jair Contreras Rojas:** Elaboré los diagramas de componentes de la arquitectura del sistema para definir la estructura modular de la solución y colaboré en la gestión organizada de los entregables técnicos requeridos por el equipo.<br><br>**Bruno Rodolfo Montalván Palomino:** Colaboré en el repositorio compartido de GitHub aportando en secciones de Style Guidelines, To-Be Scenario Mapping y el Acuerdo de Servicio, coordinando con commits siguiendo Conventional Commits y validando la información contra el trabajo ya entregado por otros integrantes antes de escribir contenido nuevo.<br><br>**Matias Francesco Razuri Alvarez:** Se colaboró activamente con el equipo en la definición del diseño de la aplicación web, asumiendo la responsabilidad de las secciones 4.6.1 (Wireframes), 4.6.2 (Wireflow Diagrams), 4.6.3 (Mock-ups) y 4.6.4 (User Flow Diagrams). Se coordinó con los demás integrantes para que los flujos diseñados fueran consistentes con los User Stories y Epics definidos por el equipo, asegurando coherencia entre el diseño y los requisitos funcionales establecidos colectivamente.<br><br>**Lopez Goitia, Carlos Alberto:** Coordiné la integración de la API REST del backend con los componentes de la interfaz móvil, asegurando que las respuestas de los endpoints coincidan con la estructura de datos requerida por el equipo de frontend.<br><br>**Delgado Carrasco, Schneider:** Participé en la estructuración del Product Backlog técnico, desglosando los requerimientos del sistema en User Stories orientadas a la arquitectura e implementando pruebas de rendimiento para validar el backend. | **AV1:** El grupo trabajó de manera coordinada organizando el Product Backlog, definiendo la arquitectura del sistema (DDD), los diagramas de base de datos y la gestión del código fuente en entornos compartidos para garantizar entregables técnicos eficientes. |
+| Conoce al menos un sector empresarial o dominio de aplicación de soluciones de tecnologías de la información. | **Cesar Jair Contreras Rojas:** Modelé los wireflows de la aplicación conectando las pantallas clave de la experiencia de usuario y traduciendo directamente los requerimientos del dominio de los huariques y exploradores gastronómicos en un flujo de navegación intuitivo.<br><br>**Bruno Rodolfo Montalván Palomino:** Profundicé en el dominio de la gastronomía local informal (huariques) al redactar el Acuerdo de Servicio y validar la documentación de diseño, familiarizándome con dinámicas del sector como los modelos de membresía para pequeños negocios y sus limitaciones tecnológicas típicas.<br><br>**Matias Francesco Razuri Alvarez:** A través del diseño de los flujos y pantallas de PuntoSabor, se profundizó en el dominio de la gastronomía local peruana, específicamente en el ecosistema de los huariques como tipo de negocio con características propias: informalidad, dependencia de la clientela local, ausencia de presencia digital y necesidad de herramientas simples. Se diseñaron flujos diferenciados para dos segmentos: el explorador (usuario consumidor) y el propietario (dueño del huarique), reflejando un entendimiento claro de sus necesidades y comportamientos dentro de este dominio.<br><br>**Lopez Goitia, Carlos Alberto:** Modelé el subdominio de geolocalización y búsqueda por cercanía, traduciendo las reglas de negocio del sector gastronómico sobre radio de alcance y disponibilidad de platos en tiempo real.<br><br>**Delgado Carrasco, Schneider:** Estructuré el Bounded Context de gestión de menús y promociones, alineando el esquema de datos a la dinámica operativa real de los huariques y su constante cambio de oferta diaria. | **AV1:** El equipo investigó a fondo el dominio del mercado mediante el levantamiento de requerimientos, la construcción del Ubiquitous Language, el perfilado de User Personas y la estructuración del Impact Mapping adaptado a las necesidades del sector. |
+| Conocimientos de nuevos métodos de colaboración y comunicación | **Cesar Jair Contreras Rojas:** Utilicé herramientas modernas de diseño y maquetación colaborativa para la creación iterativa de los wireflows y coordiné la integración del análisis de entrevistas en la documentación del repositorio.<br><br>**Bruno Rodolfo Montalván Palomino:** Utilicé GitHub para control de versiones y commits siguiendo buenas prácticas de gestión para asegurar que la documentación se mantenga precisa.<br><br>**Matias Francesco Razuri Alvarez:** Se utilizaron herramientas modernas de diseño y documentación para elaborar los artefactos de UX/UI de la entrega, incluyendo la generación de Mock-ups en HTML para facilitar su importación a Figma mediante la técnica "HTML to Figma", optimizando los tiempos de trabajo colaborativo. Se aplicaron convenciones de nomenclatura y estructura acordadas con el equipo para mantener consistencia en los archivos entregados. Además, se mejoró la documentación de secciones previas del informe aplicando las convenciones de Markdown y GitFlow definidas por el equipo en el repositorio de GitHub.<br><br>**Lopez Goitia, Carlos Alberto:** Implementé flujos de integración continua (CI/CD) utilizando GitHub Actions para automatizar las pruebas unitarias y la validación de código antes de mergear ramas a la producción.<br><br>**Delgado Carrasco, Schneider:** Utilicé herramientas de documentación de APIs como Postman y Swagger para mantener un catálogo de endpoints actualizado y accesible de forma transparente para todo el equipo de desarrollo. | **AV1:** En conjunto, el equipo adoptó metodologías ágiles e innovadoras como Lean UX Process, diagramado UI/UX en herramientas colaborativas, y flujos de trabajo basados en Source Code Management y DevOps para asegurar una comunicación fluida e integrada. |
+
+# Capítulo I: Introducción
+
+## 1.1. Startup Profile
+
+HuariApp es una startup dedicada a la creación de soluciones tecnológicas diseñadas para impulsar la competitividad y el crecimiento de pequeños comercios locales, con un énfasis particular en el rubro gastronómico. Su propuesta central, PuntoSabor, consiste en una plataforma móvil que vincula a los comensales con "huariques", establecimientos de cocina tradicional que destacan por su autenticidad y calidad, pero que suelen carecer de exposición en el entorno digital.
+
+El proyecto surge para resolver la brecha de visibilidad que enfrentan estos negocios frente a las grandes cadenas en las aplicaciones convencionales. 
+
+Mediante una interfaz intuitiva, la herramienta permite a la comunidad descubrir y recomendar estos locales, validando un modelo de negocio sostenible basado en planes de visibilidad y membresías que fortalecen el ecosistema emprendedor local.
+
+### 1.1.1. Descripción de la Startup
+
+### 1.1.2. Perfiles de integrantes del equipo
+<table border="1">
+  <thead>
+    <tr>
+      <th>Foto</th>
+      <th>Nombre completo</th>
+      <th>Código</th>
+      <th>Carrera</th>
+      <th>Habilidades técnicas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><img src="assets/chapter-1/members/Matias.png"
+       alt="Matias Francesco Razuri Alvarez"></td>
+      <td>Matias Francesco Razuri Alvarez</td>
+      <td>u202410772</td>
+      <td>Ingeniería de Software</td>
+      <td>Soy un estudiante de Ingeniería de Software, tengo conocimientos en lenguaje C++, Python, tecnologías web (HTML/CSS), bases de datos SQL y NoSQL (MongoDB), integración de APIs, patrones de diseño de software y metodologías ágiles (Scrum). Tengo varias habilidades en trabajo en equipo, resolución de problemas, organización orientada a entregas anticipadas y apertura para incorporar diversos aportes en proyectos de software.</td>
+    </tr>
+    <tr>
+      <td><img src="assets/chapter-1/members/Bruno.jpg"
+       alt="Bruno Rodolfo Montalván Palomino"></td>
+      <td>Bruno Rodolfo Montalván Palomino</td>
+      <td>u202411282</td>
+      <td>Ingeniería de Software</td>
+      <td>Soy un estudiante de Ingeniería de Software, con conocimientos en programación con Python, desarrollo Full Stack, bases de datos SQL y MongoDB, diseño y consumo de APIs, arquitectura de software, Git y control de versiones. Habilidades en análisis y resolución de problemas, diseño de soluciones, desarrollo de aplicaciones y trabajo colaborativo.</td>
+    </tr>
+    <tr>
+      <td>
+  <img src="assets/chapter-1/members/schneider.jpeg"
+       alt="Schneider Carlos Alberto Delgado Carrasco">
+</td>
+      <td>Schneider Carlos Alberto Delgado Carrasco</td>
+      <td>u202321843</td>
+      <td>Ingeniería de Software</td>
+      <td>Soy estudiante de Ingeniería de Software en la UPC, con conocimientos en programación y bases de datos. Me interesa la tecnología, la innovación y el desarrollo de soluciones digitales que mejoren la vida de las personas. Estoy comprometido con mi formación y busco nuevos retos que me permitan crecer a nivel académico y personal.</td>
+    </tr>
+            <tr>
+      <td>
+  <img src="assets/chapter-1/members/cesar.png"
+       alt="Cesar Jair Contreras Rojas">
+</td>
+      <td>Cesar Jair Contreras Rojas</td>
+      <td>u20241d995</td>
+      <td>Ingeniería de Software</td>
+      <td>Soy un estudiante de ing. de software de la UPC, tengo conocimientos de programación al igual que todos mis compañeros. Me gusta encontrar soluciones tecnológicas a problemas de mundo real</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+## 1.2. Solution Profile
+
+### 1.2.1. Antecedentes y problemática
+
+#### Las 5W's y 2H's
+
+#### What? (¿Qué?)
+El problema central radica en que los huariques, negocios gastronómicos pequeños y poco conocidos que ofrecen comida tradicional, tienen una presencia casi nula en el entorno digital, lo que impide que los consumidores puedan acceder fácilmente a alternativas de comida auténtica y a precios razonables más allá de los restaurantes con mayor popularidad.
+
+#### Why? (¿Por qué?)
+Los grandes establecimientos y cadenas dominan las plataformas de comida digitales gracias a su mayor capacidad de inversión y volumen de operaciones, desplazando a los huariques que no disponen de los recursos para competir en ese terreno. Esto crea un vacío importante: los usuarios no logran encontrar estos lugares con facilidad, y los huariques pierden potenciales oportunidades de crecimiento.
+
+#### Where? (¿Dónde?)
+El fenómeno ocurre principalmente en zonas urbanas y comunidades donde los huariques tienen presencia física, pero carecen de representación digital. Se hace especialmente evidente en mercados hispanohablantes, donde la gastronomía local es culturalmente rica, pero aún escasamente digitalizada.
+
+#### When? (Cuándo?)
+Se trata de una problemática persistente, cuya gravedad ha aumentado con la acelerada transformación digital del mercado gastronómico en los últimos años.
+
+#### Who? (¿Quién?)
+Existen dos grupos directamente perjudicados:
+
+1. Los propietarios de huariques, quienes enfrentan dificultades para captar clientes y sostenerse frente a la competencia de restaurantes y cadenas con mayor presencia en medios digitales.
+
+2. Los usuarios que buscan experiencias gastronómicas locales, económicas y genuinas, pero no cuentan con herramientas digitales adecuadas para encontrarlas.
+
+#### How? (¿Cómo?)
+El problema se expresa en la escasa o inexistente promoción digital de estos negocios, su ausencia en aplicaciones y mapas de referencia, la poca interacción con posibles clientes y la carencia de una comunidad que los recomiende y divulgue.
+
+#### How much? (¿Cuánto?)
+Esta brecha representa no solo una oportunidad económica sin aprovechar para los dueños de huariques, sino también una pérdida del patrimonio gastronómico cultural. A escala de mercado, miles de negocios pequeños y millones de usuarios permanecen al margen del ecosistema digital gastronómico.
+
+### 1.2.2. Lean UX Process
+
+#### 1.2.2.1. Lean UX Problem Statements
+
+Cada enunciado sigue la estructura estandarizada de Lean UX: **situación actual → problema observado → consecuencia para el segmento → reencuadre como oportunidad**. De esta forma el problema queda delimitado, asociado a un segmento concreto y verificable, en lugar de presentarse como una necesidad general.
+
+**Problem Statement 1 — Explorador gastronómico**
+
+Las plataformas gastronómicas actuales (Google Maps, delivery, redes sociales) fueron diseñadas para conectar a las personas con lugares para comer. Sin embargo, hemos observado que estas plataformas priorizan restaurantes y cadenas con mayor inversión publicitaria, por lo que los huariques auténticos, cercanos y económicos quedan poco visibles o con información incompleta y desactualizada. Esto provoca que el explorador gastronómico invierta tiempo y no confíe en lo que encuentra al momento de elegir dónde comer. **¿Cómo podríamos ayudar a los exploradores gastronómicos a descubrir huariques auténticos y cercanos, con información confiable que respalde su decisión?**
+
+**Problem Statement 2 — Dueño o administrador de huarique**
+
+Las herramientas de promoción digital existentes fueron pensadas para negocios con presupuesto y experiencia técnica. Hemos observado que la mayoría de los dueños de huariques cuenta con recursos limitados y poca familiaridad con estas herramientas, por lo que no logran mantener su negocio visible ni actualizado en el entorno digital. Esto provoca que pierdan oportunidades de captar nuevos clientes frente a competidores con mayor presencia. **¿Cómo podríamos permitir que los dueños de huariques publiquen y gestionen su negocio de forma sencilla, sin procesos técnicos complejos, para aumentar su visibilidad?**
+
+**Problem Statement 3 — Plataforma PuntoSabor (negocio)**
+
+El mercado de aplicaciones gastronómicas está dominado por propuestas generalistas centradas en restaurantes y cadenas conocidas. Hemos observado que ningún actor relevante se especializa en huariques ni construye comunidad alrededor de la comida local auténtica, por lo que existe un segmento desatendido tanto de usuarios como de pequeños negocios. Esto representa una oportunidad de diferenciación y de generación de ingresos recurrentes que hoy nadie está capturando. **¿Cómo podríamos posicionar a PuntoSabor como la plataforma de referencia para descubrir huariques, mediante comunidad, visibilidad local y un modelo de membresías accesible?**
+
+#### 1.2.2.2. Lean UX Assumptions
+
+#### Business Assumptions
+- Se estima que PuntoSabor logrará convocar a un número considerable de dueños de huariques que buscan mayor visibilidad digital a través de membresías o planes publicitarios.
+
+- Se prevé que la implementación de planes de membresía o publicidad genere ingresos recurrentes y estables para la startup.
+
+- Se considera que el mercado gastronómico local está preparado para adoptar soluciones digitales accesibles que impulsen a los pequeños negocios y mejoren la experiencia de descubrimiento para los usuarios.
+
+- Se parte del supuesto de que una comunidad activa de usuarios y propietarios de huariques favorecerá el crecimiento orgánico y la fidelización dentro de la plataforma.
+
+#### User Assumptions
+- Se estima que los usuarios priorizan hallar opciones de comida local genuina, económica y diferente a las que ofrecen las grandes aplicaciones.
+
+- Se espera que los usuarios no solo exploren huariques a través de la app, sino que también contribuyan con calificaciones y reseñas que orienten a otros.
+
+- Se considera que una interfaz sencilla, combinada con acceso a fotografías, especialidades del lugar, rangos de precios y mapas integrados, motivará un uso frecuente de la plataforma.
+
+- Se supone que funciones como guardar favoritos y consultar rankings impulsarán a los usuarios a volver y recomendar PuntoSabor en su entorno cercano.
+
+- Se asume que los propietarios o administradores de huariques valorarán y encontrarán sencillo el proceso de registrar y gestionar su negocio dentro de la app, con miras a aumentar su visibilidad.
+
+- Se espera que estos usuarios proporcionen información completa y actualizada-fotos, especialidades, precios-para enriquecer la experiencia de quienes los visiten.
+
+- Se estima que beneficios como la membresía y la dinámica comunitaria fomentarán que los propietarios mantengan su perfil activo y atractivo.
+
+#### 1.2.2.3. Lean UX Hypothesis Statements
+
+- Creemos que ofrecer una plataforma fácil e intuitiva para descubrir huariques auténticos y económicos aumentará la cantidad de usuarios que visitan estos negocios. Sabremos que esto es cierto cuando al menos el 60% de los usuarios activos reporten haber visitado un huarique recomendado en la plataforma durante el primer mes de uso.
+
+- Creemos que permitir a los dueños de huariques registrar y gestionar su negocio con fotos, especialidades y precios incentivará su participación activa y mejorará la calidad del contenido disponible. Sabremos que esto es cierto cuando al menos el 50% de los huariques registrados actualicen su información o respondan a reseñas dentro de los primeros tres meses tras su registro.
+
+- Creemos que la integración de mapas y funciones de geolocalización facilitará a los usuarios encontrar huariques cercanos, aumentando la interacción y el uso recurrente de la app. Sabremos que esto es cierto cuando al menos el 70% de las búsquedas y accesos diarios incluyan el uso del mapa durante el primer mes de lanzamiento.
+
+- Creemos que un sistema confiable de reseñas y calificaciones incentivará la confianza en los usuarios y motivará a más personas a utilizar PuntoSabor como su app de referencia para descubrir huariques. Sabremos que esto es cierto cuando el 80% de los huariques tengan al menos cinco reseñas activas y una valoración promedio superior a 4 estrellas en los primeros tres meses.
+
+- Creemos que la oferta de planes de membresía y publicidad atraerá a suficientes dueños de huariques para generar ingresos recurrentes sostenibles. Sabremos que esto es cierto cuando el 30% de los huariques registrados contraten al menos un plan pago durante los primeros seis meses.
+
+#### 1.2.2.4. Lean UX Canvas
+
+![alt text](<assets/LeanUXCanvas-PuntoSabor.png>)
+
+## 1.3. Segmentos objetivo
+
+### Exploradores Gastronómicos
+
+- Edad: 18 a 40 años.
+
+- Estilo de vida: Activos, curiosos, buscan descubrir comida auténtica y económica.
+
+- Uso de tecnología: Frecuente, usuarios habituales de apps móviles y web para buscar lugares para comer.
+
+- Necesidad principal: Encontrar huariques poco conocidos con buena sazón y precios accesibles.
+
+- Beneficios buscados: Acceso a recomendaciones confiables, mapas con ubicación cercana, y sistema de reseñas para tomar decisiones informadas.
+
+### Dueños y Administradores de Huariques
+
+- Perfil: Emprendedores y pequeños negocios de comida tradicional o casera.
+
+- Necesidad principal: Promocionar su negocio, aumentar la visibilidad y atraer nuevos clientes de manera sencilla, accesible y rentable.
+
+- Beneficios buscados: Herramienta accesible para gestionar su información en la plataforma, recibir retroalimentación valiosa y utilizar planes de membresía o publicidad para crecer.
+
+# Capítulo II: Requirements Elicitation & Analysis
+
+## 2.1. Competidores
+
+### 2.1.1. Análisis competitivo
+
+### 2.1.2. Estrategias y tácticas frente a competidores
+
+## 2.2. Entrevistas
+
+### 2.2.1. Diseño de entrevistas
+
+### 2.2.2. Registro de entrevistas
+
+### 2.2.3. Análisis de entrevistas
+
+## 2.3. Needfinding
+
+### 2.3.1. User Personas
+
+### 2.3.2. User Task Matrix
+
+### 2.3.3. User Journey Mapping
+
+### 2.3.4. Empathy Mapping
+
+### 2.3.5. As-is Scenario Mapping
+
+## 2.4. Ubiquitous Language
+
+# Capítulo III: Requirements Specification
+
+## 3.1. To-Be Scenario Mapping
+
+## 3.2. User Stories
+
+## 3.3. Product Backlog
+
+## 3.4. Impact Mapping
+
+# Capítulo IV: Product Design
+
+## 4.1. Style Guidelines
+
+### 4.1.1. General Style Guidelines
+
+### 4.1.2. Web Style Guidelines
+
+### 4.1.3. Mobile Style Guidelines
+
+#### 4.1.3.1. iOS Mobile Style Guidelines
+
+#### 4.1.3.2. Android Mobile Style Guidelines
+
+## 4.2. Information Architecture
+
+### 4.2.1. Organization Systems
+
+### 4.2.2. Labeling Systems
+
+### 4.2.3. SEO Tags and Meta Tags
+
+### 4.2.4. Searching Systems
+
+### 4.2.5. Navigation Systems
+
+## 4.3. Landing Page UI Design
+
+### 4.3.1. Landing Page Wireframe
+
+### 4.3.2. Landing Page Mock-up
+
+## 4.4. Mobile Applications UX/UI Design
+
+### 4.4.1. Mobile Applications Wireframes
+
+### 4.4.2. Mobile Applications Wireflow Diagrams
+
+### 4.4.3. Mobile Applications Mock-ups
+
+### 4.4.4. Mobile Applications User Flow Diagrams
+
+## 4.5. Mobile Applications Prototyping
+
+### 4.5.1. Android Mobile Applications Prototyping
+
+### 4.5.2. iOS Mobile Applications Prototyping
+
+## 4.6. Web Applications UX/UI Design
+
+### 4.6.1. Web Applications Wireframes
+
+### 4.6.2. Web Applications Wireflow Diagrams
+
+### 4.6.3. Web Applications Mock-ups
+
+### 4.6.4. Web Applications User Flow Diagrams
+
+## 4.7. Web Applications Prototyping
+
+## 4.8. Domain-Driven Software Architecture
+
+### 4.8.1. Software Architecture Context Diagram
+
+### 4.8.2. Software Architecture Container Diagrams
+
+### 4.8.3. Software Architecture Components Diagrams
+
+## 4.9. Software Object-Oriented Design
+
+### 4.9.1. Class Diagrams
+
+### 4.9.2. Class Dictionary
+
+## 4.10. Database Design
+
+### 4.10.1. Relational/Non-Relational Database Diagram
+
+# Capítulo V: Product Implementation
+
+## 5.1. Software Configuration Management
+
+### 5.1.1. Software Development Environment Configuration
+
+### 5.1.2. Source Code Management
+
+### 5.1.3. Source Code Style Guide & Conventions
+
+### 5.1.4. Software Deployment Configuration
+
+## 5.2. Product Implementation & Deployment
+
+### 5.2.1. Sprint Backlogs
+
+### 5.2.2. Implemented Landing Page Evidence
+
+### 5.2.3. Implemented Frontend-Web Application Evidence
+
+### 5.2.4. Acuerdo de Servicio - SaaS
+
+### 5.2.5. Implemented Native-Mobile Application Evidence
+
+### 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
+
+### 5.2.7. RESTful API documentation
+
+### 5.2.8. Team Collaboration Insights
+
+## 5.3. Video About-the-Product
+
+# Capítulo VI: Product Verification & Validation
+
+## 6.1. Testing Suites & Validation
+
+### 6.1.1. Core Entities Unit Tests
+
+### 6.1.2. Core Integration Tests
+
+### 6.1.3. Core Behavior-Driven Development
+
+### 6.1.4. Core System Tests
+
+## 6.2. Static testing & Verification
+
+### 6.2.1. Static Code Analysis
+
+#### 6.2.1.1. Coding standard & Code conventions
+
+#### 6.2.1.2. Code Quality & Code Security
+
+### 6.2.2. Reviews
+
+## 6.3. Validation Interviews
+
+### 6.3.1. Diseño de Entrevistas
+
+### 6.3.2. Registro de Entrevistas
+
+### 6.3.3. Evaluaciones según heurísticas
+
+## 6.4. Auditoría de Experiencias de Usuario
+
+### 6.4.1. Auditoría realizada
+
+#### 6.4.1.1. Información del grupo auditado
+
+#### 6.4.1.2. Cronograma de auditoría realizada
+
+#### 6.4.1.3. Contenido de auditoría realizada
+
+### 6.4.2. Auditoría recibida
+
+#### 6.4.2.1. Información del grupo auditor
+
+#### 6.4.2.2. Cronograma de auditoría recibida
+
+#### 6.4.2.3. Contenido de auditoría recibida
+
+#### 6.4.2.4. Resumen de modificaciones para subsanar hallazgos
+
+# Capítulo VII: DevOps Practices
+
+## 7.1. Continuous Integration
+
+### 7.1.1. Tools and Practices
+
+### 7.1.2. Build & Test Suite Pipeline Components
+
+## 7.2. Continuous Delivery
+
+### 7.2.1. Tools and Practices
+
+### 7.2.2. Stages Deployment Pipeline Components
+
+## 7.3. Continuous deployment
+
+### 7.3.1. Tools and Practices
+
+### 7.3.2. Production Deployment Pipeline Components
+
+## 7.4. Continuous Monitoring
+
+### 7.4.1. Tools and Practices
+
+### 7.4.2. Monitoring Pipeline Components
+
+### 7.4.3. Alerting Pipeline Components
+
+### 7.4.4. Notification Pipeline Components
+
+# Capítulo VIII: Experiment-Driven Development
+
+## 8.1. Experiment Planning
+
+### 8.1.1. As-Is Summary
+
+### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims
+
+### 8.1.3. Experiment-Ready Questions
+
+### 8.1.4. Question Backlog
+
+### 8.1.5. Experiment Cards
+
+## 8.2. Experiment Design
+
+### 8.2.1. Hypotheses
+
+### 8.2.2. Domain Business Metrics
+
+### 8.2.3. Measures
+
+### 8.2.4. Conditions
+
+### 8.2.5. Scale Calculations and Decisions
+
+### 8.2.6. Methods Selection
+
+### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
+
+### 8.2.8. Web and Mobile Tracking Plan
+
+## 8.3. Experimentation
+
+### 8.3.1. To-Be User Stories
+
+### 8.3.2. To-Be Product Backlog
+
+### 8.3.3. Pipeline-supported, Experiment-Driven To-Be Software Platform Lifecycle
+
+#### 8.3.3.1. To-Be Sprint Backlogs
+
+#### 8.3.3.2. Implemented To-Be Landing Page Evidence
+
+#### 8.3.3.3. Implemented To-Be Frontend-Web Application Evidence
+
+#### 8.3.3.4. Implemented To-Be Native-Mobile Application Evidence
+
+#### 8.3.3.5. Implemented To-Be RESTful API and/or Serverless Backend Evidence
+
+#### 8.3.3.6. Team Collaboration Insights
+
+### Matriz de Evaluación Ética y de Impacto
+
+### 8.3.4. To-Be Validation Interviews
+
+#### 8.3.4.1. Diseño de Entrevistas
+
+#### 8.3.4.2. Registro de Entrevistas
+
+## 8.4. Experiment Aftermath & Analysis
+
+### 8.4.1. Analysis and Interpretation of Results
+
+### 8.4.2. Re-scored and Re-prioritized Question Backlog
+
+## 8.5. Continuous Learning
+
+### 8.5.1. Shareback Session Artifacts: Learning Workflow
+
+## 8.6. To-Be Software Platform Pre-launch
+
+### 8.6.1. About-the-Product Intro Video
+
+### 8.6.2. Resumen usando Gees FrameWork
+
+## Conclusiones
+
+## Bibliografía
+
+## Anexos
