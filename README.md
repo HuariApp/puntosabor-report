@@ -311,6 +311,14 @@ Mediante una interfaz intuitiva, la herramienta permite a la comunidad descubrir
       <td>Ingeniería de Software</td>
       <td>Soy un estudiante de ing. de software de la UPC, tengo conocimientos de programación al igual que todos mis compañeros. Me gusta encontrar soluciones tecnológicas a problemas de mundo real</td>
     </tr>
+        <tr>
+      <td><img src="assets/chapter-1/members/Carlos.jpg"
+       alt="Carlos Alberto Lopez Goitia"></td>
+      <td>Carlos Alberto Lopez Goitia</td>
+      <td>u202312700</td>
+      <td>Ingeniería de Software</td>
+      <td>Soy un estudiante de Ingeniería de Software en la UPC, con conocimientos en desarrollo móvil (Flutter, Kotlin/Jetpack Compose), .NET, Python y bases de datos SQL. Me interesa el desarrollo de soluciones completas de software, desde el diseño de la arquitectura hasta la implementación, y disfruto trabajar en equipo para resolver problemas técnicos.</td>
+    </tr>
   </tbody>
 </table>
 
