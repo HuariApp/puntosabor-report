@@ -443,29 +443,297 @@ El mercado de aplicaciones gastronómicas está dominado por propuestas generali
 
 ### 2.1.1. Análisis competitivo
 
+Actualmente existen varias plataformas que permiten a los usuarios buscar lugares para comer, como Google Maps, Uber Eats, Yelp o Rappi. Estas aplicaciones ofrecen una gran variedad de opciones, pero en la mayoría de casos dan mayor visibilidad a restaurantes conocidos o cadenas, dejando de lado a negocios más pequeños como los huariques.
+
+En ese sentido, muchos de estos locales no logran aparecer fácilmente en los resultados o no cuentan con suficiente información para generar confianza en los usuarios. Esto hace que las personas tengan dificultades para descubrir nuevas opciones fuera de lo común.
+
+Frente a esta situación, PuntoSabor propone un enfoque diferente, ya que se centra únicamente en huariques. Esto permite ofrecer una experiencia más específica y enfocada en comida local auténtica, algo que las plataformas tradicionales no priorizan.
+
+Además, al incluir funciones pensadas para este tipo de negocios, como la gestión directa del perfil y un sistema de reseñas más enfocado, se genera una mejor conexión entre usuarios y dueños. Por eso, se puede ver que existe una oportunidad clara para diferenciarse en el mercado.
+
+![alt text](assets/AnalisisCompetitivo_PuntoSabor.png)
+![alt text](assets/FODA_PuntoSabor.png)
+
+PuntoSabor se distingue por su enfoque exclusivo en huariques, brindando un lugar especializado para pequeños establecimientos de comida tradicional que normalmente no son resaltados en otras plataformas. Asimismo, incluye funciones concretas como la administración directa de huariques por sus propietarios, un sistema de reseñas y evaluaciones enfocado en estos establecimientos y un modelo de membresía para aumentar la visibilidad.
+
 ### 2.1.2. Estrategias y tácticas frente a competidores
+
+Con el fin de diferenciar a PuntoSabor de otras plataformas más grandes y posicionarse dentro del mercado de huariques, se plantean las siguientes estrategias y tácticas:
+
+Estrategias:
+
+- Enfocar la plataforma en huariques y pequeños negocios de comida local poco conocidos, permitiendo ofrecer una experiencia más auténtica que no suele encontrarse en aplicaciones tradicionales.
+
+- Incentivar la participación de usuarios y propietarios mediante reseñas, recomendaciones y contenido real, con el objetivo de generar mayor confianza dentro de la plataforma.
+
+- Implementar un modelo de ingresos basado en membresías y publicidad accesible, pensado para que los dueños de huariques puedan promocionarse sin necesidad de realizar grandes inversiones.
+
+Tácticas:
+
+- Utilizar publicidad en redes sociales y buscadores, enfocada en zonas urbanas donde existe presencia de huariques, para atraer tanto usuarios como propietarios.
+
+- Establecer alianzas con ferias, eventos y organizaciones gastronómicas para dar mayor visibilidad a la plataforma e incorporar nuevos huariques.
+
+- Asegurar que la aplicación sea fácil de usar, rápida y accesible, incluyendo herramientas simples para registrar y actualizar información, así como un sistema de mapas intuitivo.
+
+- Promover la participación mediante incentivos como descuentos, beneficios o reconocimientos para usuarios y dueños que interactúan activamente.
+
+- Implementar un sistema de retroalimentación que permita recoger sugerencias y mejorar la plataforma de manera continua.
 
 ## 2.2. Entrevistas
 
 ### 2.2.1. Diseño de entrevistas
 
+Segmento 1: Exploradores Gastronómicos (Usuarios de la app móvil)
+
+Objetivo: Entender sus motivaciones, comportamientos y expectativas al usar una app móvil para descubrir comida local auténtica.
+
+Preguntas Segmento 1:
+- ¿Con qué frecuencia usas aplicaciones móvil para buscar lugares para comer fuera de lo común?
+- ¿Cómo sueles descubrir huariques o lugares de comida poco conocidos en la móvil?
+- ¿Qué aspectos valoras más al elegir un lugar para comer usando una app móvil (precio, ubicación, reseñas, fotos, etc.)?
+- ¿Qué dificultades has tenido al usar apps móvil para buscar lugares de comida local?
+- ¿Qué te motivaría a usar una app móvil dedicada exclusivamente a huariques?
+- ¿Qué funcionalidades en la app móvil considerarías imprescindibles para usarla con regularidad?
+- ¿Qué preocupaciones o barreras tendrías al usar una app móvil para descubrir huariques?
+
+Segmento 2: Dueños y Administradores de Huariques (Usuarios que usan la app móvil para gestionar su huarique).
+
+Objetivo: Entender lo que necesita y espera al utilizar la aplicación móvil para gestionar y publicitar sus huariques.
+
+Preguntas Segmento 2:
+- ¿Actualmente usas alguna plataforma móvil o digital para promocionar tu huarique? ¿Cuál?
+- ¿Qué retos has enfrentado al tratar de gestionar tu negocio a través de plataformas digitales?
+- ¿Qué tan cómodo te sientes usando aplicaciones móvil para actualizar la información de tu negocio?
+- ¿Qué características te harían decidirte a usar una app móvil especializada para huariques?
+- ¿Qué tipo de soporte o facilidades esperarías al usar esta app móvil para gestionar tu perfil o negocio?
+- ¿Qué modelo de tarifas o membresías considerarías justo para usar esta plataforma?
+- ¿Qué resultados te gustaría ver después de usar esta aplicación móvil para promocionar tu huarique?
+
 ### 2.2.2. Registro de entrevistas
 
+**Segmento #1: Exploradores Gastronómicos (Usuarios de la app móvil)**
+
+- Entrevista 1:
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** | Nicolás Valenzuela |
+| **Edad** | 22 años |
+| **Departamento** | Lima / Jesús María |
+| **Inicio del video** | 00:00 |
+| **Fin del video** | 04:37 |
+| **Link del video** | https://youtu.be/L_R3LSYC_Vs |
+| **Foto entrevista** | <img src="./assets/chapter-2/entrevista seg1/Nicolas Valenzuela seg-1.png" alt="Entrevista a Nicolás" width="500"/> |
+| **Resumen** | El entrevistado utiliza aplicaciones móviles de 2 a 3 veces por semana para buscar lugares de comida fuera de lo común. Su proceso actual involucra enterarse de estos lugares a través de TikTok, Instagram o recomendaciones directas de amigos, ya que las apps de comida tradicionales como Google Maps tienden a mostrarle siempre las mismas opciones. Expresó frustración con estas plataformas debido a que priorizan restaurantes grandes y cadenas conocidas, dejando poca o nula información confiable sobre lugares más auténticos, además de reseñas que percibe como poco creíbles. Valora principalmente las reseñas y fotos reales del lugar, así como la cercanía geográfica, ya que no está dispuesto a desplazarse mucho para probar algo nuevo. Expresó que usaría una app dedicada exclusivamente a huariques si le da la seguridad de que los lugares son auténticos y recomendados por personas que realmente los visitaron, evitándole el esfuerzo de filtrar entre opciones genéricas. Como funcionalidades imprescindibles, mencionó un mapa que indique la cercanía del lugar, fotos actuales de los platos y un sistema de reseñas confiable. Como barrera de adopción, señaló la preocupación de que la app cuente con pocos lugares registrados al inicio o con información desactualizada, lo cual lo llevaría a dejar de usarla rápidamente. |
+
+- Entrevista 2:
+
+Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** | Gonzalo Ríos |
+| **Edad** | 24 años |
+| **Departamento / Distrito** | Lima / Jesús María |
+| **Inicio del video** | 00:00 |
+| **Fin del video** | 08:18 |
+| **Link del video** | https://youtu.be/8Y9OF3IWt-I |
+| **Foto entrevista** | <img src="./assets/chapter-2/entrevista seg1/gonzalo rios seg-1.png" alt="Entrevista a Gonzalo" width="500"/> |
+| **Resumen** | El entrevistado utiliza aplicaciones móviles de 3 a 4 veces por semana para descubrir lugares nuevos de comida. Su proceso actual involucra ver videos en TikTok e Instagram y luego buscar manualmente la ubicación en Google Maps, lo cual considera fragmentado. Expresó gran frustración con las apps tradicionales debido al favorecimiento publicitario de grandes cadenas y a la presencia de información desactualizada (horarios y precios). Valora principalmente el presupuesto/rango de precios, fotos reales de clientes y la geolocalización clara. Expresó que usaría PuntoSabor si ofrece un mapa interactivo con función "Cerca de mí", filtros por precio/categoría, lista de favoritos y reseñas comunitarias. Como barreras de adopción mencionó la necesidad de contar con una buena cantidad inicial de huariques registrados y la importancia de un registro de usuario rápido e intuitivo. |
+
+- Entrevista 3:
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** | Diego Fernández Salinas |
+| **Edad** | 21 años |
+| **Departamento** | Lima / San Miguel |
+| **Inicio del video** | 00:00 |
+| **Fin del video** | 03:55 |
+| **Link del video** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312700_upc_edu_pe/IQDPpW2YWrHAR4FoibiKd8SmAQzBRwC57OVeMuBkeDhyyRM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=cdOhqB |
+| **Foto entrevista** | <img src="./assets/chapter-2/entrevista seg1/Carlos.png" alt="Entrevista a Diego" width="500"/> |
+| **Resumen** | El entrevistado utiliza redes sociales como TikTok e Instagram para descubrir lugares nuevos de comida, con una frecuencia de dos a tres veces por semana. Su proceso actual combina estas recomendaciones con las de amigos, ya que apps como Google Maps tienden a mostrarle siempre las mismas cadenas conocidas y ofrecen poca información confiable sobre huariques auténticos. Expresó frustración con las reseñas de estas plataformas, a las que percibe como poco genuinas. Valora principalmente que las fotos sean reales del lugar y los platos, reseñas confiables de personas que realmente visitaron el sitio, y la cercanía geográfica. Manifestó que usaría una app dedicada a huariques si le ofrece un mapa con la distancia al lugar, fotos reales y filtros por precio o tipo de comida. Como barrera de adopción, señaló que una baja cantidad de lugares registrados al inicio o información desactualizada (horarios, cierres) lo llevaría a desconfiar y dejar de usarla. |
+
+**Segmento #2: Dueños y Administradores de Huariques (Usuarios que usan la app móvil para gestionar su huarique)**
+
+- Entrevista 1:
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** | Katerin |
+| **Edad** | 33 años |
+| **Departamento** | Comas |
+| **Inicio del video** | 00:00 |
+| **Fin del video** | 9:00 |
+| **Link del video** | https://drive.google.com/drive/folders/1ZdixRXBDLk5fCKho-r2dA9DhSVKnbbb2?usp=drive_link |
+| **Foto entrevista** | <img src="./assets/chapter-2/entrevista seg2/katerin seg-2.png" alt="Entrevista a Katerin" width="500"/> |
+| **Resumen** | La entrevistada comentó que utiliza principalmente Instagram, Facebook y WhatsApp para promocionar su negocio y comunicarse con sus clientes. Indicó que una de sus principales dificultades es encontrar tiempo para mantener actualizadas varias plataformas al mismo tiempo. Considera importante que una aplicación para huariques sea sencilla de utilizar y permita gestionar información como horarios, precios, fotografías, menú y promociones. También valoraría funciones como reseñas, estadísticas sobre las visitas al negocio, mapas para facilitar la ubicación y soporte para resolver dudas. Respecto al modelo de pago, considera conveniente contar con una versión gratuita y una membresía opcional con beneficios adicionales. Finalmente, espera que una aplicación de este tipo le permita obtener mayor visibilidad, atraer nuevos clientes y aumentar el alcance de sus promociones. |
+
+- Entrevista 2:
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** | Nicolas Castro |
+| **Edad** | 26 |
+| **Departamento** | Lince |
+| **Inicio del video** | 0:00 |
+| **Fin del video** | 6:48 |
+| **Link del video** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d995_upc_edu_pe/IQCktyuodBQgSIde1SKOZZsyAX9FpAbF3gfr-IFp2nTi-VE?e=uUPB2F&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| **Foto entrevista** | <img src="./assets/chapter-2/entrevista seg2/Nicolas seg-2.png" alt="Entrevista a Nicolas" width="500"/> |
+| **Resumen** | El entrevistado comento que usa principalmente WhatsApp como herramienta digital para comunicarle a clientes frecuentes que esta vendiendo, que hay en el menú y si hay ofertas. Nos comento que para el es difícil manejar herramientas digitales modernas como podrían ser instagram y que se le es complicado llegar a nuevo publico ajeno a sus caseros. Para el una aplicación que lo ayude a llegar a más publico seria importante ya que así podría incrementar su clientela y consecuentemente sus ventas. El valora funciones de la aplicación como reseñas para poder recibir feedback de sus consumidores y que se pueda gestionar su negocio como colocar que menús están disponibles y que ofertas. El considera que la aplicación debería ser gratuita para que no le cobre comisiones por venta pero aceptaría un sistema de suscripciones de pago que ofrezca beneficios extra para el y su negocio. |
+
+- Entrevista 3:
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** | Paul Alexandro Angel Espinoza Lopez |
+| **Edad** | 25 |
+| **Departamento** | La Victoria |
+| **Inicio del video** | 0:00 |
+| **Fin del video** | 3:34 |
+| **Link del video** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d995_upc_edu_pe/IQCD1-ytnSIySavdlSliR38GAbg1kQQWbZ63l45oObcYUrs?e=zgc8EH&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| **Foto entrevista** | <img src="./assets/chapter-2/entrevista seg2/Paul seg-2.png" alt="Entrevista a Paul" width="500"/> |
+| **Resumen** | El entrevistado comento que usa principalmente instagram y facebook como herramienta digital para comunicarle a posibles clientes que es lo que esta ofertando en su negocios. El ya está acostumbrado a usar las redes sociales para promocionar sus productos. Para el una aplicación que lo ayude a promocionar su negocio seria clave para incrementar su clientela y en consecuencia sus ganancias. La principal función de la aplicación que el llegaría a valorar seria la capacidad de administrar su negocio de una forma la cual el considere adecuada. Está dispuesto a pagar una suscripción por el servicio de ser necesario. |
+
 ### 2.2.3. Análisis de entrevistas
+
+**Segmento #1: Exploradores Gastronómicos (Usuarios de la app móvil)**
+
+De acuerdo con las entrevistas realizadas a los integrantes de este segmento (Nicolás Valenzuela, Gonzalo Ríos y Diego Fernández), se identificaron patrones de comportamiento y expectativas homogéneas entre los jóvenes consumidores de comida local:
+
+* **Comportamiento y proceso actual:**
+  * **Frecuencia de búsqueda:** Buscan lugares nuevos de comida entre 2 y 4 veces por semana.
+  * **Flujo de descubrimiento fragmentado:** El descubrimiento inicia principalmente en redes sociales visuales como TikTok e Instagram, o a través de recomendaciones directas de amigos. Posteriormente, realizan una búsqueda manual en plataformas como Google Maps para verificar ubicaciones, lo que genera una experiencia de usuario discontinua.
+
+* **Puntos de dolor y frustraciones:**
+  * **Invisibilidad de huariques auténticos:** Coinciden en que las plataformas de navegación y mapas tradicionales priorizan algoritmos publicitarios que favorecen a grandes cadenas de restaurantes y franquicias reconocidas, desplazando a los huariques locales.
+  * **Poca credibilidad e información desactualizada:** Perciben las reseñas de las apps tradicionales como poco genuinas o manipuladas. Además, sufren constantemente por datos erróneos referentes a precios, menús y horarios de atención.
+
+* **Necesidades y funcionalidades clave:**
+  * **Validación mediante contenido real:** Valoran enfáticamente las fotos reales tomadas por los propios comensales y un sistema de calificaciones/reseñas comunitarias transparentes y verificadas.
+  * **Geolocalización y practicidad:** Exigen un mapa interactivo con función "Cerca de mí" y filtros precisos por rango de precio, distancia y categoría de comida, ya que la cercanía geográfica es determinante para su toma de decisión.
+
+* **Barreras de adopción:**
+  * La principal barrera identificada es el riesgo de encontrar una **oferta inicial reducida** (pocos huariques registrados en la plataforma) o información desactualizada al momento de usar la aplicación, lo cual destruiría la confianza inicial y causaría el abandono de la herramienta.
+
+**Segmento #2: Dueños y Administradores de Huariques**
+
+A partir de las entrevistas realizadas a los representantes de este segmento (Katerin, Nicolás Castro y Paul Espinoza), se analizaron las dinámicas operativas y comerciales de los pequeños negocios gastronómicos:
+
+* **Gestión digital actual y limitaciones:**
+  * **Canales empíricos o limitados:** Los negocios oscilan entre un uso básico e informal de redes sociales (Instagram, Facebook) y una alta dependencia de herramientas personales como WhatsApp para mantener contacto únicamente con "caseros" o clientes habituales.
+  * **Brecha de tiempo y conocimiento:** Expresan una clara dificultad para administrar múltiples plataformas digitales en paralelo debido a la falta de tiempo operativo en cocina y atención, o por la complejidad técnica de ciertas redes sociales para captar nuevo público.
+
+* **Puntos de dolor y frustraciones:**
+  * **Dificultad para atraer público nuevo:** Se sienten estancados al no poder llegar a clientes fuera de su área de alcance tradicional o de su lista de contactos.
+  * **Comisiones abusivas de apps tradicionales:** Rechazan el modelo de las aplicaciones tradicionales de delivery y restaurantes debido a las elevadas comisiones por venta, las cuales reducen drásticamente el margen de ganancia de sus productos artesanales.
+
+* **Necesidades y funcionalidades clave:**
+  * **Gestión centralizada y simplificada:** Requieren un perfil digital fácil de administrar que les permita actualizar de forma ágil menús diarios, precios, horarios, fotografías y promociones relámpago en horas de menor afluencia.
+  * **Visibilidad e interactividad:** Valoran enormemente figurar en mapas interactivos para ser descubiertos por clientes cercanos, además de contar con espacios de reseñas para recibir *feedback* directo de sus comensales y estadísticas de visitas.
+
+* **Expectativas sobre el modelo de negocio y soporte:**
+  * **Estructura de cobro justa:** Concuerdan en que la aplicación debe ofrecer un modelo de **tarifa plana / membresía mensual accesible** o un nivel gratuito con opción a planes *freemium*, rechazando categóricamente el cobro de comisiones por plato o venta realizada.
+  * **Facilidad y soporte:** Esperan herramientas prediseñadas y una interfaz intuitiva, acompañada de un canal de soporte ágil y directo (como WhatsApp) para resolver dudas de gestión rápidamente.
 
 ## 2.3. Needfinding
 
 ### 2.3.1. User Personas
 
+Se han creado dos perfiles de usuario o personas representativas para entender con mayor precisión las motivaciones, necesidades y conductas de los usuarios principales de PuntoSabor. Estos perfiles resumen los rasgos, metas y desafíos comunes de los segmentos principales, lo que simplifica el desarrollo de la plataforma al diseñarla con enfoque en el usuario y tomar decisiones estratégicas.
+
+![alt text](assets/UserPersonaSeg1.jpg)
+
+- Persona 2: Don Luis, dueño de huarique tradicional
+Don Luis representa a los dueños de huariques y a los emprendedores pequeños que buscan una forma simple de dar a conocer su negocio. No tiene mucha experiencia con tecnología, por lo que necesita herramientas fáciles de usar y que no impliquen gastos altos.
+
+![alt text](assets/UserPersonaSeg2.jpg)
+
 ### 2.3.2. User Task Matrix
+
+![alt text](assets/UserTaskMatrix-PuntoSabor.jpg)
+
+Los perfiles de usuario en PuntoSabor presentan diferencias notables en sus tareas habituales, dependiendo de las necesidades y el rol de cada uno. Como exploradora gastronómica, Carla Dípes emplea la aplicación móvil de manera continua y activa para buscar huariques, leer reseñas y utilizar la función de mapas con geolocalización. Para ella, estas actividades son fundamentales para su experiencia. Por otro lado, Don Luis Pérez, propietario de huarique, no suele emplear la aplicación para buscar o ver mapas; su interés principal es actualizar la información de su huarique, tarea que lleva a cabo con frecuencia y considera esencial. Los dos individuos se comunican de vez en cuando utilizando la función de responder reseñas y compartir fotografías u opiniones, aunque Don Luis lo hace con menos frecuencia, pero sigue siendo significativo en términos de importancia.
+
+Coincidencias:
+- Ambos utilizan, en menor medida, la función de responder reseñas, considerándola de importancia media.
+
+- Carla tiene una frecuencia más alta que los demás en lo que respecta a compartir fotos y opiniones, aunque todos comparten una actitud media hacia la importancia de hacerlo.
+
+- Para los dos perfiles, las funciones que tienen que ver con la interacción social y la comunidad son de importancia media.
+  
+Diferencias:
+- Carla usa con frecuencia la búsqueda de huariques y el mapa, mientras que Don Luis casi no utiliza estas funciones debido a su enfoque más administrativo.
+
+- La actualización de la información de su huarique es una tarea que Carla no lleva a cabo, pero Don Luis invierte más tiempo y la considera importante.
+
+- Carla presenta un alto nivel de interacción con funciones de exploración, mientras que Don Luis tiene una participación menor en este aspecto.
 
 ### 2.3.3. User Journey Mapping
 
+Segmento 1
+
+Con el uso de este artefacto se analizará y entenderá cómo los usuarios del segmento 1 (Exploradores Gastronómicos) llevan a cabo sus tareas con el fin de lograr sus metas desde su punto de vista. Este segmento está constituido por individuos que persiguen vivencias gastronómicas auténticas y asequibles, indagando en huariques menos conocidos y apreciando los datos fidedignos suministrados por medio de imágenes, mapas de localización y reseñas.
+
+![alt text](assets/Carla_Dipes.png)
+
+Segmento 2
+
+Este artefacto permitirá explicar y entender la manera en que los usuarios del segmento 2 (dueños y administradores de huariques) llevan a cabo sus actividades para lograr sus metas desde su punto de vista. Este segmento está conformado por pequeños empresarios que buscan promover su empresa, incrementar su visibilidad y captar nuevos clientes a través de una plataforma fácil de administrar y accesible, sin requerir conocimientos técnicos sofisticados.
+
+![alt text](assets/Don_Luis.jpg)
+
 ### 2.3.4. Empathy Mapping
+
+Los siguientes mapas de empatía corresponden a los dos perfiles principales de usuarios de PuntoSabor: Carla Dípes, la exploradora de la gastronomía, y Don Luis Pérez, propietario de un huarique tradicional. Estos mapas posibilitan entender a fondo sus sentimientos, pensamientos, necesidades y conductas, lo que contribuye a que el diseño esté orientado hacia el usuario.
+
+- Segmento 1:
+
+La carta de empatía de Carla revela que es una clienta que desea experiencias culinarias locales únicas y autenticidad. Considera que es fácil hallar información fiable y se siente frustrada por la abundancia de opciones genéricas en otras plataformas.
+![alt text](assets/EmphatyMap_CarlaDipes.png)
+
+- Segmento 2:
+
+El mapa de empatía de Don Luis muestra a un empresario con restricciones tecnológicas, que requiere una herramienta simple para administrar su huarique y expandir su clientela. Busque apoyo y soluciones asequibles que le permitan tener presencia en línea sin altos costos.
+![alt text](assets/EmphatyMap_DonLuisPerez.png)
 
 ### 2.3.5. As-is Scenario Mapping
 
+**As-is Scenario Mapping**
+Segmento 1
+
+Con este artefacto, se ha desarrollado el As-is Scenario Mapping para la primera franja (Exploradores Gastronómicos). Este panorama muestra la manera en que los usuarios que desean descubrir huariques llevan a cabo sus actividades hoy en día, los obstáculos a los que se enfrentan al buscar alternativas económicas y auténticas, además de las sensaciones y percepciones que sienten en cada fase de su recorrido.
+
+![alt text](assets/Segmento1_AsIs.png)
+
+Segmento 2
+
+Con este instrumento se ha realizado el As-is Scenario Mapping para el segundo grupo (los propietarios y administradores de huariques). Esta situación muestra la manera en que los emprendedores de pequeña escala administran hoy en día la promoción y organización de sus negocios, destacando las limitaciones tecnológicas, los procesos manuales y las emociones relacionadas con su necesidad de atraer nuevos clientes y obtener más visibilidad.
+
+![alt text](assets/Segmento2_AsIs.png)
+
 ## 2.4. Ubiquitous Language
+
+En esta parte se muestra el glosario de términos fundamentales del ámbito de PuntoSabor, que están escritos en inglés y acompañados de su traducción al español entre paréntesis. Cada definición tiene como objetivo que la comunicación entre todos los miembros del equipo y los interesados sea coherente y clara, así como eliminar ambigüedades y alinear el lenguaje de la empresa.
+
+Glosario:
+
+- Huarique (Huarique): Restaurante peruano tradicional, que normalmente es familiar o local, famoso por su cocina auténtica, accesible y casera. Es el núcleo de la propuesta de PuntoSabor.
+
+- Gastronomic Explorer (Explorador culinario): Persona interesada en descubrir nuevas experiencias gastronómicas, especialmente huariques auténticos, económicos y poco conocidos.
+
+- Huarique Owner (Propietario de Huarique): Persona encargada de administrar un huarique, que incluye la elaboración de los platos, la atención al cliente y la gestión general del negocio.
+
+- Review (reseña): Opinión o valoración escrita por un consumidor acerca de su vivencia en un huarique, que contiene observaciones sobre la calidad de los platos, el servicio y el ambiente.
+
+- Recommendation (Recomendación): Recomendación hecha por un cliente para que otros visitantes tengan la oportunidad de conocer o probar un huarique específico.
+
+- Favorite (Favorito): Huarique es un cliente que recuerda o enfatiza como favorito debido a la calidad de su experiencia, y al que desea volver a visitar o sugerir.
+
+- Culinary Tradition (Tradición Culinaria): Conjunto de hábitos, recetas y prácticas culinarias típicas de los huariques, que enriquecen culturalmente la vivencia gastronómica.
+
+- Community Interaction (Interacción Comunitaria): Interacción entre los clientes y los propietarios de huariques a través del intercambio de experiencias, reseñas, sugerencias y conversaciones que aumentan la confianza y el reconocimiento de sus empresas.
+  
+- Membership (Membresía): Plan o suscripción que permite a los propietarios obtener mayor visibilidad y beneficios dentro de la plataforma.
 
 # Capítulo III: Requirements Specification
 
