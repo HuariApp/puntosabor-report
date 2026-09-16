@@ -413,7 +413,7 @@ El mercado de aplicaciones gastronómicas está dominado por propuestas generali
 
 #### 1.2.2.4. Lean UX Canvas
 
-![alt text](<assets/LeanUXCanvas-PuntoSabor.png>)
+![alt text](<assets/Lean UX Canvas - PuntoSabor.png>)
 
 ## 1.3. Segmentos objetivo
 
