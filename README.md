@@ -238,20 +238,55 @@ Campo | Detalle |
 
 | Campo | Detalle |
 | --- | --- |
-| **Nombre entrevistado** | - |
-| **Edad** | - |
-| **Departamento** | - |
-| **Inicio del video** | - |
-| **Fin del video** | - |
-| **Link del video** | - |
-| **Foto entrevista** | - |
-| **Resumen** | - |
+| **Nombre entrevistado** | Paul Alexandro Angel Espinoza Lopez |
+| **Edad** | 25 |
+| **Departamento** | La Victoria |
+| **Inicio del video** | 0:00 |
+| **Fin del video** | 3:34 |
+| **Link del video** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241d995_upc_edu_pe/IQCD1-ytnSIySavdlSliR38GAbg1kQQWbZ63l45oObcYUrs?e=zgc8EH&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| **Foto entrevista** | <img src="./assets/chapter-2/entrevista seg2/Paul seg-2.png" alt="Entrevista a Paul" width="500"/> |
+| **Resumen** | El entrevistado comento que usa principalmente instagram y facebook como herramienta digital para comunicarle a posibles clientes que es lo que esta ofertando en su negocios. El ya está acostumbrado a usar las redes sociales para promocionar sus productos. Para el una aplicación que lo ayude a promocionar su negocio seria clave para incrementar su clientela y en consecuencia sus ganancias. La principal función de la aplicación que el llegaría a valorar seria la capacidad de administrar su negocio de una forma la cual el considere adecuada. Está dispuesto a pagar una suscripción por el servicio de ser necesario. |
 
 ### 2.2.3. Análisis de entrevistas
 
 **Segmento #1: Exploradores Gastronómicos (Usuarios de la app móvil)**
 
+De acuerdo con las entrevistas realizadas a los integrantes de este segmento (Nicolás Valenzuela, Gonzalo Ríos y Diego Fernández), se identificaron patrones de comportamiento y expectativas homogéneas entre los jóvenes consumidores de comida local:
+
+* **Comportamiento y proceso actual:**
+  * **Frecuencia de búsqueda:** Buscan lugares nuevos de comida entre 2 y 4 veces por semana.
+  * **Flujo de descubrimiento fragmentado:** El descubrimiento inicia principalmente en redes sociales visuales como TikTok e Instagram, o a través de recomendaciones directas de amigos. Posteriormente, realizan una búsqueda manual en plataformas como Google Maps para verificar ubicaciones, lo que genera una experiencia de usuario discontinua.
+
+* **Puntos de dolor y frustraciones:**
+  * **Invisibilidad de huariques auténticos:** Coinciden en que las plataformas de navegación y mapas tradicionales priorizan algoritmos publicitarios que favorecen a grandes cadenas de restaurantes y franquicias reconocidas, desplazando a los huariques locales.
+  * **Poca credibilidad e información desactualizada:** Perciben las reseñas de las apps tradicionales como poco genuinas o manipuladas. Además, sufren constantemente por datos erróneos referentes a precios, menús y horarios de atención.
+
+* **Necesidades y funcionalidades clave:**
+  * **Validación mediante contenido real:** Valoran enfáticamente las fotos reales tomadas por los propios comensales y un sistema de calificaciones/reseñas comunitarias transparentes y verificadas.
+  * **Geolocalización y practicidad:** Exigen un mapa interactivo con función "Cerca de mí" y filtros precisos por rango de precio, distancia y categoría de comida, ya que la cercanía geográfica es determinante para su toma de decisión.
+
+* **Barreras de adopción:**
+  * La principal barrera identificada es el riesgo de encontrar una **oferta inicial reducida** (pocos huariques registrados en la plataforma) o información desactualizada al momento de usar la aplicación, lo cual destruiría la confianza inicial y causaría el abandono de la herramienta.
+
 **Segmento #2: Dueños y Administradores de Huariques**
+
+A partir de las entrevistas realizadas a los representantes de este segmento (Katerin, Nicolás Castro y Paul Espinoza), se analizaron las dinámicas operativas y comerciales de los pequeños negocios gastronómicos:
+
+* **Gestión digital actual y limitaciones:**
+  * **Canales empíricos o limitados:** Los negocios oscilan entre un uso básico e informal de redes sociales (Instagram, Facebook) y una alta dependencia de herramientas personales como WhatsApp para mantener contacto únicamente con "caseros" o clientes habituales.
+  * **Brecha de tiempo y conocimiento:** Expresan una clara dificultad para administrar múltiples plataformas digitales en paralelo debido a la falta de tiempo operativo en cocina y atención, o por la complejidad técnica de ciertas redes sociales para captar nuevo público.
+
+* **Puntos de dolor y frustraciones:**
+  * **Dificultad para atraer público nuevo:** Se sienten estancados al no poder llegar a clientes fuera de su área de alcance tradicional o de su lista de contactos.
+  * **Comisiones abusivas de apps tradicionales:** Rechazan el modelo de las aplicaciones tradicionales de delivery y restaurantes debido a las elevadas comisiones por venta, las cuales reducen drásticamente el margen de ganancia de sus productos artesanales.
+
+* **Necesidades y funcionalidades clave:**
+  * **Gestión centralizada y simplificada:** Requieren un perfil digital fácil de administrar que les permita actualizar de forma ágil menús diarios, precios, horarios, fotografías y promociones relámpago en horas de menor afluencia.
+  * **Visibilidad e interactividad:** Valoran enormemente figurar en mapas interactivos para ser descubiertos por clientes cercanos, además de contar con espacios de reseñas para recibir *feedback* directo de sus comensales y estadísticas de visitas.
+
+* **Expectativas sobre el modelo de negocio y soporte:**
+  * **Estructura de cobro justa:** Concuerdan en que la aplicación debe ofrecer un modelo de **tarifa plana / membresía mensual accesible** o un nivel gratuito con opción a planes *freemium*, rechazando categóricamente el cobro de comisiones por plato o venta realizada.
+  * **Facilidad y soporte:** Esperan herramientas prediseñadas y una interfaz intuitiva, acompañada de un canal de soporte ágil y directo (como WhatsApp) para resolver dudas de gestión rápidamente.
 
 ## 2.3. Needfinding
 
