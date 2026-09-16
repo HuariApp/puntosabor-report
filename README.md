@@ -1319,7 +1319,22 @@ User goal: El usuario autenticado finaliza su sesión de forma segura desde cual
 | 2 | Diálogo | Confirma "Cerrar sesión" | Sesión cerrada, redirige a Home sin sesión |
 | 2b | Diálogo | Clic en "Cancelar" | Diálogo se cierra, sesión sigue activa |
 
-## 4.7. Web Applications Prototyping
+### 4.7. Web Applications Prototyping
+
+Como parte del diseño de la aplicación web de PuntoSabor, se elaboró un prototipo navegable en Figma que representa el flujo principal del usuario: inicio de sesión y exploración de huariques, además de las secciones de Promociones, Planes de membresía y Contacto.
+
+El prototipo cubre las siguientes pantallas:
+
+- **Iniciar sesión:** formulario de acceso con validación de correo y contraseña.
+- **Explorar:** vista principal con mapa interactivo, filtros por categoría y listado de huariques cercanos.
+- **Promociones:** catálogo de ofertas vigentes por local.
+- **Planes de membresía:** comparativa de planes (Básico, Premium, Exclusivo) para dueños de negocio.
+- **Contáctanos:** formulario de contacto y ubicación del negocio.
+
+El flujo conecta estas pantallas mediante la navegación del header, simulando la experiencia real del usuario final desde el login hasta la exploración de contenido.
+
+**Prototipo interactivo (Figma):**
+[Ver prototipo de PuntoSabor](https://www.figma.com/proto/lT88eEZFP7G86QwYXq59Lc/PuntoSabor?node-id=629-3146&p=f&t=56hlZllR3mACxBOc-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=629%3A3146&show-proto-sidebar=1)
 
 ## 4.8. Domain-Driven Software Architecture
 
