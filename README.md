@@ -581,11 +581,15 @@ El backend de PuntoSabor está desarrollado en **.NET 8 / C#**, desplegado al **
 
 La documentación de la API está publicada mediante **Swagger/OpenAPI**, accesible directamente desde el navegador:
  
-📄 **Swagger:** https://huariquehub-backend.up.railway.app/swagger
+**Swagger:** https://huariquehub-backend.up.railway.app/swagger
  
 Esta documentación cubre todos los servicios integrados durante los tres sprints: huariques, usuarios, categorías, reseñas, preferencias, notificaciones, planes, suscripciones, promociones y reportes — permitiendo consultar contratos, parámetros y respuestas de cada endpoint.
 
 ### 5.2.8. Team Collaboration Insights
+
+Durante este sprint, el equipo mantuvo un flujo de trabajo colaborativo bajo un enfoque Git-Flow, utilizando GitHub como repositorio central de la documentación. La evidencia de commits firmados y verificados (Verified) refleja una distribución de tareas clara entre los integrantes, cada uno enfocado en distintos artefactos del diseño del producto.
+
+![alt text](assets/Team-Insigths.png)
 
 ## 5.3. Video About-the-Product
 
