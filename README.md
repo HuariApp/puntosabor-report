@@ -477,6 +477,51 @@ Feature: Reporte de información incorrecta
 
 ### 6.1.4. Core System Tests
 
+Para esta sección se automatizaron 4 de los 10 escenarios definidos en el
+documento BDD (6.1.3), priorizando los flujos más críticos del sistema:
+autenticación, búsqueda, publicación de contenido y pagos. Se utilizó
+**Playwright** como framework de automatización, combinando el grabador
+(Codegen) para capturar las interacciones reales sobre el Front desplegado
+en producción (`https://punto-sabor-front.vercel.app`) con verificaciones
+(`expect`) escritas manualmente para validar los resultados esperados.
+
+### Configuración del entorno
+
+<img src="./assets/Test_terminal.png" alt="tests en la terminal" width="1000px">  
+
+### Escenario 1 — Autenticación
+
+Se probaron 3 casos: login exitoso, contraseña incorrecta y correo no
+registrado.
+
+<img src="./assets/Test_1.png" alt="tests en la terminal" width="1000px">  
+
+**Hallazgo:** el sistema no distingue entre "contraseña incorrecta" y
+"correo no registrado" — ambos casos muestran el mismo mensaje genérico
+"Credenciales inválidas", lo cual es una buena práctica de seguridad.
+
+### Escenario 2 — Búsqueda y filtrado
+
+<img src="./assets/Test_2.png" alt="tests en la terminal" width="1000px">  
+
+### Escenario 5 — Publicación de reseñas
+
+<img src="./assets/Test_3.png" alt="tests en la terminal" width="1000px">  
+
+### Escenario 9 — Pago de suscripción
+
+<img src="./assets/Test_4.png" alt="tests en la terminal" width="1000px">  
+
+**Hallazgo (bug reportado):** al intentar pagar con una tarjeta válida
+(número con Luhn correcto, fecha de expiración vigente, CVV válido), el
+sistema rechaza el pago mostrando un bloque de error genérico sin detalle
+específico. Se documenta como hallazgo de QA para reporte al equipo de
+desarrollo.
+
+### Evidencia de ejecución
+
+<img src="./assets/Tests.png" alt="tests en la terminal" width="1000px">  
+
 ## 6.2. Static testing & Verification
 
 ### 6.2.1. Static Code Analysis
