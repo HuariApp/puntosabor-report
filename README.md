@@ -365,10 +365,103 @@ De esta manera, el Build & Test Suite Pipeline busca asegurar que los cambios in
 
 ## 7.2. Continuous Delivery
 
+Continuous Delivery o Entrega Continua es una práctica de DevOps que busca mantener el software en un estado preparado para ser desplegado después de superar diferentes procesos de construcción, pruebas y validación.
+
+A diferencia de Continuous Deployment, en Continuous Delivery la versión del software puede encontrarse lista para ser publicada, pero el despliegue final requiere una decisión o aprobación del equipo antes de realizarse.
+
+En PuntoSabor, esta práctica permite organizar los cambios desarrollados en los diferentes componentes de la solución y verificar que una nueva versión cumpla con las condiciones necesarias antes de ser considerada para su publicación. De esta manera, se busca reducir el riesgo de desplegar funcionalidades con errores y mantener un proceso de entrega controlado.
+
 ### 7.2.1. Tools and Practices
+
+Para el proceso de Continuous Delivery de PuntoSabor se consideran las herramientas que actualmente forman parte del desarrollo, control de versiones, pruebas y despliegue del proyecto.
+
+Git es utilizado como sistema de control de versiones, mientras que GitHub funciona como repositorio remoto para almacenar y administrar los cambios realizados por los integrantes del equipo.
+
+Dentro del repositorio del informe, los capítulos son desarrollados en ramas independientes como `feature/chapter-1`, `feature/chapter-2`, hasta `feature/chapter-8`. Posteriormente, los cambios pueden ser integrados hacia la rama `develop` y finalmente hacia `main`.
+
+GitHub también permite utilizar Pull Requests para revisar los cambios antes de incorporarlos a otra rama, facilitando el control de las modificaciones realizadas por los integrantes.
+
+En cuanto a la implementación de PuntoSabor, el backend está desarrollado utilizando .NET 8 y utiliza MySQL 8 para la persistencia de información. El backend se encuentra desplegado mediante Railway y utiliza Docker para la preparación del entorno de ejecución.
+
+Para la verificación del funcionamiento del sistema se cuenta con pruebas automatizadas desarrolladas con Playwright, las cuales permiten validar diferentes flujos de PuntoSabor antes de considerar una versión como preparada para su entrega.
+
+Las principales tecnologías y herramientas consideradas dentro de este proceso son:
+
+| Componente | Tecnología o herramienta |
+|---|---|
+| Control de versiones | Git |
+| Repositorio remoto | GitHub |
+| Backend | .NET 8 |
+| Base de datos | MySQL 8 |
+| Contenedorización del backend | Docker |
+| Despliegue del backend | Railway |
+| Pruebas automatizadas | Playwright |
+
+Estas herramientas permiten establecer un proceso en el cual los cambios pueden ser revisados, construidos, probados e integrados antes de considerar una nueva versión de PuntoSabor como preparada para su publicación.
 
 ### 7.2.2. Stages Deployment Pipeline Components
 
+El proceso de Continuous Delivery de PuntoSabor puede dividirse en diferentes etapas que permiten verificar progresivamente que una nueva versión se encuentre preparada para ser desplegada.
+
+El flujo general considerado es el siguiente:
+
+`Source → Build → Test → Integration → Release Preparation → Approval`
+
+**Source Stage**
+
+El proceso comienza con los cambios realizados por los integrantes del equipo y almacenados en GitHub.
+
+Cada modificación queda registrada mediante commits dentro de la rama correspondiente al trabajo desarrollado. En el caso del informe, por ejemplo, cada capítulo cuenta con una rama independiente antes de ser integrado hacia `develop`.
+
+Este control permite mantener la trazabilidad de los cambios y evitar modificaciones directas sobre la versión principal del proyecto.
+
+**Build Stage**
+
+En esta etapa se verifica que el componente desarrollado pueda construirse correctamente y que sus dependencias se encuentren disponibles.
+
+En el caso del backend desarrollado con .NET 8, se realiza la restauración de las dependencias necesarias y posteriormente la compilación del proyecto.
+
+El objetivo principal de esta etapa es detectar problemas de compilación antes de continuar con las pruebas y la preparación de una nueva versión.
+
+**Test Stage**
+
+Una vez que el proyecto puede ser construido correctamente, se realizan las pruebas correspondientes para comprobar el funcionamiento de las funcionalidades implementadas.
+
+En PuntoSabor se cuenta con pruebas automatizadas desarrolladas utilizando Playwright, las cuales permiten verificar diferentes flujos funcionales del sistema.
+
+Si una prueba presenta errores, los cambios deben ser revisados y corregidos antes de continuar con el proceso de entrega.
+
+**Integration Stage**
+
+Los cambios que han sido revisados pueden ser integrados con el trabajo realizado por los demás integrantes del equipo.
+
+En el repositorio del informe de PuntoSabor, la rama `develop` cumple la función de reunir los avances desarrollados en las diferentes ramas `feature/chapter-X` antes de incorporarlos posteriormente a `main`.
+
+El flujo utilizado puede representarse de la siguiente manera:
+
+`feature/chapter-X → develop → main`
+
+Esta separación permite mantener una versión integrada del trabajo sin modificar directamente la rama principal durante el desarrollo.
+
+**Release Preparation Stage**
+
+Una vez que los cambios han sido integrados y verificados, se prepara la versión que podrá ser utilizada para un futuro despliegue.
+
+En esta etapa se comprueba que el proyecto pueda ejecutarse correctamente, que las pruebas realizadas hayan finalizado de manera satisfactoria y que no existan errores conocidos que impidan continuar con la publicación.
+
+Para el backend de PuntoSabor, Railway constituye la plataforma documentada para alojar la aplicación, mientras que Docker permite mantener una configuración reproducible del entorno donde se ejecuta el servicio.
+
+**Approval Stage**
+
+En Continuous Delivery, el hecho de que una versión se encuentre preparada no significa necesariamente que será desplegada de manera automática.
+
+Antes de realizar la publicación, el equipo puede revisar la versión preparada y decidir si cumple con las condiciones necesarias para llegar al entorno de producción.
+
+El flujo completo puede resumirse de la siguiente manera:
+
+`Changes → Build → Tests → Integration → Release Preparation → Approval`
+
+De esta manera, Continuous Delivery permite mantener los componentes de PuntoSabor preparados para una futura publicación, asegurando previamente que los cambios hayan pasado por procesos de revisión, construcción, pruebas e integración.
 ## 7.3. Continuous deployment
 
 ### 7.3.1. Tools and Practices
