@@ -464,9 +464,129 @@ El flujo completo puede resumirse de la siguiente manera:
 De esta manera, Continuous Delivery permite mantener los componentes de PuntoSabor preparados para una futura publicación, asegurando previamente que los cambios hayan pasado por procesos de revisión, construcción, pruebas e integración.
 ## 7.3. Continuous deployment
 
+Continuous Deployment o Despliegue Continuo es una práctica de DevOps orientada a llevar versiones validadas del software hacia un entorno de producción de forma frecuente y controlada.
+
+Esta práctica continúa el proceso iniciado en Continuous Integration y Continuous Delivery. Primero, los cambios desarrollados deben ser revisados, integrados y verificados. Posteriormente, una versión que cumple con las condiciones establecidas puede ser utilizada para actualizar el entorno donde se encuentra ejecutándose la aplicación.
+
+En PuntoSabor, el backend está desarrollado con .NET 8 y se encuentra desplegado en Railway. Además, se utiliza Docker para definir el entorno de ejecución y MySQL 8 para la persistencia de la información.
+
+El objetivo del proceso de despliegue es mantener una versión funcional del backend disponible para los demás componentes de PuntoSabor, reduciendo los errores que pueden producirse al trasladar una nueva versión hacia producción.
+
 ### 7.3.1. Tools and Practices
 
+Para el proceso de despliegue de PuntoSabor se consideran las herramientas utilizadas para el control de versiones, organización de ramas, construcción del backend, contenedorización y publicación del servicio.
+
+Git se utiliza como sistema de control de versiones para mantener un historial de los cambios realizados en el proyecto, mientras que GitHub funciona como repositorio remoto donde se almacenan y administran las diferentes versiones.
+
+Para organizar el trabajo, PuntoSabor emplea una estrategia de ramificación basada en GitFlow simplificado. El desarrollo se realiza en ramas independientes como `feature/chapter-1` hasta `feature/chapter-8`, cuyos cambios son posteriormente integrados hacia `develop` y, después de su revisión, pueden incorporarse a `main`.
+
+El flujo utilizado por el equipo puede representarse de la siguiente manera:
+
+`feature/chapter-X → develop → main`
+
+Esta organización permite separar los cambios que todavía se encuentran en desarrollo de la versión principal del proyecto y facilita la trazabilidad de las modificaciones realizadas por los integrantes del equipo.
+
+El backend de PuntoSabor se encuentra desarrollado utilizando .NET 8. Para su ejecución en un entorno controlado se utiliza Docker, permitiendo definir las dependencias y configuraciones requeridas por el servicio.
+
+Railway es la plataforma utilizada para alojar el backend de PuntoSabor. Asimismo, MySQL 8 se utiliza como sistema de gestión de base de datos para almacenar la información utilizada por la plataforma.
+
+Las principales herramientas relacionadas con el proceso de despliegue son:
+
+| Componente | Tecnología o herramienta |
+|---|---|
+| Control de versiones | Git |
+| Repositorio remoto | GitHub |
+| Estrategia de ramificación | GitFlow simplificado |
+| Backend | .NET 8 |
+| Contenedorización | Docker |
+| Plataforma de despliegue | Railway |
+| Base de datos | MySQL 8 |
+
+Antes de considerar una versión para producción, los cambios deben haber pasado previamente por los procesos de revisión, construcción y pruebas correspondientes.
+
+De esta manera, el proceso general puede representarse como:
+
+`Development → Integration → Validation → Release → Deployment`
+
+Este flujo permite mantener una separación entre el desarrollo de nuevas funcionalidades y la versión que finalmente será utilizada en el entorno de producción.
+
 ### 7.3.2. Production Deployment Pipeline Components
+
+El Production Deployment Pipeline representa el conjunto de componentes y etapas necesarias para llevar una versión validada del backend de PuntoSabor hacia su entorno de producción.
+
+El flujo general considerado para este proceso es:
+
+`GitHub → Build → Docker → Railway → MySQL → Production Validation`
+
+Los principales componentes del pipeline son:
+
+| Componente | Descripción |
+|---|---|
+| Source Control | Git y GitHub permiten mantener e identificar la versión del código considerada para el despliegue. |
+| Branch Management | La estrategia GitFlow simplificada permite organizar el trabajo mediante ramas de desarrollo, integración y versión principal. |
+| Build | Se comprueba que el backend desarrollado en .NET 8 pueda construirse correctamente. |
+| Container Preparation | Docker permite preparar un entorno consistente para la ejecución del backend. |
+| Deployment Environment | Railway proporciona el entorno donde se encuentra desplegado el backend de PuntoSabor. |
+| Database Service | MySQL 8 proporciona la persistencia de los datos utilizados por el backend. |
+| Production Validation | Después del despliegue se verifica que el servicio se encuentre disponible y responda correctamente. |
+
+**Source Control**
+
+El proceso comienza a partir del código almacenado en GitHub. El uso de Git permite identificar los cambios realizados, mantener diferentes versiones y recuperar estados anteriores del proyecto cuando sea necesario.
+
+Antes de considerar una nueva versión para producción, los cambios deben haber sido integrados siguiendo la organización de ramas establecida por el equipo.
+
+**Branch Management**
+
+PuntoSabor utiliza una estrategia basada en GitFlow simplificado para organizar los cambios.
+
+Las ramas `feature/chapter-X` contienen los desarrollos independientes realizados por el equipo. Posteriormente, estos cambios pueden integrarse en `develop`, donde se reúnen los avances antes de incorporarlos finalmente a `main`.
+
+El flujo puede representarse de la siguiente manera:
+
+`feature/chapter-X → develop → main`
+
+De esta forma, `main` mantiene la versión principal del proyecto mientras los cambios en desarrollo permanecen separados hasta completar su revisión.
+
+**Build**
+
+En esta etapa se verifica que el backend desarrollado en .NET 8 pueda construirse correctamente.
+
+El proceso permite identificar errores relacionados con dependencias o problemas de compilación antes de llevar una nueva versión hacia el entorno donde se encuentra desplegado el servicio.
+
+**Container Preparation**
+
+Docker permite preparar el entorno necesario para ejecutar el backend de manera consistente.
+
+Mediante la utilización de un contenedor se pueden definir las dependencias y configuraciones requeridas por la aplicación, reduciendo diferencias entre el entorno de desarrollo y el entorno utilizado para el despliegue.
+
+**Deployment Environment**
+
+Railway es la plataforma utilizada para alojar el backend de PuntoSabor.
+
+En este entorno se ejecuta el servicio encargado de proporcionar los endpoints necesarios para las funcionalidades de la plataforma.
+
+La publicación del backend permite que este pueda ser accedido mediante una dirección pública y responder a las solicitudes realizadas por los componentes que utilizan sus servicios.
+
+**Database Service**
+
+El backend utiliza MySQL 8 como sistema de gestión de base de datos.
+
+Este componente permite almacenar y recuperar la información requerida por las funcionalidades de PuntoSabor, manteniendo la persistencia de los datos utilizados por la aplicación.
+
+**Production Validation**
+
+Después de realizar un despliegue es necesario comprobar que el servicio se encuentre disponible y funcione correctamente.
+
+Esta validación puede incluir la comprobación de la disponibilidad del backend, la conexión con la base de datos y la respuesta de los endpoints principales.
+
+Si se identifica un problema durante esta etapa, el equipo debe revisar la versión desplegada, identificar la causa del error y realizar las correcciones necesarias antes de considerar la versión como estable.
+
+El flujo completo puede representarse de la siguiente manera:
+
+`Validated Version → Build → Docker Container → Railway Deployment → MySQL Connection → Production Validation`
+
+De esta manera, el Production Deployment Pipeline permite organizar las etapas necesarias para llevar una versión validada del backend de PuntoSabor hacia su entorno de producción, manteniendo un proceso controlado y trazable.
 
 ## 7.4. Continuous Monitoring
 
