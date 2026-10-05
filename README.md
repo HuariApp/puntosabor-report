@@ -246,6 +246,35 @@ Proyecto
 
 ### 6.1.1. Core Entities Unit Tests
 
+Se implementaron pruebas unitarias para las entidades del dominio que concentran 
+lógica de negocio propia, aislándolas de la base de datos y de servicios externos. 
+Se priorizaron las propiedades calculadas `Promo.IsActive` y `Subscription.IsActive`, 
+que determinan la vigencia de promociones y membresías respectivamente.
+
+**Framework:** xUnit (.NET 8)
+**Patrón aplicado:** AAA (Arrange-Act-Assert / Preparar-Ejecutar-Verificar)
+
+| # | Clase | Comportamiento probado |
+|---|---|---|
+| 1 | `Promo` | `IsActive` true cuando está dentro de rango y con cupos disponibles |
+| 2 | `Promo` | `IsActive` false cuando ya expiró |
+| 3 | `Promo` | `IsActive` false cuando aún no comienza |
+| 4 | `Promo` | `IsActive` false cuando se agotaron los cupos |
+| 5 | `Promo` | `IsActive` ignora el límite cuando `MaxUses` es nulo |
+| 6 | `Subscription` | `IsActive` true si está activa y sin vencimiento |
+| 7 | `Subscription` | `IsActive` false si el status es `cancelled` |
+
+Las 7 pruebas se ejecutaron satisfactoriamente (7/7 superadas, 0 con error):
+
+![alt text](assets/CoreEntitiesUnitTests.png)
+
+**Repositorio:** https://github.com/HuariqueHub/PuntoSabor-Backend (carpeta `PuntoSabor-Backend.Tests`)
+
+| Repository | Branch | Commit Id | Commit Message | Commited on |
+|---|---|---|---|---|
+| PuntoSabor-Backend | feature/unit-tests-core-entities | `c421528` | `test: add unit tests for Promo and Subscription IsActive` | 05/10/2026 |
+
+
 ### 6.1.2. Core Integration Tests
 
 ### 6.1.3. Core Behavior-Driven Development
