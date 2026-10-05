@@ -292,11 +292,76 @@ Proyecto
 
 # Capítulo VII: DevOps Practices
 
+En este capítulo se describen las prácticas DevOps consideradas para el desarrollo y mantenimiento de PuntoSabor. Estas prácticas permiten integrar, validar, entregar, desplegar y supervisar los diferentes componentes de la solución de una forma organizada y repetible.
+
+La adopción de DevOps busca reducir los errores producidos durante la integración de los cambios, facilitar la colaboración entre los integrantes del equipo y asegurar que las nuevas versiones del producto puedan ser verificadas antes de ser publicadas. Para ello, se consideran los procesos de Continuous Integration, Continuous Delivery, Continuous Deployment y Continuous Monitoring.
+
 ## 7.1. Continuous Integration
+
+Continuous Integration o Integración Continua es una práctica de desarrollo que consiste en integrar frecuentemente los cambios realizados por los integrantes del equipo dentro de un repositorio compartido. De esta manera, los avances pueden ser revisados y validados antes de incorporarse a las ramas principales del proyecto.
+
+En PuntoSabor, esta práctica permite organizar el trabajo realizado por los diferentes integrantes del equipo. Los cambios son gestionados mediante Git y almacenados en GitHub, utilizando ramas independientes para desarrollar los diferentes capítulos antes de integrarlos progresivamente en `develop` y posteriormente en `main`.
 
 ### 7.1.1. Tools and Practices
 
+Para el proceso de Continuous Integration de PuntoSabor se utilizan principalmente Git y GitHub. Asimismo, GitHub Actions se considera como herramienta para la automatización de procesos de compilación y pruebas dentro de los repositorios de software del proyecto.
+
+Git se utiliza como sistema de control de versiones para registrar los cambios realizados durante el desarrollo. Esto permite mantener un historial de modificaciones, identificar los aportes realizados por los integrantes del equipo y recuperar versiones anteriores cuando sea necesario.
+
+GitHub funciona como repositorio remoto central del proyecto y permite que los integrantes trabajen de manera colaborativa mediante diferentes ramas. Además, facilita la revisión e integración de cambios mediante Pull Requests.
+
+Actualmente, el repositorio del informe de PuntoSabor se encuentra organizado con las siguientes ramas:
+
+| Rama | Propósito |
+|---|---|
+| `main` | Contiene la versión principal y estable del informe del proyecto. |
+| `develop` | Integra los avances desarrollados por el equipo antes de incorporarlos a `main`. |
+| `feature/chapter-1` | Contiene el desarrollo correspondiente al Capítulo I. |
+| `feature/chapter-2` | Contiene el desarrollo correspondiente al Capítulo II. |
+| `feature/chapter-3` | Contiene el desarrollo correspondiente al Capítulo III. |
+| `feature/chapter-4` | Contiene el desarrollo correspondiente al Capítulo IV. |
+| `feature/chapter-5` | Contiene el desarrollo correspondiente al Capítulo V. |
+| `feature/chapter-6` | Contiene el desarrollo correspondiente al Capítulo VI. |
+| `feature/chapter-7` | Contiene el desarrollo correspondiente al Capítulo VII. |
+| `feature/chapter-8` | Contiene el desarrollo correspondiente al Capítulo VIII. |
+
+Esta organización permite que cada capítulo pueda desarrollarse de manera independiente sin modificar directamente las ramas principales. Una vez que el contenido de una rama se encuentra terminado y revisado, sus cambios pueden integrarse hacia `develop` y posteriormente hacia `main`.
+
+Asimismo, se utilizan mensajes de commit descriptivos con la finalidad de mantener un historial comprensible de las modificaciones realizadas en cada rama.
+
+Como complemento al proceso de integración, GitHub Actions permite definir workflows que pueden ejecutarse ante eventos determinados del repositorio, como un `push` o un Pull Request. Estos workflows pueden utilizarse para automatizar procesos de compilación, ejecución de pruebas y validación del software antes de realizar una integración.
+
+De esta manera, Continuous Integration permite mantener una estructura organizada de trabajo y detectar posibles problemas antes de incorporar nuevos cambios a una versión estable del proyecto.
+
 ### 7.1.2. Build & Test Suite Pipeline Components
+
+El Build & Test Suite Pipeline tiene como objetivo verificar los cambios realizados en los componentes de software de PuntoSabor antes de que estos sean considerados para una versión estable.
+
+El flujo general considerado para PuntoSabor es el siguiente:
+
+`Source Code → Dependency Restore → Build → Automated Tests → Validation → Result`
+
+Los principales componentes del pipeline son:
+
+| Componente | Descripción |
+|---|---|
+| Source Code | Se obtiene desde GitHub la versión del código correspondiente al cambio que inició el proceso. |
+| Environment Setup | Se prepara el entorno necesario para compilar y ejecutar el componente del proyecto. |
+| Dependency Restore | Se descargan las dependencias requeridas por la aplicación. |
+| Build | Se comprueba que el proyecto pueda compilarse correctamente. |
+| Automated Tests | Se ejecutan las pruebas automatizadas disponibles para detectar posibles errores. |
+| Validation | Se verifica que las etapas de compilación y pruebas hayan finalizado satisfactoriamente. |
+| Pipeline Result | Se registra el resultado final del proceso como exitoso o fallido. |
+
+Para el backend de PuntoSabor desarrollado en .NET 8, el proceso de construcción considera la restauración de las dependencias mediante `dotnet restore` y posteriormente la compilación mediante `dotnet build`.
+
+En el caso de la aplicación móvil Android, Gradle permite administrar las dependencias y realizar el proceso de construcción de la aplicación.
+
+Además, las pruebas de sistema desarrolladas con Playwright permiten automatizar la validación de diferentes flujos funcionales de PuntoSabor, complementando el proceso de verificación previo a una integración.
+
+En caso de que alguna etapa del pipeline presente un error, el cambio deberá ser revisado y corregido antes de continuar con su integración hacia una rama estable.
+
+De esta manera, el Build & Test Suite Pipeline busca asegurar que los cambios incorporados al proyecto mantengan un nivel adecuado de estabilidad y reduzcan la posibilidad de introducir errores durante el proceso de integración.
 
 ## 7.2. Continuous Delivery
 
