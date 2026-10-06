@@ -575,27 +575,14 @@ planes, "Choose Premium", datos de tarjeta y pago) y verifica el mensaje
 "Payment Successful!", la activación de la membresía y el ID de transacción.
 Requiere una cuenta sin suscripción previa.
 
-**Hallazgo (defecto de integración Front-backend):** cuando el usuario ya tiene
-una suscripción activa, el pago falla. En la pantalla de pago, al pulsar "Pay",
-aparece un recuadro rojo "Error" sin ningún detalle. El Front consulta
-`GET /subscriptions?userId=` (200, encuentra la suscripción existente) y envía
-`PATCH /subscriptions/{id}`, a lo que el servidor responde
-`405 Method Not Allowed`.
-
-<img src="./assets/Test_4_hallazgo.png" alt="Respuesta 405 al enviar PATCH /subscriptions/{id}" width="1000px">
-
-**Causa (revisión del código):** `process-membership-payment.usecase.js` llama
-a `updateSubscription` (PATCH) cuando ya existe una suscripción, pero
-`SubscriptionsController` del backend solo expone `GET`, `POST`,
-`POST /{id}/cancel` y `DELETE`. Su `POST /subscriptions` ya cancela la
-suscripción activa anterior y crea una nueva, por lo que el Front puede usar
-siempre `POST`.
-
-**Impacto:** un usuario con suscripción no puede renovar ni cambiar de plan.
+**Observación:** si la cuenta ya tiene una suscripción activa, el pago falla en
+la versión desplegada al momento de las pruebas (`PATCH` no soportado por el
+backend, HTTP 405); la corrección se encuentra en revisión (PR #1 del Front).
 
 ### Evidencia de ejecución
 
 <img src="./assets/Tests.png" alt="Resultado de la ejecución de todas las pruebas" width="1000px">
+
 ## 6.2. Static testing & Verification
 
 ### 6.2.1. Static Code Analysis
