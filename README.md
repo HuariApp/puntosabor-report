@@ -539,13 +539,20 @@ registrado.
 
 ### Escenario 9 — Pago de suscripción
 
-<img src="./assets/Test_4.png" alt="tests en la terminal" width="1000px">  
+<img src="./assets/Test_4.png" alt="test de pago pasando" width="1000px">
 
-**Hallazgo (bug reportado):** al intentar pagar con una tarjeta válida
-(número con Luhn correcto, fecha de expiración vigente, CVV válido), el
-sistema rechaza el pago mostrando un bloque de error genérico sin detalle
-específico. Se documenta como hallazgo de QA para reporte al equipo de
-desarrollo.
+La prueba recorre el flujo grabado completo (inicio de sesión, elección de rol,
+planes, "Choose Premium", datos de tarjeta y pago) y verifica el mensaje
+"Payment Successful!", la activación de la membresía y el ID de transacción.
+Requiere una cuenta sin suscripción previa.
+
+Hallazgo (defecto del backend): cuando el usuario ya tiene una suscripción
+activa, el pago falla. El Front consulta `GET /subscriptions?userId=`, encuentra
+la suscripción existente y envía `PATCH /subscriptions/{id}`, a lo que el backend
+responde `405 Method Not Allowed`. El Front solo muestra un bloque "Error" sin
+detalle. Un usuario con suscripción no puede renovar ni cambiar de plan.
+
+<img src="./assets/Test_4_hallazgo.png" alt="respuesta 405 del backend" width="1000px">
 
 ### Evidencia de ejecución
 
