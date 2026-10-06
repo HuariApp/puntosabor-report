@@ -529,57 +529,73 @@ Feature: Reporte de información incorrecta
 ### 6.1.4. Core System Tests
 
 Para esta sección se automatizaron 4 de los 10 escenarios definidos en el
-documento BDD (6.1.3), priorizando los flujos más críticos del sistema:
-autenticación, búsqueda, publicación de contenido y pagos. Se utilizó
-**Playwright** como framework de automatización, combinando el grabador
-(Codegen) para capturar las interacciones reales sobre el Front desplegado
-en producción (`https://punto-sabor-front.vercel.app`) con verificaciones
-(`expect`) escritas manualmente para validar los resultados esperados.
+documento BDD (6.1.3), con un total de 7 casos de prueba, priorizando los
+flujos más críticos del sistema: autenticación, búsqueda, publicación de
+contenido y pagos. Se utilizó **Playwright** como framework de automatización,
+combinando el grabador (Codegen) para capturar las interacciones reales sobre
+el Front desplegado en producción (`https://punto-sabor-front.vercel.app`) con
+verificaciones (`expect`) escritas manualmente para validar los resultados
+esperados. El código de las pruebas está en la carpeta `e2e-tests/` del
+repositorio del Front.
 
 ### Configuración del entorno
 
-<img src="./assets/Test_terminal.png" alt="tests en la terminal" width="1000px">  
+Las pruebas se ejecutan con `npx playwright test --project=chromium`.
+
+<img src="./assets/Test_terminal.png" alt="Ejecución de las pruebas en la terminal" width="1000px">
 
 ### Escenario 1 — Autenticación
 
 Se probaron 3 casos: login exitoso, contraseña incorrecta y correo no
 registrado.
 
-<img src="./assets/Test_1.png" alt="tests en la terminal" width="1000px">  
-
-**Hallazgo:** el sistema no distingue entre "contraseña incorrecta" y
-"correo no registrado" — ambos casos muestran el mismo mensaje genérico
-"Credenciales inválidas", lo cual es una buena práctica de seguridad.
+<img src="./assets/Test_1.png" alt="Pruebas de autenticación: 3 casos pasando" width="1000px">
 
 ### Escenario 2 — Búsqueda y filtrado
 
-<img src="./assets/Test_2.png" alt="tests en la terminal" width="1000px">  
+Se probaron 2 casos: la búsqueda "Pollo" muestra resultados de esa categoría y
+una búsqueda sin coincidencias muestra "0 hallazgos".
+
+<img src="./assets/Test_2.png" alt="Pruebas de búsqueda: 2 casos pasando" width="1000px">
 
 ### Escenario 5 — Publicación de reseñas
 
-<img src="./assets/Test_3.png" alt="tests en la terminal" width="1000px">  
+El usuario inicia sesión, elige el rol Explorer, busca "Pollo", publica una
+reseña de 5 estrellas con comentario y se verifica que aparece en el listado
+del huarique.
+
+<img src="./assets/Test_3.png" alt="Prueba de publicación de reseña pasando" width="1000px">
 
 ### Escenario 9 — Pago de suscripción
 
-<img src="./assets/Test_4.png" alt="test de pago pasando" width="1000px">
+<img src="./assets/Test_4.png" alt="Prueba de pago pasando" width="1000px">
 
 La prueba recorre el flujo grabado completo (inicio de sesión, elección de rol,
 planes, "Choose Premium", datos de tarjeta y pago) y verifica el mensaje
 "Payment Successful!", la activación de la membresía y el ID de transacción.
 Requiere una cuenta sin suscripción previa.
 
-Hallazgo (defecto del backend): cuando el usuario ya tiene una suscripción
-activa, el pago falla. El Front consulta `GET /subscriptions?userId=`, encuentra
-la suscripción existente y envía `PATCH /subscriptions/{id}`, a lo que el backend
-responde `405 Method Not Allowed`. El Front solo muestra un bloque "Error" sin
-detalle. Un usuario con suscripción no puede renovar ni cambiar de plan.
+**Hallazgo (defecto de integración Front-backend):** cuando el usuario ya tiene
+una suscripción activa, el pago falla. En la pantalla de pago, al pulsar "Pay",
+aparece un recuadro rojo "Error" sin ningún detalle. El Front consulta
+`GET /subscriptions?userId=` (200, encuentra la suscripción existente) y envía
+`PATCH /subscriptions/{id}`, a lo que el servidor responde
+`405 Method Not Allowed`.
 
-<img src="./assets/Test_4_hallazgo.png" alt="respuesta 405 del backend" width="1000px">
+<img src="./assets/Test_4_hallazgo.png" alt="Respuesta 405 al enviar PATCH /subscriptions/{id}" width="1000px">
+
+**Causa (revisión del código):** `process-membership-payment.usecase.js` llama
+a `updateSubscription` (PATCH) cuando ya existe una suscripción, pero
+`SubscriptionsController` del backend solo expone `GET`, `POST`,
+`POST /{id}/cancel` y `DELETE`. Su `POST /subscriptions` ya cancela la
+suscripción activa anterior y crea una nueva, por lo que el Front puede usar
+siempre `POST`.
+
+**Impacto:** un usuario con suscripción no puede renovar ni cambiar de plan.
 
 ### Evidencia de ejecución
 
-<img src="./assets/Tests.png" alt="tests en la terminal" width="1000px">  
-
+<img src="./assets/Tests.png" alt="Resultado de la ejecución de todas las pruebas" width="1000px">
 ## 6.2. Static testing & Verification
 
 ### 6.2.1. Static Code Analysis
