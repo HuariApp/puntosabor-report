@@ -274,8 +274,30 @@ Las 7 pruebas se ejecutaron satisfactoriamente (7/7 superadas, 0 con error):
 |---|---|---|---|---|
 | PuntoSabor-Backend | feature/unit-tests-core-entities | `c421528` | `test: add unit tests for Promo and Subscription IsActive` | 05/10/2026 |
 
-
 ### 6.1.2. Core Integration Tests
+
+Se implementaron pruebas de integración para validar las reglas de negocio clave (*Business Rules*) que involucran la interacción directa con la base de datos relacional y las restricciones de integridad entre entidades. Las pruebas se ejecutaron sobre un motor de base de datos en memoria (**SQLite In-Memory**), permitiendo validar persistencia, unicidad y consultas complejas en un entorno aislado, controlado y de rápida ejecución.
+
+**Framework:** xUnit (.NET 8)  
+**Motor DB de Prueba:** Microsoft.Data.Sqlite (In-Memory)  
+**Patrón aplicado:** AAA (Arrange-Act-Assert / Preparar-Ejecutar-Verificar)
+
+| # | Regla de Negocio | Comportamiento probado |
+|---|---|---|
+| 1 | `BR-01` | Prevención de reseñas duplicadas: lanza `InvalidOperationException` si el mismo usuario intenta publicar más de una reseña en el mismo huarique. |
+| 2 | `BR-02` | Control de cancelación SaaS: verifica que una membresía con estado `cancelled` permanezca con beneficios activos (`IsActive = true`) hasta alcanzar su fecha de vencimiento (`EndDate`). |
+| 3 | `BR-03` | Límite único de favoritos: garantiza que la combinación `UserId` y `HuariqueId` no se duplique en la base de datos al intentar agregar un favorito existente. |
+| 4 | `BR-04` | Control de cupos en promociones: verifica que una promoción con `CurrentUses` igual a `MaxUses` pase automáticamente a `IsActive = false` y sea excluida del listado de promociones vigentes. |
+
+Las 4 pruebas de integración se ejecutaron satisfactoriamente (4/4 superadas, 0 con error):
+
+![Core Integration Tests](assets/Integral_tests.png)
+
+**Repositorio:** https://github.com/HuariqueHub/PuntoSabor-Backend (carpeta `PuntoSabor-Backend.Tests`)
+
+| Repository | Branch | Commit Id | Commit Message | Commited on |
+|---|---|---|---|---|
+| PuntoSabor-Backend | main | `afb5b57` | `test: add integration tests for core business rules (BR-01 to BR-04)` | 06/10/2026 |
 
 ### 6.1.3. Core Behavior-Driven Development
 
