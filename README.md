@@ -588,6 +588,8 @@ El flujo completo puede representarse de la siguiente manera:
 
 De esta manera, el Production Deployment Pipeline permite organizar las etapas necesarias para llevar una versión validada del backend de PuntoSabor hacia su entorno de producción, manteniendo un proceso controlado y trazable.
 
+![Production Deployment Pipeline Components](assets/railway-deployment-pipeline.png)
+
 ## 7.4. Continuous Monitoring
 
 Continuous Monitoring o Monitoreo Continuo es una práctica de DevOps orientada a supervisar el comportamiento de una aplicación después de su despliegue. Su finalidad es comprobar que los servicios continúen disponibles, identificar posibles errores y obtener información que permita al equipo reaccionar ante incidentes.
@@ -614,13 +616,13 @@ Las principales herramientas utilizadas son:
 
 A continuación, se presenta evidencia del estado del backend de PuntoSabor desplegado en Railway.
 
-![Railway Service Status](assets/chapter-7/railway-service-status.png)
+![Railway Service Status](assets/railway-service-status.png)
 
 **Figura X. Estado del servicio backend de PuntoSabor en Railway.**
 
 Asimismo, se presentan los registros generados durante la ejecución del backend.
 
-![Railway Logs](assets/chapter-7/railway-logs.png)
+![Railway Logs](assets/railway-logs.png)
 
 **Figura X. Logs de ejecución del backend de PuntoSabor en Railway.**
 
@@ -675,7 +677,7 @@ Cuando se identifica un problema, el equipo puede revisar los registros correspo
 
 A continuación, se muestra la sección de deployments de Railway, desde donde es posible identificar el estado de las diferentes versiones desplegadas.
 
-![Railway Deployments](assets/chapter-7/railway-deployments.png)
+![Railway Deployments](assets/railway-deployment.png)
 
 **Figura X. Historial y estado de deployments del backend de PuntoSabor.**
 
