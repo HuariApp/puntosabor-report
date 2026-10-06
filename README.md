@@ -590,13 +590,114 @@ De esta manera, el Production Deployment Pipeline permite organizar las etapas n
 
 ## 7.4. Continuous Monitoring
 
+Continuous Monitoring o Monitoreo Continuo es una práctica de DevOps orientada a supervisar el comportamiento de una aplicación después de su despliegue. Su finalidad es comprobar que los servicios continúen disponibles, identificar posibles errores y obtener información que permita al equipo reaccionar ante incidentes.
+
+En PuntoSabor, el monitoreo se centra principalmente en el backend desplegado en Railway. La plataforma permite revisar el estado de los despliegues y consultar los registros generados durante la ejecución del servicio.
+
+Además, la disponibilidad de los endpoints del backend puede comprobarse mediante la interfaz de Swagger, permitiendo verificar que la API se encuentra accesible y responde correctamente.
+
 ### 7.4.1. Tools and Practices
+
+Para el monitoreo de PuntoSabor se utilizan principalmente las herramientas disponibles en Railway y las funcionalidades de diagnóstico proporcionadas por el backend.
+
+Railway permite visualizar el estado del servicio desplegado, revisar los despliegues realizados y consultar los logs generados durante la ejecución de la aplicación.
+
+Por otro lado, Swagger permite comprobar de manera directa la disponibilidad de los endpoints expuestos por el backend y realizar solicitudes para verificar su funcionamiento.
+
+Las principales herramientas utilizadas son:
+
+| Herramienta | Uso |
+|---|---|
+| Railway | Visualización del estado del backend, deployments y logs. |
+| Swagger | Verificación de disponibilidad y funcionamiento de los endpoints de la API. |
+| GitHub | Seguimiento de las versiones y cambios asociados al código desplegado. |
+
+A continuación, se presenta evidencia del estado del backend de PuntoSabor desplegado en Railway.
+
+![Railway Service Status](assets/chapter-7/railway-service-status.png)
+
+**Figura X. Estado del servicio backend de PuntoSabor en Railway.**
+
+Asimismo, se presentan los registros generados durante la ejecución del backend.
+
+![Railway Logs](assets/chapter-7/railway-logs.png)
+
+**Figura X. Logs de ejecución del backend de PuntoSabor en Railway.**
 
 ### 7.4.2. Monitoring Pipeline Components
 
+El Monitoring Pipeline permite obtener información sobre el comportamiento del backend después de su despliegue.
+
+El flujo de monitoreo considerado para PuntoSabor es el siguiente:
+
+`Backend → Railway → Logs → Service Status → Team Review`
+
+Los principales componentes son:
+
+| Componente | Descripción |
+|---|---|
+| Backend Service | Servicio .NET 8 desplegado y accesible públicamente. |
+| Railway Deployment | Entorno encargado de ejecutar el backend. |
+| Application Logs | Registros producidos por la aplicación durante su funcionamiento. |
+| Service Status | Permite comprobar si el backend se encuentra disponible. |
+| Swagger | Permite comprobar el funcionamiento de los endpoints expuestos por la API. |
+| Team Review | Los integrantes pueden revisar los registros cuando se presenta algún comportamiento inesperado. |
+
+Railway centraliza la información relacionada con la ejecución del backend. Mediante sus logs es posible revisar el inicio de la aplicación, solicitudes recibidas y posibles errores ocurridos durante la ejecución.
+
+Por otro lado, Swagger permite realizar una validación directa del servicio accediendo a los endpoints disponibles.
+
+A continuación, se muestra la disponibilidad de la API de PuntoSabor mediante Swagger.
+
+![Swagger Backend](assets/swagger-backend-status.png)
+
+**Figura. Verificación del funcionamiento de la API de PuntoSabor mediante Swagger.**
+
 ### 7.4.3. Alerting Pipeline Components
 
+El Alerting Pipeline tiene como finalidad detectar situaciones que puedan afectar el funcionamiento normal de la aplicación y facilitar su identificación por parte del equipo de desarrollo.
+
+Actualmente, PuntoSabor utiliza principalmente la revisión del estado del servicio y de los logs disponibles en Railway para identificar posibles problemas en el backend.
+
+Entre las situaciones que deben ser observadas se encuentran:
+
+- Fallos durante el despliegue del backend.
+- Errores producidos durante la ejecución de la aplicación.
+- Problemas de conexión con la base de datos.
+- Respuestas incorrectas de los endpoints.
+- Indisponibilidad del servicio desplegado.
+
+El flujo actual puede representarse de la siguiente manera:
+
+`Service Execution → Railway Logs → Error Detection → Team Review`
+
+Cuando se identifica un problema, el equipo puede revisar los registros correspondientes para determinar su causa y realizar posteriormente una corrección en el código fuente.
+
+A continuación, se muestra la sección de deployments de Railway, desde donde es posible identificar el estado de las diferentes versiones desplegadas.
+
+![Railway Deployments](assets/chapter-7/railway-deployments.png)
+
+**Figura X. Historial y estado de deployments del backend de PuntoSabor.**
+
 ### 7.4.4. Notification Pipeline Components
+
+El Notification Pipeline complementa el proceso de monitoreo al permitir comunicar a los integrantes del equipo la existencia de cambios o incidentes relacionados con el proyecto.
+
+En el estado actual de PuntoSabor, el equipo puede revisar los eventos asociados al repositorio mediante GitHub y los estados de despliegue directamente desde Railway.
+
+El flujo considerado es:
+
+`Event Detection → Platform Status → Team Review → Corrective Action`
+
+Cuando se detecta un problema en el servicio, los integrantes pueden revisar los logs disponibles, identificar el componente afectado y realizar las modificaciones necesarias dentro del repositorio.
+
+Posteriormente, la corrección sigue nuevamente el flujo de desarrollo establecido por el equipo:
+
+`feature/chapter-X → develop → main`
+
+Para futuras iteraciones del proyecto se puede ampliar este proceso incorporando mecanismos automáticos de notificación que informen inmediatamente al equipo cuando se produzca una caída del servicio o un error crítico.
+
+De esta manera, Continuous Monitoring complementa los procesos de integración, entrega y despliegue, permitiendo supervisar el funcionamiento de PuntoSabor una vez que sus servicios se encuentran disponibles.
 
 # Capítulo VIII: Experiment-Driven Development
 
