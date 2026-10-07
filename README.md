@@ -583,6 +583,25 @@ backend, HTTP 405); la corrección se encuentra en revisión (PR #1 del Front).
 
 <img src="./assets/Tests.png" alt="Resultado de la ejecución de todas las pruebas" width="1000px">
 
+Adicionalmente, se automatizó el flujo de autenticación de la aplicación
+móvil (5 casos) con Jetpack Compose UI Test, sobre el emulador de Android
+Studio.
+
+Se automatizó el flujo de autenticación de la app para dueños con
+**Jetpack Compose UI Test**, ejecutado en el emulador de Android Studio
+(Medium Phone, API 37) contra el backend desplegado en Railway. El código está
+en `app/src/androidTest/` del repositorio de la app.
+
+| N.° | Caso | Resultado esperado |
+|---|---|---|
+| 1 | Campos vacíos | Muestra "Por favor completa todos los campos" |
+| 2 | Contraseña corta | Muestra "La contraseña debe tener al menos 6 caracteres" |
+| 3 | Contraseña incorrecta | Muestra el error de credenciales del backend |
+| 4 | Cuenta de explorador | Muestra "Esta app es para dueños" |
+| 5 | Cuenta de dueño | Navega al panel "Mi Panel" |
+
+<img src="./assets/Test_mobile.png" alt="Pruebas móviles: 5 casos pasando" width="1000px">
+
 ## 6.2. Static testing & Verification
 
 ### 6.2.1. Static Code Analysis
