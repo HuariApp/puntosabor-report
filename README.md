@@ -63,7 +63,9 @@ Proyecto
 
 **Repositorio de la documentación del proyecto:** https://github.com/HuariApp/puntosabor-report.git
 
-<img src="assets/Insight.png" alt="Collaboration Insigths">
+<img src="assets/Insight.png" alt="Collaboration Insigths AV1">
+
+<img src="assets/Insights_TB1.png" alt="Collaboration Insigths TB1">
 
 # Contenido
 
