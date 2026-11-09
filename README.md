@@ -796,7 +796,7 @@ De esta manera, las Experiment Cards establecen una base estructurada para que P
 
 Las hipótesis de PuntoSabor se derivan directamente de las Experiment Cards EXP-01 a EXP-05 definidas en la sección 8.1.5. Para los experimentos de tipo Belief-led (EXP-01, EXP-02, EXP-03 y EXP-05) se establece una hipótesis alternativa (H₁) y una hipótesis nula (H₀). EXP-04 es de naturaleza exploratoria, por lo que no requiere hipótesis formal. Cada hipótesis es falsificable, testable y especifica las medidas esperadas que permitirán evaluarla.
 
-#### EXP-01 — Eficiencia en la búsqueda de huariques
+#### EXP-01: Eficiencia en la búsqueda de huariques
 
 **H₁ (Hipótesis alternativa):** Presentar los filtros de precio y categoría de forma visualmente accesible incrementará la tasa de búsquedas completadas correctamente en al menos 15 puntos porcentuales y reducirá el tiempo promedio de búsqueda en al menos 20 % respecto al diseño actual.
 
@@ -804,7 +804,7 @@ Las hipótesis de PuntoSabor se derivan directamente de las Experiment Cards EXP
 
 **Medidas especificadas:** tasa de búsquedas completadas (%) y tiempo promedio de búsqueda (segundos).
 
-#### EXP-02 — Confiabilidad de la información comercial
+#### EXP-02: Confiabilidad de la información comercial
 
 **H₁ (Hipótesis alternativa):** Mostrar la fecha de última actualización de la información comercial en los perfiles de los huariques incrementará en al menos 20 puntos porcentuales la proporción de exploradores gastronómicos que califican la información como confiable (puntuación ≥ 4 en escala 1–5) respecto al perfil sin fecha visible.
 
@@ -812,7 +812,7 @@ Las hipótesis de PuntoSabor se derivan directamente de las Experiment Cards EXP
 
 **Medidas especificadas:** proporción de participantes con calificación de confianza ≥ 4 sobre 5.
 
-#### EXP-03 — Facilidad del registro de huariques
+#### EXP-03: Facilidad del registro de huariques
 
 **H₁ (Hipótesis alternativa):** Organizar el formulario de registro en pasos esenciales incrementará la tasa de registros completados en al menos 20 puntos porcentuales y reducirá el tiempo promedio de registro en al menos 25 % respecto al formulario actual.
 
@@ -820,11 +820,11 @@ Las hipótesis de PuntoSabor se derivan directamente de las Experiment Cards EXP
 
 **Medidas especificadas:** tasa de registros completados (%) y tiempo promedio de registro (segundos).
 
-#### EXP-04 — Credibilidad de las reseñas (exploratorio, sin hipótesis formal)
+#### EXP-04: Credibilidad de las reseñas (exploratorio, sin hipótesis formal)
 
 Este experimento tiene naturaleza exploratoria. Su objetivo es identificar qué señales de autenticidad utilizan los exploradores gastronómicos para evaluar la confiabilidad de una reseña, en lugar de contrastar el efecto de una funcionalidad predefinida. Por este motivo no se establece hipótesis nula ni alternativa en esta etapa. Los hallazgos obtenidos servirán de base para formular hipótesis en iteraciones futuras.
 
-#### EXP-05 — Comprensión de los planes de membresía
+#### EXP-05: Comprensión de los planes de membresía
 
 **H₁ (Hipótesis alternativa):** Una presentación comparativa simplificada de los planes de membresía incrementará en al menos 25 puntos porcentuales la tasa de comprensión correcta de beneficios y condiciones, y en al menos 20 puntos porcentuales la proporción de propietarios que manifiestan intención de seleccionar un plan, respecto a la presentación actual.
 
@@ -875,7 +875,7 @@ Las métricas cualitativas generadas por EXP-04 no forman parte de esta tabla po
 
 Las medidas seleccionadas para cada experimento permiten recopilar la evidencia necesaria para responder la pregunta experimental y detectar el efecto esperado según las hipótesis planteadas. Se priorizan las medidas representativas del cambio esperado y se limitan a las estrictamente necesarias durante el tiempo justo, minimizando costos y riesgos.
 
-#### EXP-01 — Eficiencia en la búsqueda de huariques
+#### EXP-01: Eficiencia en la búsqueda de huariques
 
 **Medida primaria 1 — Task Completion Rate (M-01):** proporción de participantes que encuentran correctamente un huarique que cumple los criterios de precio y categoría establecidos en la tarea. Es la medida principal porque refleja directamente si la mejora visual en los filtros produce resultados de búsqueda exitosos.
 
@@ -883,8 +883,7 @@ Las medidas seleccionadas para cada experimento permiten recopilar la evidencia 
 
 **Justificación de exclusiones:** no se miden clics intermedios ni rutas de navegación, ya que el objetivo es evaluar el resultado de la tarea y la eficiencia, no el comportamiento de exploración detallado.
 
-
-#### EXP-02 — Confiabilidad de la información comercial
+#### EXP-02: Confiabilidad de la información comercial
 
 **Medida primaria — High-Trust Rate (M-04):** proporción de participantes que califican la información como confiable con puntuación ≥ 4 sobre 5. Es la medida principal porque operacionaliza directamente la hipótesis sobre confianza percibida.
 
@@ -892,8 +891,7 @@ Las medidas seleccionadas para cada experimento permiten recopilar la evidencia 
 
 **Justificación de exclusiones:** no se mide intención de visita ni comportamiento posterior a la consulta del perfil, ya que el experimento evalúa específicamente la percepción de confianza ante la información mostrada, no la decisión final del usuario.
 
-
-#### EXP-03 — Facilidad del registro de huariques
+#### EXP-03: Facilidad del registro de huariques
 
 **Medida primaria 1 — Registration Completion Rate (M-05):** proporción de participantes que completan correctamente el formulario de registro. Refleja si la reorganización en pasos reduce las barreras que impiden finalizar el proceso.
 
@@ -901,8 +899,7 @@ Las medidas seleccionadas para cada experimento permiten recopilar la evidencia 
 
 **Justificación de exclusiones:** no se mide el número de errores por campo, ya que la prioridad del experimento es determinar si el nuevo formato facilita la finalización del proceso, no identificar campos problemáticos específicos (eso corresponde a un análisis cualitativo complementario).
 
-
-#### EXP-04 — Credibilidad de las reseñas (exploratorio)
+#### EXP-04: Credibilidad de las reseñas (exploratorio)
 
 Dado el carácter exploratorio de este experimento, no se utilizan métricas cuantitativas predefinidas. Las medidas son cualitativas:
 
@@ -912,15 +909,13 @@ Dado el carácter exploratorio de este experimento, no se utilizan métricas cua
 
 Estas medidas se registran mediante notas de la sesión y, con consentimiento, grabación de audio para posterior análisis temático.
 
-
-#### EXP-05 — Comprensión de los planes de membresía
+#### EXP-05: Comprensión de los planes de membresía
 
 **Medida primaria 1 — Plan Comprehension Rate (M-07):** proporción de participantes que responden correctamente al menos 3 de 4 preguntas cerradas sobre los beneficios y condiciones de los planes. Evalúa directamente si la presentación comparativa mejora la comprensión.
 
 **Medida primaria 2 — Plan Selection Intent Rate (M-08):** proporción de participantes que manifiestan intención de seleccionar un plan al finalizar la tarea simulada. Captura el efecto de la comprensión sobre la decisión declarada.
 
 **Justificación de exclusiones:** no se miden conversiones reales de pago, ya que el experimento utiliza una selección simulada. La intención declarada es el indicador más cercano disponible en el contexto de una prueba A/B controlada.
-
 
 #### Resumen de medidas por experimento
 
@@ -937,7 +932,7 @@ Estas medidas se registran mediante notas de la sesión y, con consentimiento, g
 
 Las condiciones definen los estados bajo los cuales se recopila la evidencia de cada experimento. Para los experimentos Belief-led (EXP-01, EXP-02, EXP-03 y EXP-05) se establece una condición de control y una condición experimental. Para el experimento exploratorio EXP-04 se definen únicamente las características del grupo participante.
 
-#### EXP-01 — Eficiencia en la búsqueda de huariques
+#### EXP-01: Eficiencia en la búsqueda de huariques
 
 **Condición de control (A):** interfaz de búsqueda actual de PuntoSabor, donde los filtros de precio y categoría se encuentran disponibles pero no destacados visualmente respecto a otros elementos.
 
@@ -947,8 +942,7 @@ Las condiciones definen los estados bajo los cuales se recopila la evidencia de 
 
 **Restricción de interferencia:** un mismo participante no puede ser expuesto a ambas condiciones durante el experimento.
 
-
-#### EXP-02 — Confiabilidad de la información comercial
+#### EXP-02: Confiabilidad de la información comercial
 
 **Condición de control (A):** perfil de huarique con la presentación actual, sin indicación visible de la fecha de última actualización de horarios, precios o menú.
 
@@ -958,8 +952,7 @@ Las condiciones definen los estados bajo los cuales se recopila la evidencia de 
 
 **Restricción de veracidad:** las fechas utilizadas en la condición experimental deben corresponder a información verificable y no deben ser engañosas.
 
-
-#### EXP-03 — Facilidad del registro de huariques
+#### EXP-03: Facilidad del registro de huariques
 
 **Condición de control (A):** formulario de registro actual de PuntoSabor, que solicita toda la información del establecimiento en una sola pantalla o vista.
 
@@ -967,8 +960,7 @@ Las condiciones definen los estados bajo los cuales se recopila la evidencia de 
 
 **Restricciones de equivalencia:** ambos formularios solicitan la misma información obligatoria mínima para generar un registro válido. Los participantes completan el registro utilizando un conjunto de datos de prueba estandarizados. Se asignan aleatoriamente a una condición.
 
-
-#### EXP-04 — Credibilidad de las reseñas (exploratorio)
+#### EXP-04: Credibilidad de las reseñas (exploratorio)
 
 Al ser exploratorio, este experimento no tiene condiciones de control ni experimental en sentido estricto. En su lugar se definen las características del grupo participante y los límites del estudio:
 
@@ -976,15 +968,13 @@ Al ser exploratorio, este experimento no tiene condiciones de control ni experim
 - **Estímulos:** entre cuatro y seis ejemplos de reseñas con distintas combinaciones de características (fotografía, extensión del texto, calificación, fecha, información del autor), presentados de forma individual y sin identificación de marca.
 - **Límites:** los ejemplos de reseñas utilizados solo tienen fines de investigación. Cuando sean simulados, se identificarán como tales ante los participantes.
 
-
-#### EXP-05 — Comprensión de los planes de membresía
+#### EXP-05: Comprensión de los planes de membresía
 
 **Condición de control (A):** presentación actual de los planes de membresía de PuntoSabor (Basic, Premium y Exclusive), en su formato y orden habituales.
 
 **Condición experimental (B):** presentación comparativa simplificada en la que los tres planes se muestran en paralelo, con sus precios, principales beneficios y condiciones organizados en columnas comparables. Se incluye una etiqueta visual que identifica el plan más popular o recomendado.
 
 **Restricciones de equivalencia:** ambas condiciones muestran exactamente los mismos precios y condiciones comerciales vigentes. La selección de planes durante el experimento es simulada y no genera cargos ni contratos reales.
-
 
 #### Resumen de condiciones
 
@@ -1008,8 +998,7 @@ El tamaño de muestra de cada experimento se determina considerando tres paráme
 - Distribución asumida: normal (z), dado que se trabaja con proporciones y los tamaños de muestra calculados superan 30 participantes por grupo.
 - Fórmula utilizada para proporciones: n = [(z_α/2 + z_β)² × (p₁(1−p₁) + p₂(1−p₂))] / (p₁ − p₂)², donde p₁ es la tasa esperada en el grupo de control y p₂ es la tasa esperada en el grupo experimental.
 
-
-#### EXP-01 — Eficiencia en la búsqueda de huariques
+#### EXP-01: Eficiencia en la búsqueda de huariques
 
 **Parámetros de escala:**
 
@@ -1027,8 +1016,7 @@ n = 3,587 / 0,0225 ≈ 160 participantes por grupo
 
 **Decisión de escala:** dado que el experimento se ejecutará en un contexto de prueba de usabilidad controlada, el equipo aplicará una prueba piloto con 10 participantes por condición para verificar las tasas de referencia antes de ejecutar el experimento completo. Si la tasa de control resulta mayor a 0,65, el MDE requerido para detectar diferencias significativas se recalculará.
 
-
-#### EXP-02 — Confiabilidad de la información comercial
+#### EXP-02: Confiabilidad de la información comercial
 
 **Parámetros de escala:**
 
@@ -1046,8 +1034,7 @@ n = 3,724 / 0,04 ≈ 93 participantes por grupo
 
 **Decisión de escala:** se ejecutará una prueba piloto con 8 participantes por condición para verificar la comprensión de la encuesta de confianza y ajustar la redacción si fuera necesario antes del despliegue completo.
 
-
-#### EXP-03 — Facilidad del registro de huariques
+#### EXP-03: Facilidad del registro de huariques
 
 **Parámetros de escala:**
 
@@ -1065,8 +1052,7 @@ n = 3,410 / 0,04 ≈ 85 participantes por grupo
 
 **Decisión de escala:** se realizará una prueba piloto con 6 participantes por condición para verificar que ambos formularios generan registros válidos y que los datos de prueba son comprensibles.
 
-
-#### EXP-04 — Credibilidad de las reseñas (exploratorio)
+#### EXP-04: Credibilidad de las reseñas (exploratorio)
 
 Al ser de naturaleza exploratoria y cualitativa, EXP-04 no requiere cálculos de potencia estadística. La escala se determina por el criterio de saturación temática, es decir, el punto en que las sesiones adicionales dejan de aportar categorías de respuesta nuevas.
 
@@ -1074,8 +1060,7 @@ Al ser de naturaleza exploratoria y cualitativa, EXP-04 no requiere cálculos de
 
 **Límites de generalización:** los resultados serán cualitativos y descriptivos; no se generalizarán estadísticamente al conjunto de usuarios de PuntoSabor.
 
-
-#### EXP-05 — Comprensión de los planes de membresía
+#### EXP-05: Comprensión de los planes de membresía
 
 **Parámetros de escala:**
 
@@ -1093,7 +1078,6 @@ n = 3,587 / 0,0625 ≈ 57 participantes por grupo
 
 **Decisión de escala:** se aplicará una prueba piloto con 5 participantes por condición para verificar que las preguntas de comprensión son claras y que la tarea de selección simulada no genera confusión.
 
-
 #### Resumen de tamaños de muestra
 
 | Exp. | p₁ (control) | p₂ (experimental) | MDE | n por grupo | Total |
@@ -1109,7 +1093,7 @@ n = 3,587 / 0,0625 ≈ 57 participantes por grupo
 
 El principio fundamental de la selección de métodos en PuntoSabor es el Simplest Useful Thing: el método elegido debe ser el más sencillo que permita alcanzar el tamaño de muestra necesario, mantener las condiciones definidas y obtener evidencia confiable para responder la pregunta experimental. Se evita ejecutar simultáneamente dos experimentos sobre el mismo dominio que puedan exponer a un mismo usuario a ambas condiciones.
 
-#### EXP-01 — Eficiencia en la búsqueda de huariques
+#### EXP-01: Eficiencia en la búsqueda de huariques
 
 **Método seleccionado:** prueba A/B de usabilidad moderada.
 
@@ -1117,8 +1101,7 @@ El principio fundamental de la selección de métodos en PuntoSabor es el Simple
 
 **Procedimiento simplificado:** los participantes son asignados aleatoriamente a la condición A o B. Se les presenta una tarea de búsqueda estandarizada y se registra si la completaron correctamente y el tiempo empleado. El moderador no interviene durante la tarea. Al finalizar se realiza una pregunta abierta breve sobre la experiencia.
 
-
-#### EXP-02 — Confiabilidad de la información comercial
+#### EXP-02: Confiabilidad de la información comercial
 
 **Método seleccionado:** prueba A/B de presentación de información con encuesta de percepción.
 
@@ -1126,8 +1109,7 @@ El principio fundamental de la selección de métodos en PuntoSabor es el Simple
 
 **Procedimiento simplificado:** los participantes acceden a una URL que muestra aleatoriamente la condición A o B (perfil sin fecha / perfil con fecha). Visualizan el perfil durante 60 segundos y luego responden la encuesta de percepción de 3 preguntas. No hay moderador. La asignación es automática.
 
-
-#### EXP-03 — Facilidad del registro de huariques
+#### EXP-03: Facilidad del registro de huariques
 
 **Método seleccionado:** prueba A/B de usabilidad moderada.
 
@@ -1135,8 +1117,7 @@ El principio fundamental de la selección de métodos en PuntoSabor es el Simple
 
 **Procedimiento simplificado:** los participantes son asignados aleatoriamente a un formulario (actual o por pasos). Se les entrega un conjunto de datos de prueba del establecimiento y se les pide que completen el registro. El moderador observa sin intervenir a menos que el participante abandone. Se registra el resultado y el tiempo.
 
-
-#### EXP-04 — Credibilidad de las reseñas (exploratorio)
+#### EXP-04: Credibilidad de las reseñas (exploratorio)
 
 **Método seleccionado:** entrevistas semiestructuradas con evaluación guiada de ejemplos.
 
@@ -1144,15 +1125,13 @@ El principio fundamental de la selección de métodos en PuntoSabor es el Simple
 
 **Procedimiento simplificado:** sesiones individuales de 30 a 45 minutos. El entrevistador presenta los ejemplos de reseñas de forma secuencial y hace preguntas abiertas sobre qué hace confiable o poco confiable cada reseña. Las sesiones se graban con consentimiento y se analizan mediante codificación temática.
 
-
-#### EXP-05 — Comprensión de los planes de membresía
+#### EXP-05: Comprensión de los planes de membresía
 
 **Método seleccionado:** prueba A/B con tareas de comprensión y selección simulada.
 
 **Justificación:** la pregunta evalúa comprensión (medible con preguntas cerradas) e intención (medible con una selección declarada). Ambas medidas pueden obtenerse sin moderador mediante un formulario en línea. No se requiere observación directa porque la tarea es autoadministrada y el resultado se captura automáticamente. Es el método más simple que permite alcanzar los 57 participantes por condición con recursos limitados.
 
 **Procedimiento simplificado:** los participantes acceden a una URL que muestra aleatoriamente la condición A o B. Visualizan los planes y responden 4 preguntas de comprensión cerradas y 1 pregunta de intención de selección. La selección es simulada y no genera cargos. No hay moderador.
-
 
 #### Restricción de interferencia entre experimentos
 
@@ -1221,7 +1200,7 @@ El Web and Mobile Tracking Plan define los eventos, propiedades y herramientas d
 
 #### Eventos de tracking por experimento
 
-**EXP-01 — Eficiencia en la búsqueda**
+**EXP-01: Eficiencia en la búsqueda**
 
 | Evento | Descripción | Propiedades | Plataforma |
 |---|---|---|---|
@@ -1231,7 +1210,7 @@ El Web and Mobile Tracking Plan define los eventos, propiedades y herramientas d
 | `search_task_completed` | El participante encuentra un huarique que cumple los criterios. | `session_id`, `timestamp_end`, `result: success\|fail` | Web / Móvil |
 | `search_time_elapsed` | Tiempo total en segundos desde inicio hasta completar la tarea. | `duration_seconds`, `condition` | Web / Móvil |
 
-**EXP-02 — Confiabilidad de la información**
+**EXP-02: Confiabilidad de la información**
 
 | Evento | Descripción | Propiedades | Plataforma |
 |---|---|---|---|
@@ -1239,7 +1218,7 @@ El Web and Mobile Tracking Plan define los eventos, propiedades y herramientas d
 | `profile_viewed` | El participante visualiza el perfil del huarique durante al menos 10 segundos. | `session_id`, `condition`, `duration_seconds` | Web |
 | `trust_survey_submitted` | El participante envía la encuesta de percepción de confianza. | `session_id`, `condition`, `trust_score: 1–5` | Web |
 
-**EXP-03 — Facilidad de registro**
+**EXP-03: Facilidad de registro**
 
 | Evento | Descripción | Propiedades | Plataforma |
 |---|---|---|---|
@@ -1249,11 +1228,11 @@ El Web and Mobile Tracking Plan define los eventos, propiedades y herramientas d
 | `registration_completed` | El participante finaliza el registro correctamente. | `session_id`, `timestamp_end`, `result: success\|fail` | Web / Móvil |
 | `registration_time_elapsed` | Tiempo total en segundos del proceso de registro. | `duration_seconds`, `condition` | Web / Móvil |
 
-**EXP-04 — Credibilidad de las reseñas (cualitativo)**
+**EXP-04: Credibilidad de las reseñas (cualitativo)**
 
 EXP-04 no utiliza instrumentación digital. La recolección de datos se realiza mediante notas del entrevistador y, con consentimiento, grabación de audio. No se registran eventos en la aplicación.
 
-**EXP-05 — Comprensión de membresías**
+**EXP-05: Comprensión de membresías**
 
 | Evento | Descripción | Propiedades | Plataforma |
 |---|---|---|---|
@@ -1296,7 +1275,6 @@ Cada historia incluye criterios de aceptación en formato Gherkin (Given-When-Th
 | TBS-07 | EXP-05 | Alta | EP10 | Vista comparativa simplificada de planes de membresía |
 | TBS-08 | EXP-05 | Media | EP10 | Etiqueta de plan recomendado en la comparación de membresías |
 
-
 **TBS-01** *Como explorador gastronómico, deseo ver accesos rápidos a los filtros de precio y categoría en la parte superior de la pantalla de búsqueda, para encontrar huariques que se ajusten a mis preferencias sin tener que buscar las opciones de filtrado.*
 
 Criterios de aceptación:
@@ -1309,7 +1287,6 @@ Criterios de aceptación:
   - **Given** que el explorador visualiza los accesos rápidos de filtro
   - **When** selecciona un valor de precio o categoría desde el acceso rápido
   - **Then** la lista de resultados se actualiza mostrando únicamente los huariques que cumplen el filtro seleccionado
-
 
 **TBS-02** *Como explorador gastronómico, deseo aplicar simultáneamente filtros de precio, categoría y distancia desde la vista principal de búsqueda, para reducir el tiempo necesario para encontrar el huarique que busco.*
 
@@ -1324,7 +1301,6 @@ Criterios de aceptación:
   - **When** no existen huariques que cumplan todos los criterios seleccionados
   - **Then** la plataforma muestra un mensaje que indica que no hay resultados para esa combinación y sugiere ampliar los filtros
 
-
 **TBS-03** *Como explorador gastronómico, deseo ver la fecha en que fue actualizada la información de un huarique (horario, precios o menú) dentro de su perfil, para evaluar si los datos que estoy consultando son recientes y confiables.*
 
 Criterios de aceptación:
@@ -1337,7 +1313,6 @@ Criterios de aceptación:
   - **Given** que el explorador visualiza el perfil de un huarique
   - **When** el propietario no ha actualizado su información en los últimos 90 días
   - **Then** el perfil muestra una advertencia visual que indica que la información puede no estar actualizada
-
 
 **TBS-04** *Como propietario de un huarique, deseo registrar mi establecimiento completando el formulario en tres pasos esenciales separados, para poder avanzar de forma progresiva sin sentirme abrumado por la cantidad de campos requeridos.*
 
@@ -1356,7 +1331,6 @@ Criterios de aceptación:
   - **When** uno o más campos obligatorios del paso actual están vacíos
   - **Then** el sistema muestra un mensaje de validación indicando cuáles campos son obligatorios y no permite avanzar hasta completarlos
 
-
 **TBS-05** *Como propietario de un huarique, deseo que el sistema guarde automáticamente el progreso de mi registro al finalizar cada paso, para poder retomar el proceso en otro momento si no puedo completarlo en una sola sesión.*
 
 Criterios de aceptación:
@@ -1369,7 +1343,6 @@ Criterios de aceptación:
   - **Given** que el propietario tiene un registro en progreso
   - **When** accede nuevamente al panel de propietario
   - **Then** el sistema le muestra la opción de continuar el registro pendiente desde el último paso completado
-
 
 **TBS-06** *Como explorador gastronómico, deseo identificar señales de autenticidad en las reseñas de los huariques (como fotografías del plato, fecha de la visita e información del autor), para evaluar con mayor confianza si una reseña refleja una experiencia real.*
 
@@ -1384,7 +1357,6 @@ Criterios de aceptación:
   - **When** la reseña se muestra en la lista
   - **Then** el sistema muestra el texto, la calificación, la fecha y el nombre del autor, sin espacio vacío donde iría la imagen
 
-
 **TBS-07** *Como propietario de un huarique, deseo ver una comparación clara de los tres planes de membresía (Basic, Premium y Exclusive) con sus precios, beneficios y condiciones organizados en columnas paralelas, para entender las diferencias entre ellos y tomar una decisión informada.*
 
 Criterios de aceptación:
@@ -1397,7 +1369,6 @@ Criterios de aceptación:
   - **Given** que el propietario visualiza la comparación de planes
   - **When** selecciona el botón de acción de uno de los planes
   - **Then** el sistema lo redirige al flujo de contratación del plan seleccionado, mostrando un resumen previo a la confirmación
-
 
 **TBS-08** *Como propietario de un huarique, deseo ver una etiqueta que identifique el plan más popular o recomendado dentro de la comparación de membresías, para tener una referencia visual que facilite mi decisión cuando no estoy seguro de qué plan elegir.*
 
