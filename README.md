@@ -557,7 +557,67 @@ desarrollo.
 
 #### 6.2.1.1. Coding standard & Code conventions
 
+Se corrió `dotnet format --verify-no-changes` sobre el proyecto `PuntoSabor-Backend` para verificar el cumplimiento del `.editorconfig` del repositorio (charset UTF-8, finales de línea CRLF, indentación de 4 espacios y newline final obligatorio).
+
+El resultado arrojó 527 violaciones en 49 archivos: 488 de indentación/espaciado (WHITESPACE) y 39 de archivos sin salto de línea final (FINALNEWLINE). La mayoría se concentra en archivos poco modificados desde su creación, en especial `DataSeeder.cs` con 358 violaciones, el 68% del total. Le siguen `PromosController.cs` (28), `HuariqueRepository.cs` (27), `AuthController.cs` (18) y `HuariquesController.cs` (14); el resto de archivos tiene entre 1 y 6 violaciones, casi todas en comentarios de documentación XML. Los archivos de pruebas agregados en la sección 6.1 no presentan ninguna, porque se escribieron ya respetando el formato configurado.
+
+Son correcciones mecánicas que no afectan la lógica del sistema, así que quedan pendientes para un commit de formateo aparte, sin mezclarlas con cambios funcionales.
+
+Las convenciones de nomenclatura y la organización en capas (PascalCase, separación Domain/Application/Infrastructure/Presentation, Conventional Commits) ya estaban definidas desde la sección 5.1.3; esta verificación se limitó al formato automático.
+
 #### 6.2.1.2. Code Quality & Code Security
+
+El proyecto no tenía ningún analizador de calidad configurado (ni StyleCop.Analyzers ni SonarAnalyzer.CSharp), por lo que se habilitaron los analizadores de Roslyn agregando `<EnableNETAnalyzers>true</EnableNETAnalyzers>` y `<AnalysisLevel>latest-recommended</AnalysisLevel>` en `PuntoSabor-Backend.csproj`.
+
+Antes de esto, `dotnet build` solo marcaba un warning real: `EF1002`, detallado abajo. Con `latest-recommended` activo, el build pasó a 52 warnings, la mayoría de APIs sensibles a cultura (`CA1305`, `CA1304`, `CA1311`), namespaces que chocan con palabras reservadas (`CA1716`), inicializadores redundantes (`CA1805`) y sugerencias de comparación de strings (`CA1862`). Ninguno es un riesgo de seguridad, quedan como deuda técnica documentada.
+
+**Hallazgo de seguridad: SQL Injection (EF1002)**
+
+El analizador detectó que `SchemaInitializer.cs` construía una sentencia DDL interpolando directamente nombres de tabla y columna:
+
+```csharp
+// Antes
+context.Database.ExecuteSqlRaw($"ALTER TABLE `{table}` ADD COLUMN `{column}` {definition}");
+```
+
+La parametrización que sugiere EF1002 no aplica acá: MySQL no permite enlazar un parámetro en la posición de un nombre de tabla o columna en DDL. Se validan los identificadores contra un patrón estricto antes de interpolarlos y se suprime el warning puntualmente:
+
+```csharp
+// Después
+ValidateIdentifier(table);
+ValidateIdentifier(column);
+#pragma warning disable EF1002
+context.Database.ExecuteSqlRaw($"ALTER TABLE `{table}` ADD COLUMN `{column}` {definition}");
+#pragma warning restore EF1002
+
+private static void ValidateIdentifier(string identifier)
+{
+    if (!Regex.IsMatch(identifier, "^[A-Za-z_][A-Za-z0-9_]*$"))
+        throw new ArgumentException($"Identificador SQL inválido: '{identifier}'.", nameof(identifier));
+}
+```
+
+**Vulnerabilidades en dependencias**
+
+`dotnet list package --vulnerable --include-transitive` encontró 4 paquetes transitivos con severidad High, ninguno declarado directamente en el `.csproj`:
+
+| Paquete transitivo | Versión | Severidad | Advisory |
+|---|---|---|---|
+| Microsoft.Extensions.Caching.Memory | 8.0.0 | High | GHSA-qj66-m88j-hmgj |
+| System.Net.Http | 4.3.0 | High | GHSA-7jgj-8wvc-jh57 |
+| System.Text.Json | 8.0.3 | High (x2) | GHSA-hh2w-p6rv-4g7w, GHSA-8g4q-xg66-9fp4 |
+| System.Text.RegularExpressions | 4.3.0 | High | GHSA-cmhx-cq75-c4mj |
+
+Llegan de forma transitiva, probablemente desde versiones antiguas de `MySql.EntityFrameworkCore` y `Swashbuckle.AspNetCore`. Quedan pendientes de remediación, porque fijar versiones mínimas seguras requiere antes verificar compatibilidad.
+
+Build final: 51 warnings (deuda técnica documentada), 0 errores, 30/30 pruebas unitarias pasando.
+
+**Repositorio:** https://github.com/HuariApp/PuntoSabor-Backend
+
+| Repository | Branch | Commit Id | Commit Message | Commited on |
+|---|---|---|---|---|
+| PuntoSabor-Backend | feature/static-code-analysis | `998cef2` | `chore: enable .NET analyzers with latest-recommended level` | [fecha] |
+| PuntoSabor-Backend | feature/static-code-analysis | `0606ac9` | `fix: validate identifiers before interpolating DDL in SchemaInitializer` | [fecha] |
 
 ### 6.2.2. Reviews
 
