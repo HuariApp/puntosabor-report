@@ -320,11 +320,51 @@ Proyecto
 
 ### 7.4.4. Notification Pipeline Components
 
+
 # Capítulo VIII: Experiment-Driven Development
 
 ## 8.1. Experiment Planning
 
+La planificación de experimentos de PuntoSabor tiene como finalidad identificar y priorizar las incertidumbres relacionadas con la experiencia de los usuarios, el funcionamiento de la plataforma y la generación de valor para los pequeños negocios gastronómicos.
+
+A partir de las entrevistas realizadas, el proceso Lean UX, las User Stories y las pruebas documentadas en las etapas anteriores, se plantean preguntas que permitirán evaluar posibles mejoras mediante experimentos y análisis de datos.
+
+Para ello, se aplica el enfoque Experiment-Driven Product Development (XDPD), que permite transformar suposiciones y problemas identificados en preguntas investigables, priorizarlas de acuerdo con su importancia y establecer experimentos que faciliten la toma de decisiones fundamentadas.
+
+Esta etapa comprende el análisis del estado actual de PuntoSabor, la identificación del material bruto, la formulación de preguntas experimentales, la construcción del Question Backlog y la elaboración de Experiment Cards.
+
 ### 8.1.1. As-Is Summary
+
+PuntoSabor es una plataforma digital desarrollada por HuariApp cuyo objetivo es incrementar la visibilidad de los huariques peruanos y facilitar que los consumidores descubran establecimientos gastronómicos locales que ofrecen comida tradicional y económica.
+
+La solución está dirigida a dos segmentos principales: los exploradores gastronómicos, interesados en encontrar nuevos lugares para comer, y los dueños o administradores de huariques, quienes buscan promocionar sus establecimientos y atraer nuevos clientes mediante herramientas digitales accesibles.
+
+Actualmente, el proyecto documenta una landing page, una aplicación web, una solución móvil para propietarios y servicios backend que permiten gestionar las principales operaciones del sistema.
+
+Entre sus funcionalidades se encuentran la búsqueda y filtrado de huariques, la visualización de establecimientos, la autenticación de usuarios, la gestión de información comercial, la publicación de reseñas y la administración de membresías y promociones.
+
+Durante el levantamiento de requisitos se realizaron entrevistas a los dos segmentos objetivo. Los exploradores gastronómicos manifestaron que utilizan principalmente redes sociales como TikTok e Instagram para descubrir establecimientos, complementando esta información con Google Maps y recomendaciones personales.
+
+Los entrevistados señalaron dificultades relacionadas con la limitada visibilidad de los huariques, la información desactualizada y la confiabilidad de las reseñas. Asimismo, destacaron la importancia de contar con fotografías reales, filtros por precio, categorías gastronómicas y herramientas de geolocalización.
+
+Por otra parte, los propietarios de huariques indicaron que utilizan plataformas como Facebook, Instagram y WhatsApp para promocionar sus negocios. Sin embargo, algunos manifestaron dificultades para administrar múltiples canales digitales, actualizar sus menús y llegar a consumidores fuera de su clientela habitual.
+
+Estos resultados permitieron identificar oportunidades de mejora relacionadas con la facilidad de navegación, la confiabilidad de la información, la administración de establecimientos y la presentación de los beneficios comerciales de PuntoSabor.
+
+En cuanto a la verificación técnica, el capítulo VI del informe documenta siete pruebas unitarias con xUnit, cuatro pruebas de integración, escenarios BDD y pruebas automatizadas del sistema web y móvil. Estas actividades permiten comprobar determinados comportamientos del software, pero no demuestran por sí solas que la plataforma genere los resultados de negocio esperados.
+
+Por este motivo, es necesario complementar las pruebas funcionales con experimentos que permitan comprender el comportamiento de los usuarios y evaluar el impacto de posibles mejoras.
+
+A partir del estado actual se identifican cinco áreas principales de investigación:
+
+1. **Descubrimiento de huariques:** determinar si los filtros de búsqueda permiten encontrar establecimientos de forma rápida y sencilla.
+2. **Confiabilidad de la información:** evaluar cómo influye la actualización de horarios, precios y menús en la confianza de los consumidores.
+3. **Registro de establecimientos:** identificar las dificultades de los propietarios durante el proceso de incorporación de sus negocios.
+4. **Credibilidad de las reseñas:** comprender los elementos que generan confianza al consultar las opiniones de otros usuarios.
+5. **Membresías:** evaluar si los propietarios comprenden los beneficios y condiciones de los planes ofrecidos.
+
+Estas oportunidades representan el punto de partida de la planificación experimental. Las mejoras planteadas deberán evaluarse mediante evidencia antes de considerarse efectivas.
+
 
 ### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims
 
