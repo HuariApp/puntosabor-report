@@ -623,7 +623,172 @@ Posteriormente, los resultados de los experimentos permitirán reevaluar las pri
 De esta manera, PuntoSabor podrá orientar sus próximas iteraciones mediante evidencia y aprendizaje continuo, reduciendo la incertidumbre antes de implementar modificaciones en la plataforma.
 
 
+
 ### 8.1.5. Experiment Cards
+
+Las Experiment Cards son artefactos utilizados para documentar las investigaciones seleccionadas en el Deep Question Backlog. Su propósito es establecer qué se desea aprender, por qué es importante realizar el experimento y cuál es el procedimiento más sencillo que permitirá obtener evidencia útil para PuntoSabor.
+
+Cada Experiment Card se divide en dos partes:
+
+- **Lado frontal (Front):** contiene la pregunta experimental (Question), su motivación (Why), la hipótesis correspondiente (Hypothesis) cuando aplica y el procedimiento propuesto (What).
+- **Lado posterior (Back):** contiene las medidas (Measures), condiciones (Conditions) y escala (Scale) necesarias para orientar la ejecución del experimento.
+
+Para PuntoSabor se elaboraron cinco Experiment Cards correspondientes a las preguntas Q-01, Q-02, Q-03, Q-04 y Q-05, seleccionadas en la sección 8.1.4 Question Backlog.
+
+Los procedimientos y medidas presentados constituyen propuestas de planificación. Las métricas de negocio, los tamaños de muestra y los criterios estadísticos deberán formalizarse posteriormente en la sección 8.2 Experiment Design.
+
+#### Experiment Card EXP-01: Eficiencia en la búsqueda de huariques
+
+**Front — Definición del experimento**
+
+| Campo | Descripción |
+|---|---|
+| **Experiment ID** | EXP-01 |
+| **Question ID** | Q-01 |
+| **QUESTION** | ¿Priorizar visualmente los filtros de precio y categoría mejora la proporción de usuarios que encuentran un huarique adecuado y reduce el tiempo de búsqueda frente al diseño actual? |
+| **WHY** | El descubrimiento de huariques constituye una de las principales funcionalidades de PuntoSabor. Si los usuarios encuentran dificultades para localizar establecimientos que se ajusten a sus preferencias, podrían abandonar la búsqueda y recurrir a otras plataformas. Investigar esta situación permitirá determinar si es necesario mejorar la presentación de los filtros. |
+| **HYPOTHESIS** | Creemos que presentar los filtros de precio y categoría de manera más accesible incrementará la proporción de usuarios que encuentran un huarique adecuado y reducirá el tiempo necesario para completar una búsqueda. |
+| **WHAT** | Comparar la interfaz actual de búsqueda con una variante que destaque visualmente los filtros de precio y categoría. Los participantes deberán encontrar un huarique que cumpla condiciones previamente definidas. Se registrarán los resultados de la tarea y el tiempo empleado. |
+
+**Back — Configuración del experimento**
+
+| Campo | Descripción |
+|---|---|
+| **MEASURES** | Tasa de búsquedas completadas correctamente y tiempo promedio necesario para encontrar un huarique que cumpla los criterios establecidos. |
+| **CONDITIONS** | Grupo de control: interfaz actual de búsqueda. Grupo experimental: interfaz con filtros destacados. Ambos grupos realizarán tareas equivalentes utilizando el mismo conjunto de establecimientos. |
+| **SCALE** | El tamaño de muestra será determinado mediante los cálculos de la sección 8.2.5. Inicialmente se realizará una prueba piloto para comprobar las tareas y obtener información de referencia. |
+| **METHOD** | Prueba A/B de usabilidad con asignación de participantes a una de las dos interfaces. |
+| **EXPECTED LEARNING** | Identificar si una presentación más accesible de los filtros mejora la eficiencia de búsqueda y facilita el descubrimiento de huariques. |
+| **STATUS** | Planificado. |
+
+Este experimento permitirá investigar la relación entre la presentación de los filtros y la capacidad de los exploradores gastronómicos para encontrar establecimientos adecuados.
+
+#### Experiment Card EXP-02: Confiabilidad de la información comercial
+
+**Front — Definición del experimento**
+
+| Campo | Descripción |
+|---|---|
+| **Experiment ID** | EXP-02 |
+| **Question ID** | Q-02 |
+| **QUESTION** | ¿Mostrar la fecha de última actualización de la información comercial incrementa la confianza de los exploradores gastronómicos respecto a la presentación actual? |
+| **WHY** | Durante las entrevistas realizadas, los exploradores gastronómicos manifestaron preocupación por la información desactualizada de los establecimientos, especialmente en horarios, precios y menús. Esta situación puede generar desconfianza e influir negativamente en la decisión de visitar un huarique. |
+| **HYPOTHESIS** | Creemos que mostrar una fecha verificable de actualización de la información comercial incrementará la confianza de los usuarios al consultar los perfiles de los huariques. |
+| **WHAT** | Presentar dos variantes de un mismo perfil de huarique. La primera conservará la presentación actual, mientras que la segunda mostrará la fecha de última actualización de la información comercial. Posteriormente, los participantes evaluarán la confianza que les transmite la información presentada. |
+
+**Back — Configuración del experimento**
+
+| Campo | Descripción |
+|---|---|
+| **MEASURES** | Proporción de participantes que califican la información como confiable mediante una escala de percepción de 1 a 5. |
+| **CONDITIONS** | Grupo de control: perfil sin fecha visible de actualización. Grupo experimental: perfil con fecha de actualización. Ambas variantes mantendrán la misma información comercial y presentación general. |
+| **SCALE** | El tamaño de muestra será calculado en la sección 8.2.5. Las fechas utilizadas deberán corresponder a información verificable para evitar presentar datos engañosos. |
+| **METHOD** | Prueba A/B de presentación de información, complementada con una encuesta breve de percepción. |
+| **EXPECTED LEARNING** | Determinar si mostrar la fecha de actualización contribuye a incrementar la confianza percibida por los exploradores gastronómicos. |
+| **STATUS** | Planificado. |
+
+Este experimento permitirá evaluar si una mayor transparencia sobre la actualización de los datos comerciales puede contribuir a mejorar la experiencia de los consumidores.
+
+#### Experiment Card EXP-03: Facilidad del registro de huariques
+
+**Front — Definición del experimento**
+
+| Campo | Descripción |
+|---|---|
+| **Experiment ID** | EXP-03 |
+| **Question ID** | Q-03 |
+| **QUESTION** | ¿Un formulario de registro dividido en pasos esenciales incrementa la proporción de propietarios que completan el registro de sus huariques? |
+| **WHY** | Las entrevistas realizadas a propietarios evidenciaron que algunos cuentan con tiempo limitado y presentan dificultades al utilizar plataformas digitales. Un proceso de registro complejo podría reducir la incorporación de nuevos huariques y limitar la cantidad de establecimientos disponibles en PuntoSabor. |
+| **HYPOTHESIS** | Creemos que organizar el formulario de registro en etapas, solicitando primero los datos indispensables, incrementará la tasa de registros completados sin comprometer la información obligatoria del establecimiento. |
+| **WHAT** | Comparar el formulario de registro actual con una variante dividida en etapas. Los participantes deberán completar el registro de un establecimiento utilizando datos de prueba y se evaluará si logran finalizar correctamente el proceso. |
+
+**Back — Configuración del experimento**
+
+| Campo | Descripción |
+|---|---|
+| **MEASURES** | Tasa de registros completados, tiempo promedio de registro y proporción de formularios que cumplen los requisitos obligatorios. |
+| **CONDITIONS** | Grupo de control: formulario actual. Grupo experimental: formulario organizado en etapas esenciales. Ambos procesos deberán solicitar la misma información obligatoria para completar un registro válido. |
+| **SCALE** | El tamaño de muestra será definido en la sección 8.2.5. Se realizará una prueba piloto para verificar que ambos formularios generen registros válidos y que las tareas puedan ejecutarse correctamente. |
+| **METHOD** | Prueba A/B de usabilidad con propietarios de huariques o participantes representativos del segmento objetivo. |
+| **EXPECTED LEARNING** | Identificar si la reorganización del formulario facilita el registro y disminuye las dificultades durante la incorporación de establecimientos. |
+| **STATUS** | Planificado. |
+
+Los resultados permitirán evaluar si la simplificación del proceso de registro representa una mejora relevante para los propietarios de huariques.
+
+#### Experiment Card EXP-04: Credibilidad de las reseñas
+
+**Front — Definición del experimento**
+
+| Campo | Descripción |
+|---|---|
+| **Experiment ID** | EXP-04 |
+| **Question ID** | Q-04 |
+| **QUESTION** | ¿Qué señales de autenticidad utilizan los exploradores gastronómicos para determinar si una reseña sobre un huarique es confiable? |
+| **WHY** | Los exploradores gastronómicos entrevistados señalaron que las reseñas son importantes al seleccionar establecimientos, pero también expresaron dudas sobre la autenticidad de algunas opiniones. Comprender los elementos que generan confianza permitirá identificar oportunidades de mejora sin implementar mecanismos innecesarios. |
+| **HYPOTHESIS** | No aplica inicialmente, debido a que se trata de una pregunta exploratoria orientada a descubrir criterios de confianza y comportamientos de los usuarios. |
+| **WHAT** | Presentar ejemplos de reseñas con diferentes características, como fotografías, detalles de la experiencia gastronómica e información del autor. Los participantes deberán identificar cuáles consideran más confiables y explicar los motivos de sus decisiones. |
+
+**Back — Configuración del experimento**
+
+| Campo | Descripción |
+|---|---|
+| **MEASURES** | Señales de confianza identificadas, frecuencia con la que se menciona cada criterio y nivel de confianza percibido por los participantes. |
+| **CONDITIONS** | Participarán personas pertenecientes al segmento de exploradores gastronómicos. Los ejemplos de reseñas se utilizarán únicamente con fines de investigación. Cuando sean simulados, se identificarán como tales. |
+| **SCALE** | Se propone una muestra exploratoria inicial de 6 a 8 participantes, considerando diversidad de perfiles. Los resultados serán cualitativos y no se generalizarán estadísticamente a todos los usuarios. |
+| **METHOD** | Entrevistas semiestructuradas y evaluación guiada de ejemplos de reseñas. |
+| **EXPECTED LEARNING** | Identificar las características que generan mayor credibilidad y determinar qué aspectos relacionados con la confianza deberían investigarse o mejorarse posteriormente. |
+| **STATUS** | Planificado. |
+
+Debido a su naturaleza exploratoria, este experimento busca obtener conocimiento sobre las preferencias y criterios de los participantes, en lugar de demostrar el efecto de una funcionalidad previamente seleccionada.
+
+#### Experiment Card EXP-05: Comprensión de los planes de membresía
+
+**Front — Definición del experimento**
+
+| Campo | Descripción |
+|---|---|
+| **Experiment ID** | EXP-05 |
+| **Question ID** | Q-05 |
+| **QUESTION** | ¿Una comparación simplificada de precios, beneficios y condiciones mejora la comprensión de las membresías y la intención de seleccionar un plan? |
+| **WHY** | El modelo de membresías constituye una oportunidad de sostenibilidad económica para PuntoSabor. Sin embargo, los propietarios de huariques necesitan comprender claramente los costos, beneficios y condiciones de cada plan antes de considerar su contratación. |
+| **HYPOTHESIS** | Creemos que presentar los planes mediante una comparación clara de precios, beneficios y condiciones incrementará la comprensión de la oferta comercial y la proporción de propietarios que manifiestan interés en seleccionar una membresía. |
+| **WHAT** | Comparar la presentación actual de los planes con una variante que permita visualizar sus diferencias de manera simplificada. Los participantes deberán responder preguntas sobre los beneficios y realizar una selección simulada del plan que consideren más adecuado. |
+
+**Back — Configuración del experimento**
+
+| Campo | Descripción |
+|---|---|
+| **MEASURES** | Tasa de comprensión correcta de los beneficios y condiciones de cada plan y proporción de participantes que manifiestan intención de seleccionar una membresía. |
+| **CONDITIONS** | Grupo de control: presentación actual de planes. Grupo experimental: presentación comparativa simplificada. Ambas variantes mostrarán los mismos precios y condiciones comerciales. |
+| **SCALE** | El tamaño de muestra será determinado en la sección 8.2.5. Se realizará una prueba piloto para verificar que las preguntas de comprensión y las tareas de selección sean claras. |
+| **METHOD** | Prueba A/B con tareas de comprensión y selección simulada de membresías. |
+| **EXPECTED LEARNING** | Identificar si una presentación comparativa mejora la comprensión de la oferta comercial y facilita una decisión informada por parte de los propietarios. |
+| **STATUS** | Planificado. |
+
+La selección de membresías durante el experimento será simulada y no implicará cargos ni contrataciones reales. Asimismo, la intención declarada de seleccionar un plan no se interpretará como una conversión de pago efectiva.
+
+#### Resumen de Experiment Cards
+
+Las cinco tarjetas propuestas permiten mantener la trazabilidad entre las preguntas priorizadas y las investigaciones que se realizarán durante las siguientes etapas de PuntoSabor.
+
+| Experiment ID | Question ID | Tipo de investigación | Segmento objetivo | Método propuesto |
+|---|---|---|---|---|
+| EXP-01 | Q-01 | Belief-led | Exploradores gastronómicos | Prueba A/B de búsqueda |
+| EXP-02 | Q-02 | Belief-led | Exploradores gastronómicos | Prueba A/B y encuesta |
+| EXP-03 | Q-03 | Belief-led | Dueños de huariques | Prueba A/B de registro |
+| EXP-04 | Q-04 | Exploratory | Exploradores gastronómicos | Entrevistas y evaluación guiada |
+| EXP-05 | Q-05 | Belief-led | Dueños de huariques | Prueba A/B de comprensión |
+
+Los experimentos EXP-01, EXP-02, EXP-03 y EXP-05 estarán orientados a contrastar hipótesis mediante la comparación de condiciones. Por su parte, EXP-04 permitirá obtener conocimiento exploratorio sobre los factores que influyen en la percepción de autenticidad de las reseñas.
+
+Antes de ejecutar los experimentos se deberán definir las métricas de negocio utilizadas, sus fórmulas, los criterios de decisión y los tamaños de muestra correspondientes. Estos elementos serán desarrollados en la sección 8.2 Experiment Design.
+
+Asimismo, la ejecución deberá respetar el consentimiento de los participantes, proteger sus datos personales y evitar la exposición simultánea de un mismo usuario a experimentos que puedan interferir entre sí.
+
+Los resultados obtenidos permitirán contrastar las hipótesis planteadas, identificar oportunidades de mejora y actualizar posteriormente el Question Backlog.
+
+De esta manera, las Experiment Cards establecen una base estructurada para que PuntoSabor continúe su evolución mediante investigaciones orientadas a reducir incertidumbres y tomar decisiones fundamentadas en evidencia.
+
 
 ## 8.2. Experiment Design
 
