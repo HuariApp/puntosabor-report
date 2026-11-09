@@ -667,8 +667,8 @@ Build final: 51 warnings (deuda técnica documentada), 0 errores, 30/30 pruebas 
 
 | Repository | Branch | Commit Id | Commit Message | Commited on |
 |---|---|---|---|---|
-| PuntoSabor-Backend | feature/static-code-analysis | `998cef2` | `chore: enable .NET analyzers with latest-recommended level` | [fecha] |
-| PuntoSabor-Backend | feature/static-code-analysis | `0606ac9` | `fix: validate identifiers before interpolating DDL in SchemaInitializer` | [fecha] |
+| PuntoSabor-Backend | feature/static-code-analysis | `998cef2` | `chore: enable .NET analyzers with latest-recommended level` | 09/11/2026 |
+| PuntoSabor-Backend | feature/static-code-analysis | `0606ac9` | `fix: validate identifiers before interpolating DDL in SchemaInitializer` | 09/11/2026 |
 
 ### 6.2.2. Reviews
 
