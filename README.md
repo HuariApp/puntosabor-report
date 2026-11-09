@@ -274,8 +274,30 @@ Las 7 pruebas se ejecutaron satisfactoriamente (7/7 superadas, 0 con error):
 |---|---|---|---|---|
 | PuntoSabor-Backend | feature/unit-tests-core-entities | `c421528` | `test: add unit tests for Promo and Subscription IsActive` | 05/10/2026 |
 
-
 ### 6.1.2. Core Integration Tests
+
+Se implementaron pruebas de integración para validar las reglas de negocio clave (*Business Rules*) que involucran la interacción directa con la base de datos relacional y las restricciones de integridad entre entidades. Las pruebas se ejecutaron sobre un motor de base de datos en memoria (**SQLite In-Memory**), permitiendo validar persistencia, unicidad y consultas complejas en un entorno aislado, controlado y de rápida ejecución.
+
+**Framework:** xUnit (.NET 8)  
+**Motor DB de Prueba:** Microsoft.Data.Sqlite (In-Memory)  
+**Patrón aplicado:** AAA (Arrange-Act-Assert / Preparar-Ejecutar-Verificar)
+
+| # | Regla de Negocio | Comportamiento probado |
+|---|---|---|
+| 1 | `BR-01` | Prevención de reseñas duplicadas: lanza `InvalidOperationException` si el mismo usuario intenta publicar más de una reseña en el mismo huarique. |
+| 2 | `BR-02` | Control de cancelación SaaS: verifica que una membresía con estado `cancelled` permanezca con beneficios activos (`IsActive = true`) hasta alcanzar su fecha de vencimiento (`EndDate`). |
+| 3 | `BR-03` | Límite único de favoritos: garantiza que la combinación `UserId` y `HuariqueId` no se duplique en la base de datos al intentar agregar un favorito existente. |
+| 4 | `BR-04` | Control de cupos en promociones: verifica que una promoción con `CurrentUses` igual a `MaxUses` pase automáticamente a `IsActive = false` y sea excluida del listado de promociones vigentes. |
+
+Las 4 pruebas de integración se ejecutaron satisfactoriamente (4/4 superadas, 0 con error):
+
+![Core Integration Tests](assets/Integral_tests.png)
+
+**Repositorio:** https://github.com/HuariqueHub/PuntoSabor-Backend (carpeta `PuntoSabor-Backend.Tests`)
+
+| Repository | Branch | Commit Id | Commit Message | Commited on |
+|---|---|---|---|---|
+| PuntoSabor-Backend | main | `afb5b57` | `test: add integration tests for core business rules (BR-01 to BR-04)` | 06/10/2026 |
 
 ### 6.1.3. Core Behavior-Driven Development
 
@@ -507,49 +529,78 @@ Feature: Reporte de información incorrecta
 ### 6.1.4. Core System Tests
 
 Para esta sección se automatizaron 4 de los 10 escenarios definidos en el
-documento BDD (6.1.3), priorizando los flujos más críticos del sistema:
-autenticación, búsqueda, publicación de contenido y pagos. Se utilizó
-**Playwright** como framework de automatización, combinando el grabador
-(Codegen) para capturar las interacciones reales sobre el Front desplegado
-en producción (`https://punto-sabor-front.vercel.app`) con verificaciones
-(`expect`) escritas manualmente para validar los resultados esperados.
+documento BDD (6.1.3), con un total de 7 casos de prueba, priorizando los
+flujos más críticos del sistema: autenticación, búsqueda, publicación de
+contenido y pagos. Se utilizó **Playwright** como framework de automatización,
+combinando el grabador (Codegen) para capturar las interacciones reales sobre
+el Front desplegado en producción (`https://punto-sabor-front.vercel.app`) con
+verificaciones (`expect`) escritas manualmente para validar los resultados
+esperados. El código de las pruebas está en la carpeta `e2e-tests/` del
+repositorio del Front.
 
 ### Configuración del entorno
 
-<img src="./assets/Test_terminal.png" alt="tests en la terminal" width="1000px">  
+Las pruebas se ejecutan con `npx playwright test --project=chromium`.
+
+<img src="./assets/Test_terminal.png" alt="Ejecución de las pruebas en la terminal" width="1000px">
 
 ### Escenario 1 — Autenticación
 
 Se probaron 3 casos: login exitoso, contraseña incorrecta y correo no
 registrado.
 
-<img src="./assets/Test_1.png" alt="tests en la terminal" width="1000px">  
-
-**Hallazgo:** el sistema no distingue entre "contraseña incorrecta" y
-"correo no registrado" — ambos casos muestran el mismo mensaje genérico
-"Credenciales inválidas", lo cual es una buena práctica de seguridad.
+<img src="./assets/Test_1.png" alt="Pruebas de autenticación: 3 casos pasando" width="1000px">
 
 ### Escenario 2 — Búsqueda y filtrado
 
-<img src="./assets/Test_2.png" alt="tests en la terminal" width="1000px">  
+Se probaron 2 casos: la búsqueda "Pollo" muestra resultados de esa categoría y
+una búsqueda sin coincidencias muestra "0 hallazgos".
+
+<img src="./assets/Test_2.png" alt="Pruebas de búsqueda: 2 casos pasando" width="1000px">
 
 ### Escenario 5 — Publicación de reseñas
 
-<img src="./assets/Test_3.png" alt="tests en la terminal" width="1000px">  
+El usuario inicia sesión, elige el rol Explorer, busca "Pollo", publica una
+reseña de 5 estrellas con comentario y se verifica que aparece en el listado
+del huarique.
+
+<img src="./assets/Test_3.png" alt="Prueba de publicación de reseña pasando" width="1000px">
 
 ### Escenario 9 — Pago de suscripción
 
-<img src="./assets/Test_4.png" alt="tests en la terminal" width="1000px">  
+<img src="./assets/Test_4.png" alt="Prueba de pago pasando" width="1000px">
 
-**Hallazgo (bug reportado):** al intentar pagar con una tarjeta válida
-(número con Luhn correcto, fecha de expiración vigente, CVV válido), el
-sistema rechaza el pago mostrando un bloque de error genérico sin detalle
-específico. Se documenta como hallazgo de QA para reporte al equipo de
-desarrollo.
+La prueba recorre el flujo grabado completo (inicio de sesión, elección de rol,
+planes, "Choose Premium", datos de tarjeta y pago) y verifica el mensaje
+"Payment Successful!", la activación de la membresía y el ID de transacción.
+Requiere una cuenta sin suscripción previa.
+
+**Observación:** si la cuenta ya tiene una suscripción activa, el pago falla en
+la versión desplegada al momento de las pruebas (`PATCH` no soportado por el
+backend, HTTP 405); la corrección se encuentra en revisión (PR #1 del Front).
 
 ### Evidencia de ejecución
 
-<img src="./assets/Tests.png" alt="tests en la terminal" width="1000px">  
+<img src="./assets/Tests.png" alt="Resultado de la ejecución de todas las pruebas" width="1000px">
+
+Adicionalmente, se automatizó el flujo de autenticación de la aplicación
+móvil (5 casos) con Jetpack Compose UI Test, sobre el emulador de Android
+Studio.
+
+Se automatizó el flujo de autenticación de la app para dueños con
+**Jetpack Compose UI Test**, ejecutado en el emulador de Android Studio
+(Medium Phone, API 37) contra el backend desplegado en Railway. El código está
+en `app/src/androidTest/` del repositorio de la app.
+
+| N.° | Caso | Resultado esperado |
+|---|---|---|
+| 1 | Campos vacíos | Muestra "Por favor completa todos los campos" |
+| 2 | Contraseña corta | Muestra "La contraseña debe tener al menos 6 caracteres" |
+| 3 | Contraseña incorrecta | Muestra el error de credenciales del backend |
+| 4 | Cuenta de explorador | Muestra "Esta app es para dueños" |
+| 5 | Cuenta de dueño | Navega al panel "Mi Panel" |
+
+<img src="./assets/Test_mobile.png" alt="Pruebas móviles: 5 casos pasando" width="1000px">
 
 ## 6.2. Static testing & Verification
 
@@ -625,9 +676,122 @@ Build final: 51 warnings (deuda técnica documentada), 0 errores, 30/30 pruebas 
 
 ### 6.3.1. Diseño de Entrevistas
 
+Para llevar a cabo las entrevistas de validación de concepto y usabilidad del proyecto **PuntoSabor**, se diseñó una guía estructurada orientada a evaluar la percepción de valor, la claridad de la interfaz y la intención de uso en dos segmentos clave de usuarios. 
+
+#### **Segmento 1: Explorador gastronómico**
+Este segmento está compuesto por usuarios que buscan descubrir huariques, restaurantes locales o lugares de comida auténtica mediante herramientas digitales.
+
+**Preguntas realizadas:**
+1. Después de ver la aplicación, ¿crees que PuntoSabor te ayudaría a encontrar huariques de manera más sencilla?
+2. ¿La pantalla principal te parece clara y fácil de entender?
+3. ¿Consideras útil poder buscar huariques por categorías, nombre o preferencias?
+4. ¿La información mostrada en el detalle del huarique, como fotos, horarios, ubicación, reseñas y estado de apertura, te parece suficiente para decidir si visitarías el local?
+5. ¿Qué opinas sobre la posibilidad de guardar huariques favoritos?
+6. ¿Las promociones o recomendaciones te motivarían a usar la aplicación con mayor frecuencia?
+7. ¿Qué aspecto de la aplicación te gustó más?
+8. ¿Qué mejorarías para que la experiencia sea más completa?
+9. ¿Recomendarías PuntoSabor a otras personas interesadas en descubrir huariques? ¿Por qué?
+10. ¿Qué tan confiables o útiles te parecen las reseñas y fotos mostradas en comparación con lo que sueles ver en otras plataformas o redes sociales?
+11. Al interactuar con la búsqueda y los filtros, ¿hubo alguna información o botón que esperabas encontrar y no estaba a la vista?
+12. ¿En qué momento o situación de tu semana te imaginas abriendo PuntoSabor por primera vez?
+
+---
+
+#### **Segmento 2: Dueño o administrador de huarique**
+Este segmento está compuesto por propietarios o encargados de negocios gastronómicos locales que buscan aumentar su visibilidad digital y atraer más clientes.
+
+**Preguntas realizadas:**
+1. Después de ver la aplicación, ¿crees que PuntoSabor podría ayudarte a promocionar tu huarique o negocio?
+2. ¿Te parece clara la forma en que se muestra la información del huarique?
+3. ¿Consideras útil poder mostrar horarios, estado de apertura, ubicación, fotos y reseñas del negocio?
+4. ¿Qué opinas sobre las promociones y planes de membresía dentro de la aplicación?
+5. ¿Crees que esta plataforma podría ayudarte a atraer nuevos clientes?
+6. ¿La aplicación te parece fácil de entender para un dueño de huarique?
+7. ¿Qué funcionalidad te parece más útil para tu negocio?
+8. ¿Qué mejorarías para que la aplicación sea más práctica para los propietarios?
+9. ¿Estarías dispuesto a usar PuntoSabor para dar mayor visibilidad a tu negocio? ¿Por qué?
+10. ¿Qué tan sencillo te resultaría actualizar periódicamente tus platos del día, promociones u horarios desde el panel de administración visto?
+11. ¿Qué información sobre los clientes que visitan o buscan tu negocio te gustaría ver dentro de la aplicación para medir si la plataforma te está funcionando?
+12. ¿Qué duda o temor te surgiría al momento de evaluar contratar un plan de membresía o promoción pagada en la plataforma?
+
+---
+
 ### 6.3.2. Registro de Entrevistas
 
+A continuación se resumen los registros y evidencias cualitativas recolectadas durante la ejecución de las sesiones de entrevista con representantes de ambos segmentos.
+
+#### **Registro de Entrevistas - Segmento 1: Explorador Gastronómico**
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** |  |
+| **Edad** |  |
+| **Departamento / Distrito** |  |
+| **Inicio del video** |  |
+| **Fin del video** |  |
+| **Duración** |  |
+| **Link del video** |  |
+| **Foto entrevista** |  |
+| **Resumen** |  |
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** |  |
+| **Edad** |  |
+| **Departamento / Distrito** |  |
+| **Inicio del video** |  |
+| **Fin del video** |  |
+| **Duración** |  |
+| **Link del video** |  |
+| **Foto entrevista** |  |
+| **Resumen** |  |
+
+#### **Registro de Entrevistas - Segmento 2: Dueño o administrador de huarique**
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** |  |
+| **Edad** |  |
+| **Departamento / Distrito** |  |
+| **Inicio del video** |  |
+| **Fin del video** |  |
+| **Duración** |  |
+| **Link del video** |  |
+| **Foto entrevista** |  |
+| **Resumen** |  |
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** |  |
+| **Edad** |  |
+| **Departamento / Distrito** |  |
+| **Inicio del video** |  |
+| **Fin del video** |  |
+| **Duración** |  |
+| **Link del video** |  |
+| **Foto entrevista** |  |
+| **Resumen** |  |
+
+---
+
 ### 6.3.3. Evaluaciones según heurísticas
+
+Para analizar sistemáticamente las respuestas obtenidas en las entrevistas, se definieron y aplicaron 3 heurísticas metodológicas de evaluación cualitativa:
+
+1. **Heurística 1: Claridad y Usabilidad Percibida (Nielsen #2 y #4)**
+   * **Definición:** Evalúa la facilidad con la que el usuario comprende la interfaz, la jerarquía visual de la información (horarios, ubicación, menús) y la navegabilidad sin requerir esfuerzo cognitivo adicional.
+   * **Análisis de Resultados (Segmento 1):** Los usuarios señalaron que la pantalla principal y las fichas de detalle son intuitivas. La inclusión visual de badges como "Abierto/Cerrado" reduce dudas inmediatas. Se identificó la necesidad de mantener filtros visibles desde la pantalla de inicio.
+   * **Análisis de Resultados (Segmento 2):** Los administradores entendieron la estructura de la información expuesta. Solicitaron interfaces extremadamente simplificadas para la actualización de menús diarios.
+
+2. **Heurística 2: Propuesta de Valor y Relevancia de Negocio (Utility & Desirability)**
+   * **Definición:** Mide si las funcionalidades presentadas (promociones, guardado de favoritos, estado de apertura, visibilidad comercial y membresías) resuelven necesidades reales de forma superior a las alternativas actuales.
+   * **Análisis de Resultados (Segmento 1):** La posibilidad de descubrir huariques no comerciales mediante recomendaciones categorizadas aporta valor directo. Las promociones actúan como un incentivador clave para incrementar la frecuencia de uso de la aplicación.
+   * **Análisis de Resultados (Segmento 2):** Atraer nuevos clientes a través de la digitalización resuelve una de las mayores frustraciones del segmento. El interés en planes de membresía depende de la inclusión de métricas claras de visualizaciones y visitas.
+
+3. **Heurística 3: Adopción y Fricción de Uso (Adoption Barrier Analysis)**
+   * **Definición:** Analiza la disposición del usuario a incorporar PuntoSabor en su rutina diaria o flujo de trabajo, identificando temores, dudas o fricciones que impidan la recomendación o permanencia en la plataforma.
+   * **Análisis de Resultados (Segmento 1):** La principal fricción identificada es la desconfianza ante reseñas manipuladas o desactualizadas; los usuarios demandan verificar opiniones y fotos reales hechas por la misma comunidad.
+   * **Análisis de Resultados (Segmento 2):** El temor recurrente radica en la complejidad o el tiempo que requiera mantener actualizada la información del local en la plataforma. Asegurar un panel de administración rápido y ágil es condición clave para lograr la adopción continua del comercio.
 
 ## 6.4. Auditoría de Experiencias de Usuario
 
