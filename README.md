@@ -526,7 +526,102 @@ Esta diferenciación permitirá seleccionar posteriormente el método de investi
 Finalmente, las ocho preguntas servirán como entrada para la construcción del Question Backlog, donde serán priorizadas considerando su confianza, riesgo, impacto e interés para PuntoSabor.
 
 
+
 ### 8.1.4. Question Backlog
+
+El Question Backlog de PuntoSabor tiene como finalidad organizar y priorizar las preguntas identificadas durante la planificación de experimentos. Su propósito es determinar cuáles de las incertidumbres relacionadas con la plataforma deben investigarse primero, considerando su importancia para los usuarios y los objetivos de negocio de HuariApp.
+
+A diferencia del Product Backlog, que contiene funcionalidades e historias de usuario, el Question Backlog está compuesto por preguntas que buscan generar conocimiento mediante experimentos. De esta manera, se evita priorizar soluciones sin contar previamente con evidencia sobre su utilidad.
+
+Para establecer un orden de investigación se utiliza un sistema de puntuación basado en cuatro criterios: Confidence, Risk, Impact e Interest.
+
+#### Criterios de priorización
+
+| Criterio | Descripción | Escala |
+|---|---|---|
+| Confidence (C) | Representa la incertidumbre existente sobre la respuesta a la pregunta. Se asigna una puntuación mayor cuando existe menor confianza en el conocimiento actual y se requiere investigar. | 1 = Baja incertidumbre; 5 = Alta incertidumbre. |
+| Risk (R) | Evalúa las consecuencias de mantener una incertidumbre sin resolver o de tomar una decisión incorrecta. | 1 = Riesgo bajo; 5 = Riesgo alto. |
+| Impact (IM) | Representa el posible impacto de resolver la pregunta sobre los objetivos de PuntoSabor y la experiencia de sus usuarios. | 1 = Impacto bajo; 5 = Impacto alto. |
+| Interest (IN) | Determina la relevancia del aprendizaje para los segmentos objetivo y las futuras decisiones de desarrollo. | 1 = Interés bajo; 5 = Interés alto. |
+
+Cada criterio recibe una puntuación de 1 a 5. Para determinar la prioridad de investigación se utiliza la siguiente fórmula:
+
+**Priority Score = C + R + IM + IN**
+
+El puntaje máximo posible es 20. Las preguntas con mayor puntuación tendrán prioridad dentro de la planificación experimental.
+
+En caso de empate se seleccionará primero la pregunta que presente mayor riesgo. Si el empate continúa, se considerará el impacto y posteriormente el interés.
+
+Las puntuaciones presentadas constituyen una propuesta inicial de priorización basada en el análisis del proyecto y deberán revisarse con el equipo cuando se disponga de nueva evidencia.
+
+#### Broad Question Backlog
+
+El Broad Question Backlog reúne todas las preguntas identificadas en la sección 8.1.3. Estas preguntas se encuentran relacionadas con las principales incertidumbres de PuntoSabor y se organizan de acuerdo con los criterios de priorización establecidos.
+
+| Prioridad | ID | Experiment-Ready Question | C | R | IM | IN | Total |
+|---|---|---|---|---|---|---|---|
+| 1 | Q-01 | ¿Priorizar visualmente los filtros de precio y categoría mejora la eficiencia de búsqueda de huariques? | 4 | 5 | 5 | 5 | **19** |
+| 2 | Q-02 | ¿Mostrar la fecha de actualización de la información comercial incrementa la confianza de los usuarios? | 5 | 5 | 4 | 4 | **18** |
+| 3 | Q-03 | ¿Un formulario dividido en pasos esenciales incrementa la tasa de registros completados por propietarios? | 4 | 5 | 4 | 4 | **17** |
+| 4 | Q-04 | ¿Qué señales de autenticidad permiten reconocer reseñas confiables? | 5 | 4 | 4 | 3 | **16** |
+| 5 | Q-05 | ¿Una comparación simplificada de membresías mejora su comprensión y la intención de seleccionar un plan? | 4 | 4 | 4 | 3 | **15** |
+| 6 | Q-06 | ¿Qué dificultades experimentan los usuarios al buscar huariques mediante mapas y geolocalización? | 3 | 4 | 4 | 3 | **14** |
+| 7 | Q-07 | ¿Qué factores impiden que los propietarios actualicen periódicamente la información de sus negocios? | 3 | 3 | 4 | 3 | **13** |
+| 8 | Q-08 | ¿Qué factores motivan a los usuarios a regresar después de guardar huariques como favoritos? | 4 | 3 | 3 | 2 | **12** |
+
+#### Justificación de la priorización
+
+La priorización se realizó considerando la problemática identificada mediante Lean UX, los resultados de las entrevistas y las principales funcionalidades de PuntoSabor.
+
+| ID | Why (¿Por qué investigar?) |
+|---|---|
+| Q-01 | El descubrimiento de huariques constituye la funcionalidad principal de PuntoSabor. Si los usuarios encuentran dificultades durante la búsqueda, la plataforma podría no cumplir adecuadamente su propuesta de valor. |
+| Q-02 | La información desactualizada puede perjudicar la confianza de los consumidores y afectar las oportunidades comerciales de los huariques. |
+| Q-03 | Un proceso de registro complicado puede dificultar la incorporación de nuevos establecimientos, reduciendo la variedad de huariques disponibles para los usuarios. |
+| Q-04 | La credibilidad de las reseñas influye en la percepción de confianza de los consumidores y puede afectar sus decisiones al seleccionar establecimientos gastronómicos. |
+| Q-05 | La comprensión de los beneficios y condiciones de las membresías es relevante para evaluar la viabilidad del modelo de negocio de PuntoSabor. |
+| Q-06 | La geolocalización facilita el descubrimiento de establecimientos cercanos, pero es necesario identificar posibles obstáculos de navegación y uso. |
+| Q-07 | La actualización de horarios, precios y menús permite mantener información útil para los consumidores. Comprender las dificultades de los propietarios puede ayudar a reducir la presencia de datos desactualizados. |
+| Q-08 | El retorno de los usuarios a sus establecimientos favoritos puede contribuir a la retención y al uso recurrente de la plataforma. |
+
+Las preguntas Q-01, Q-02 y Q-03 obtuvieron los puntajes más elevados porque se relacionan directamente con tres procesos esenciales: encontrar establecimientos, confiar en la información disponible e incorporar nuevos huariques.
+
+Por otra parte, Q-04 y Q-05 representan oportunidades relevantes para mejorar la experiencia de los consumidores y comprender la percepción de valor del modelo de membresías.
+
+Las preguntas Q-06, Q-07 y Q-08 se mantienen dentro del backlog, aunque con una prioridad inicial menor, debido a que su investigación puede realizarse en iteraciones posteriores.
+
+#### Deep Question Backlog
+
+El Deep Question Backlog contiene las preguntas seleccionadas para profundizar en su investigación y preparar los experimentos correspondientes.
+
+Para PuntoSabor se priorizan cinco preguntas que representan diferentes aspectos de la experiencia de los usuarios y del modelo de negocio.
+
+| Prioridad | Question ID | Experiment ID | Segmento objetivo | Objetivo de investigación | Estado |
+|---|---|---|---|---|---|
+| 1 | Q-01 | EXP-01 | Exploradores gastronómicos | Evaluar la eficiencia de los filtros de búsqueda. | Planificado |
+| 2 | Q-02 | EXP-02 | Exploradores gastronómicos | Evaluar la confianza en la información comercial actualizada. | Planificado |
+| 3 | Q-03 | EXP-03 | Dueños de huariques | Evaluar la facilidad de registro de establecimientos. | Planificado |
+| 4 | Q-04 | EXP-04 | Exploradores gastronómicos | Identificar las características que generan confianza en las reseñas. | Planificado |
+| 5 | Q-05 | EXP-05 | Dueños de huariques | Evaluar la comprensión de los beneficios y condiciones de las membresías. | Planificado |
+
+La selección de estas cinco preguntas permite abordar tanto las necesidades de los exploradores gastronómicos como las de los propietarios de huariques.
+
+Los experimentos EXP-01, EXP-02 y EXP-03 estarán orientados a contrastar hipótesis sobre posibles mejoras en procesos existentes. EXP-04 tendrá un enfoque exploratorio para identificar criterios de confianza antes de proponer modificaciones. Finalmente, EXP-05 permitirá investigar la claridad de la oferta comercial de PuntoSabor.
+
+Las preguntas Q-06, Q-07 y Q-08 permanecerán en el Broad Question Backlog para futuras investigaciones. Su prioridad podrá modificarse si se identifican nuevos riesgos, problemas de usabilidad o necesidades de los usuarios.
+
+#### Relación entre el Question Backlog y la experimentación
+
+El Question Backlog constituye una herramienta de planificación que permite mantener la trazabilidad entre las incertidumbres identificadas y los experimentos propuestos.
+
+Cada pregunta priorizada se vincula con una Experiment Card que documentará su motivación, hipótesis cuando corresponda, procedimiento de investigación, medidas, condiciones y escala.
+
+Las preguntas Q-01 a Q-05 serán desarrolladas en la sección 8.1.5 Experiment Cards, mientras que los aspectos metodológicos y cuantitativos necesarios para su ejecución se definirán en la sección 8.2 Experiment Design.
+
+Posteriormente, los resultados de los experimentos permitirán reevaluar las prioridades y actualizar el backlog, considerando el conocimiento adquirido y las nuevas necesidades identificadas.
+
+De esta manera, PuntoSabor podrá orientar sus próximas iteraciones mediante evidencia y aprendizaje continuo, reduciendo la incertidumbre antes de implementar modificaciones en la plataforma.
+
 
 ### 8.1.5. Experiment Cards
 
