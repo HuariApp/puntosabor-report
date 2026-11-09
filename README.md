@@ -616,9 +616,122 @@ en `app/src/androidTest/` del repositorio de la app.
 
 ### 6.3.1. Diseño de Entrevistas
 
+Para llevar a cabo las entrevistas de validación de concepto y usabilidad del proyecto **PuntoSabor**, se diseñó una guía estructurada orientada a evaluar la percepción de valor, la claridad de la interfaz y la intención de uso en dos segmentos clave de usuarios. 
+
+#### **Segmento 1: Explorador gastronómico**
+Este segmento está compuesto por usuarios que buscan descubrir huariques, restaurantes locales o lugares de comida auténtica mediante herramientas digitales.
+
+**Preguntas realizadas:**
+1. Después de ver la aplicación, ¿crees que PuntoSabor te ayudaría a encontrar huariques de manera más sencilla?
+2. ¿La pantalla principal te parece clara y fácil de entender?
+3. ¿Consideras útil poder buscar huariques por categorías, nombre o preferencias?
+4. ¿La información mostrada en el detalle del huarique, como fotos, horarios, ubicación, reseñas y estado de apertura, te parece suficiente para decidir si visitarías el local?
+5. ¿Qué opinas sobre la posibilidad de guardar huariques favoritos?
+6. ¿Las promociones o recomendaciones te motivarían a usar la aplicación con mayor frecuencia?
+7. ¿Qué aspecto de la aplicación te gustó más?
+8. ¿Qué mejorarías para que la experiencia sea más completa?
+9. ¿Recomendarías PuntoSabor a otras personas interesadas en descubrir huariques? ¿Por qué?
+10. ¿Qué tan confiables o útiles te parecen las reseñas y fotos mostradas en comparación con lo que sueles ver en otras plataformas o redes sociales?
+11. Al interactuar con la búsqueda y los filtros, ¿hubo alguna información o botón que esperabas encontrar y no estaba a la vista?
+12. ¿En qué momento o situación de tu semana te imaginas abriendo PuntoSabor por primera vez?
+
+---
+
+#### **Segmento 2: Dueño o administrador de huarique**
+Este segmento está compuesto por propietarios o encargados de negocios gastronómicos locales que buscan aumentar su visibilidad digital y atraer más clientes.
+
+**Preguntas realizadas:**
+1. Después de ver la aplicación, ¿crees que PuntoSabor podría ayudarte a promocionar tu huarique o negocio?
+2. ¿Te parece clara la forma en que se muestra la información del huarique?
+3. ¿Consideras útil poder mostrar horarios, estado de apertura, ubicación, fotos y reseñas del negocio?
+4. ¿Qué opinas sobre las promociones y planes de membresía dentro de la aplicación?
+5. ¿Crees que esta plataforma podría ayudarte a atraer nuevos clientes?
+6. ¿La aplicación te parece fácil de entender para un dueño de huarique?
+7. ¿Qué funcionalidad te parece más útil para tu negocio?
+8. ¿Qué mejorarías para que la aplicación sea más práctica para los propietarios?
+9. ¿Estarías dispuesto a usar PuntoSabor para dar mayor visibilidad a tu negocio? ¿Por qué?
+10. ¿Qué tan sencillo te resultaría actualizar periódicamente tus platos del día, promociones u horarios desde el panel de administración visto?
+11. ¿Qué información sobre los clientes que visitan o buscan tu negocio te gustaría ver dentro de la aplicación para medir si la plataforma te está funcionando?
+12. ¿Qué duda o temor te surgiría al momento de evaluar contratar un plan de membresía o promoción pagada en la plataforma?
+
+---
+
 ### 6.3.2. Registro de Entrevistas
 
+A continuación se resumen los registros y evidencias cualitativas recolectadas durante la ejecución de las sesiones de entrevista con representantes de ambos segmentos.
+
+#### **Registro de Entrevistas - Segmento 1: Explorador Gastronómico**
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** |  |
+| **Edad** |  |
+| **Departamento / Distrito** |  |
+| **Inicio del video** |  |
+| **Fin del video** |  |
+| **Duración** |  |
+| **Link del video** |  |
+| **Foto entrevista** |  |
+| **Resumen** |  |
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** |  |
+| **Edad** |  |
+| **Departamento / Distrito** |  |
+| **Inicio del video** |  |
+| **Fin del video** |  |
+| **Duración** |  |
+| **Link del video** |  |
+| **Foto entrevista** |  |
+| **Resumen** |  |
+
+#### **Registro de Entrevistas - Segmento 2: Dueño o administrador de huarique**
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** |  |
+| **Edad** |  |
+| **Departamento / Distrito** |  |
+| **Inicio del video** |  |
+| **Fin del video** |  |
+| **Duración** |  |
+| **Link del video** |  |
+| **Foto entrevista** |  |
+| **Resumen** |  |
+
+| Campo | Detalle |
+| --- | --- |
+| **Nombre entrevistado** |  |
+| **Edad** |  |
+| **Departamento / Distrito** |  |
+| **Inicio del video** |  |
+| **Fin del video** |  |
+| **Duración** |  |
+| **Link del video** |  |
+| **Foto entrevista** |  |
+| **Resumen** |  |
+
+---
+
 ### 6.3.3. Evaluaciones según heurísticas
+
+Para analizar sistemáticamente las respuestas obtenidas en las entrevistas, se definieron y aplicaron 3 heurísticas metodológicas de evaluación cualitativa:
+
+1. **Heurística 1: Claridad y Usabilidad Percibida (Nielsen #2 y #4)**
+   * **Definición:** Evalúa la facilidad con la que el usuario comprende la interfaz, la jerarquía visual de la información (horarios, ubicación, menús) y la navegabilidad sin requerir esfuerzo cognitivo adicional.
+   * **Análisis de Resultados (Segmento 1):** Los usuarios señalaron que la pantalla principal y las fichas de detalle son intuitivas. La inclusión visual de badges como "Abierto/Cerrado" reduce dudas inmediatas. Se identificó la necesidad de mantener filtros visibles desde la pantalla de inicio.
+   * **Análisis de Resultados (Segmento 2):** Los administradores entendieron la estructura de la información expuesta. Solicitaron interfaces extremadamente simplificadas para la actualización de menús diarios.
+
+2. **Heurística 2: Propuesta de Valor y Relevancia de Negocio (Utility & Desirability)**
+   * **Definición:** Mide si las funcionalidades presentadas (promociones, guardado de favoritos, estado de apertura, visibilidad comercial y membresías) resuelven necesidades reales de forma superior a las alternativas actuales.
+   * **Análisis de Resultados (Segmento 1):** La posibilidad de descubrir huariques no comerciales mediante recomendaciones categorizadas aporta valor directo. Las promociones actúan como un incentivador clave para incrementar la frecuencia de uso de la aplicación.
+   * **Análisis de Resultados (Segmento 2):** Atraer nuevos clientes a través de la digitalización resuelve una de las mayores frustraciones del segmento. El interés en planes de membresía depende de la inclusión de métricas claras de visualizaciones y visitas.
+
+3. **Heurística 3: Adopción y Fricción de Uso (Adoption Barrier Analysis)**
+   * **Definición:** Analiza la disposición del usuario a incorporar PuntoSabor en su rutina diaria o flujo de trabajo, identificando temores, dudas o fricciones que impidan la recomendación o permanencia en la plataforma.
+   * **Análisis de Resultados (Segmento 1):** La principal fricción identificada es la desconfianza ante reseñas manipuladas o desactualizadas; los usuarios demandan verificar opiniones y fotos reales hechas por la misma comunidad.
+   * **Análisis de Resultados (Segmento 2):** El temor recurrente radica en la complejidad o el tiempo que requiera mantener actualizada la información del local en la plataforma. Asegurar un panel de administración rápido y ágil es condición clave para lograr la adopción continua del comercio.
 
 ## 6.4. Auditoría de Experiencias de Usuario
 
