@@ -447,7 +447,84 @@ Por otro lado, los propietarios de huariques requieren herramientas accesibles p
 En consecuencia, el material bruto recopilado permitirá formular Experiment-Ready Questions orientadas a investigar las necesidades identificadas, evaluar las suposiciones y obtener evidencia para las próximas iteraciones del producto.
 
 
+
 ### 8.1.3. Experiment-Ready Questions
+
+Las Experiment-Ready Questions permiten transformar las incertidumbres identificadas en el material bruto en preguntas específicas que puedan responderse mediante experimentos, observación de usuarios o análisis de datos.
+
+En PuntoSabor, estas preguntas se elaboran considerando las necesidades de los exploradores gastronómicos y de los propietarios de huariques, así como las principales funcionalidades de la plataforma.
+
+Para su formulación se consideran dos tipos de preguntas:
+
+- **Belief-led Questions:** buscan contrastar una creencia o suposición sobre el efecto que podría producir una modificación en el producto.
+- **Exploratory Questions:** buscan obtener conocimiento sobre comportamientos, necesidades o dificultades que todavía no se comprenden suficientemente.
+
+A partir de las Assumptions, Knowledge Gaps, Ideas y Claims identificados en la sección 8.1.2, se formularon las siguientes preguntas experimentales.
+
+#### Identificación de Experiment-Ready Questions
+
+| ID | Tipo | Experiment-Ready Question | Material relacionado |
+|---|---|---|---|
+| Q-01 | Belief-led | ¿Priorizar visualmente los filtros de precio y categoría mejora la proporción de usuarios que encuentran un huarique adecuado y reduce el tiempo de búsqueda frente al diseño actual? | A-01, KG-01, I-01 |
+| Q-02 | Belief-led | ¿Mostrar la fecha de última actualización de la información comercial incrementa la confianza de los exploradores gastronómicos respecto a la presentación actual? | A-02, KG-02, I-02 |
+| Q-03 | Belief-led | ¿Un formulario de registro dividido en pasos esenciales incrementa la proporción de propietarios que completan el registro de sus huariques? | A-03, KG-03, I-03 |
+| Q-04 | Exploratory | ¿Qué señales de autenticidad utilizan los exploradores gastronómicos para determinar si una reseña sobre un huarique es confiable? | A-04, KG-04, C-02 |
+| Q-05 | Belief-led | ¿Una comparación simplificada de precios, beneficios y condiciones mejora la comprensión de las membresías y la intención de seleccionar un plan? | A-05, KG-05, I-05 |
+| Q-06 | Exploratory | ¿Qué dificultades experimentan los usuarios al buscar huariques mediante mapas y geolocalización? | A-06, KG-01 |
+| Q-07 | Exploratory | ¿Qué factores impiden que los propietarios actualicen periódicamente sus horarios, menús y promociones? | A-07, KG-06, C-04 |
+| Q-08 | Exploratory | ¿Qué factores motivan a los exploradores gastronómicos a regresar a PuntoSabor después de guardar un huarique como favorito? | A-06, KG-07 |
+
+#### Análisis de las preguntas experimentales
+
+Las preguntas identificadas se relacionan con las principales necesidades y oportunidades de mejora de PuntoSabor.
+
+**1. Descubrimiento y búsqueda de huariques**
+
+La pregunta Q-01 busca determinar si una presentación más accesible de los filtros permite mejorar la experiencia de búsqueda. Esta investigación resulta relevante porque el descubrimiento de establecimientos constituye una de las principales propuestas de valor de PuntoSabor.
+
+La pregunta Q-06 complementa esta investigación al explorar las dificultades que podrían presentarse durante el uso de mapas y herramientas de geolocalización.
+
+**2. Confiabilidad de la información**
+
+La pregunta Q-02 busca evaluar si mostrar la fecha de actualización de la información comercial puede incrementar la confianza de los exploradores gastronómicos.
+
+Por otro lado, la pregunta Q-04 pretende identificar las características que los consumidores consideran importantes para determinar la autenticidad y credibilidad de una reseña.
+
+Ambas preguntas se relacionan con las preocupaciones sobre información desactualizada y opiniones poco confiables identificadas durante las entrevistas.
+
+**3. Registro y administración de huariques**
+
+La pregunta Q-03 busca determinar si un proceso de registro organizado en etapas facilita la incorporación de nuevos establecimientos.
+
+Asimismo, la pregunta Q-07 pretende identificar las dificultades que enfrentan los propietarios al mantener actualizados sus horarios, menús y promociones.
+
+Estas investigaciones permitirán comprender posibles obstáculos de uso, considerando que algunos propietarios cuentan con experiencia tecnológica limitada y disponen de poco tiempo para administrar sus canales digitales.
+
+**4. Modelo de negocio y membresías**
+
+La pregunta Q-05 busca evaluar si una presentación más clara de los precios, beneficios y condiciones de las membresías facilita su comprensión por parte de los propietarios.
+
+Esta investigación es importante para PuntoSabor porque su modelo de negocio contempla planes de visibilidad y membresías dirigidas a pequeños establecimientos gastronómicos.
+
+**5. Retención de usuarios**
+
+La pregunta Q-08 busca identificar qué factores motivan a los exploradores gastronómicos a regresar a PuntoSabor después de guardar establecimientos como favoritos.
+
+Comprender estos comportamientos permitirá identificar oportunidades relacionadas con la experiencia de uso recurrente y la retención de usuarios.
+
+#### Clasificación según el propósito de investigación
+
+| Categoría | Preguntas | Propósito |
+|---|---|---|
+| Belief-led | Q-01, Q-02, Q-03, Q-05 | Contrastar creencias sobre posibles mejoras de la plataforma mediante evidencia medible. |
+| Exploratory | Q-04, Q-06, Q-07, Q-08 | Identificar necesidades, dificultades y comportamientos que requieren una investigación inicial. |
+
+Las preguntas Belief-led podrán evaluarse mediante experimentos comparativos con métricas previamente definidas. Por su parte, las preguntas Exploratory podrán abordarse mediante entrevistas, observación de usuarios y análisis cualitativo.
+
+Esta diferenciación permitirá seleccionar posteriormente el método de investigación más adecuado para cada pregunta, evitando implementar soluciones sin comprender primero los problemas identificados.
+
+Finalmente, las ocho preguntas servirán como entrada para la construcción del Question Backlog, donde serán priorizadas considerando su confianza, riesgo, impacto e interés para PuntoSabor.
+
 
 ### 8.1.4. Question Backlog
 
