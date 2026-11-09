@@ -366,7 +366,86 @@ A partir del estado actual se identifican cinco áreas principales de investigac
 Estas oportunidades representan el punto de partida de la planificación experimental. Las mejoras planteadas deberán evaluarse mediante evidencia antes de considerarse efectivas.
 
 
+
 ### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims
+
+El material bruto de experimentación está compuesto por las suposiciones, brechas de conocimiento, ideas y afirmaciones identificadas durante el análisis de la problemática, las entrevistas a los segmentos objetivo y el proceso Lean UX de PuntoSabor.
+
+Su propósito es reconocer qué aspectos de la plataforma requieren investigación y transformar la información disponible en oportunidades de aprendizaje. Para ello, se consideran cuatro categorías: Assumptions, Knowledge Gaps, Ideas y Claims.
+
+#### Assumptions (Suposiciones)
+
+Las suposiciones representan creencias iniciales sobre el comportamiento de los usuarios y los beneficios que podría generar PuntoSabor. Estas deberán contrastarse mediante experimentos antes de considerarse verdaderas.
+
+| ID | Assumptions |
+|---|---|
+| A-01 | Los exploradores gastronómicos encontrarán huariques de manera más eficiente si los filtros de ubicación, precio y categoría son más accesibles. |
+| A-02 | Mostrar información comercial actualizada incrementará la confianza de los usuarios al seleccionar un huarique. |
+| A-03 | Los propietarios completarán el registro de sus establecimientos con mayor facilidad si el formulario presenta inicialmente solo los campos indispensables. |
+| A-04 | Los exploradores gastronómicos confiarán más en las reseñas cuando puedan identificar señales de autenticidad. |
+| A-05 | Los propietarios comprenderán mejor el valor de las membresías si los beneficios, precios y condiciones se presentan de forma clara. |
+| A-06 | La geolocalización y los favoritos pueden incentivar a los usuarios a regresar a PuntoSabor. |
+| A-07 | Los propietarios estarán más dispuestos a actualizar sus menús y promociones si el procedimiento requiere poco tiempo y esfuerzo. |
+
+Estas suposiciones se relacionan con las necesidades identificadas durante las entrevistas, así como con las funcionalidades documentadas en los capítulos anteriores. Su evaluación permitirá determinar cuáles representan oportunidades reales de mejora.
+
+#### Knowledge Gaps (Brechas de conocimiento)
+
+Las brechas de conocimiento representan aspectos sobre los cuales HuariApp todavía no dispone de información suficiente para tomar decisiones fundamentadas.
+
+| ID | Knowledge Gaps |
+|---|---|
+| KG-01 | Se desconoce cuánto tiempo necesitan los usuarios para encontrar un huarique que satisfaga sus preferencias. |
+| KG-02 | No se ha determinado cómo influye mostrar la fecha de actualización de horarios, menús y precios en la confianza del consumidor. |
+| KG-03 | Se desconoce qué campos o pasos del registro generan mayor dificultad entre los propietarios de huariques. |
+| KG-04 | No se ha identificado cuáles son las señales de autenticidad de las reseñas más valoradas por los consumidores. |
+| KG-05 | No existe evidencia suficiente para determinar cómo influye la presentación de los planes en la intención de contratar una membresía. |
+| KG-06 | Se desconoce qué dificultades experimentan los propietarios al actualizar periódicamente la información de sus negocios. |
+| KG-07 | No se ha determinado qué factores motivan a los usuarios a regresar a la plataforma después de guardar establecimientos como favoritos. |
+
+La identificación de estas brechas permite establecer preguntas exploratorias y experimentales que ayuden a comprender mejor las necesidades de los usuarios y los posibles efectos de las modificaciones en la plataforma.
+
+#### Ideas (Propuestas)
+
+Las ideas constituyen alternativas de mejora que podrían implementarse en futuras iteraciones de PuntoSabor. Sin embargo, antes de desarrollarlas se deben evaluar las suposiciones relacionadas con su utilidad.
+
+| ID | Ideas |
+|---|---|
+| I-01 | Incorporar accesos rápidos a filtros por categoría gastronómica, precio y cercanía para simplificar la búsqueda de huariques. |
+| I-02 | Mostrar la fecha de última actualización de horarios, menús y precios en los perfiles de los establecimientos. |
+| I-03 | Organizar el formulario de registro de huariques en etapas, diferenciando la información obligatoria de los datos complementarios. |
+| I-04 | Incorporar información contextual que permita a los usuarios reconocer reseñas más confiables. |
+| I-05 | Diseñar una comparación simplificada de los precios, beneficios y condiciones de las membresías disponibles. |
+| I-06 | Facilitar la actualización de horarios, menús y promociones mediante formularios breves y accesos directos desde el panel del propietario. |
+| I-07 | Evaluar mecanismos que incentiven a los usuarios a regresar a los establecimientos guardados como favoritos. |
+
+Estas ideas representan posibles soluciones y no funcionalidades cuya efectividad haya sido demostrada. La planificación experimental busca investigar primero los problemas y necesidades que justifican cada propuesta.
+
+#### Claims (Afirmaciones)
+
+Las afirmaciones corresponden a percepciones, comentarios y necesidades expresadas por los participantes durante las entrevistas realizadas a exploradores gastronómicos y propietarios de huariques.
+
+| ID | Claims | Fuente |
+|---|---|---|
+| C-01 | Las plataformas gastronómicas tradicionales suelen mostrar restaurantes conocidos, dificultando descubrir huariques menos populares. | Entrevistas a exploradores gastronómicos. |
+| C-02 | Las fotografías reales, los precios y las reseñas confiables son elementos importantes para decidir dónde comer. | Entrevistas a exploradores gastronómicos. |
+| C-03 | La información desactualizada sobre horarios y disponibilidad puede generar desconfianza en los consumidores. | Entrevistas a exploradores gastronómicos. |
+| C-04 | Administrar múltiples canales digitales representa una dificultad para algunos propietarios de huariques. | Entrevistas a dueños y administradores. |
+| C-05 | Los propietarios valoran herramientas sencillas para actualizar menús, precios, horarios y promociones. | Entrevistas a dueños y administradores. |
+| C-06 | Los propietarios muestran interés en alternativas gratuitas o membresías accesibles que permitan aumentar la visibilidad de sus negocios. | Entrevistas a dueños y administradores. |
+
+Estas afirmaciones se fundamentan en los hallazgos cualitativos de la sección 2.2 del informe. No representan resultados estadísticos generalizables, por lo que su alcance deberá evaluarse mediante investigaciones adicionales.
+
+#### Análisis del material bruto
+
+A partir de las cuatro categorías identificadas se reconocen las principales incertidumbres relacionadas con el desarrollo de PuntoSabor.
+
+Por un lado, los exploradores gastronómicos necesitan encontrar establecimientos de manera sencilla, acceder a información confiable y consultar reseñas que les permitan tomar decisiones informadas.
+
+Por otro lado, los propietarios de huariques requieren herramientas accesibles para registrar sus negocios, mantener actualizada su información comercial y comprender los beneficios de los servicios ofrecidos por la plataforma.
+
+En consecuencia, el material bruto recopilado permitirá formular Experiment-Ready Questions orientadas a investigar las necesidades identificadas, evaluar las suposiciones y obtener evidencia para las próximas iteraciones del producto.
+
 
 ### 8.1.3. Experiment-Ready Questions
 
