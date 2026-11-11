@@ -799,19 +799,378 @@ Para analizar sistemáticamente las respuestas obtenidas en las entrevistas, se 
 
 #### 6.4.1.1. Información del grupo auditado
 
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombre de la Startup (Auditada)** | Bananawire |
+| **Nombre del Producto (Auditado)** | Clair |
+| **Integrante 1** | Aleman Romano, Dante Mateo (u202319963) |
+| **Integrante 2** | Barturen, Iker (u202319025) |
+| **Integrante 3** | Huaco Oliva, Luis Alonso (u202417743) |
+| **Integrante 4** | Ortiz Alarcon, Victor Nicolas (u202312899) |
+| **Integrante 5** | Ventosilla Trujillo, Anderson Ricardo (u202319095) |
+| **Grupo Auditor** | HuariApp / PuntoSabor |
+| **Repositorio del Informe Auditado** | https://github.com/bananawire/deis-report/tree/develop |
+| **Repositorio Landing Page** | https://github.com/bananawire/site |
+| **Repositorio Frontend Web** | https://github.com/bananawire/clair-ui |
+| **Repositorio Backend/API** | https://github.com/bananawire/clair-core |
+| **URL Landing Page** | https://site-beige-mu.vercel.app/ |
+| **URL Frontend Web** | https://clair-ui.vercel.app/ |
+| **URL Backend/API** | https://clair-api.giks.net |
+
 #### 6.4.1.2. Cronograma de auditoría realizada
 
+| Fecha | Hora Inicio | Hora Fin | Actividad Realizada | Duración | Auditores Participantes |
+|:---|:---|:---|:---|:---|:---|
+| `[10/11/2026]` | `[08:00]` | `[09:30]` | **Revisión de Landing Page:** propuesta de valor, narrativa del producto, sección de precios y página de contacto. | `[90] min` | `[Jair Contreras]` |
+| `[10/11/2026]` | `[09:30]` | `[11:30]` | **Prueba de flujos en la Web App:** registro, inicio de sesión, panel principal y consulta de indicadores ambientales. | `[120] min` | `[Schneider Delgado]` |
+| `[10/11/2026]` | `[11:30]` | `[12:30]` | **Revisión del informe:** índice general, estructura de capítulos, numeración y anexos. | `[60] min` | `[Carlos Lopez]` |
+| `[10/11/2026]` | `[12:30]` | `[13:30]` | **Revisión de canales de contacto y enlaces externos:** correos, teléfono, videos y enlaces de los anexos. | `[60] min` | `[Bruno Montalván]` |
+| `[10/11/2026]` | `[14:00]` | `[16:00]` | **Consolidación de hallazgos:** clasificación de severidades, redacción de recomendaciones y preparación del Anexo D. | `[120] min` | `[Matías Razuri]` |
+
 #### 6.4.1.3. Contenido de auditoría realizada
+
+#### Anexo D. Formato para Evaluación de User Experience según Heurísticas
+
+**UX Heuristics & Principles Evaluation**
+**Usability – Inclusive Design – Information Architecture**
+
+| | |
+| :--- |:--- |
+| **CARRERA** | Ingeniería de Software |
+| **CURSO** | Diseño de Experimentos de Ingeniería de Software |
+| **NRC** | `[9112]` |
+| **PROFESORES** | Cenas Vasquez, Lennin Percy / Flores Morocco, Juan Antonio / Noriega Melendez, Julio Manuel / Sanchez Ponce, Alex Humberto / Yesn Paiba, Juan Fernando |
+| **AUDITOR** | HuariApp / PuntoSabor (Equipo auditor) |
+| **CLIENTE(S)** | Bananawire / Clair (Equipo auditado) |
+
+**SITE o APP A EVALUAR:**
+Clair (Landing Page y Web Application) y el repositorio del informe del equipo auditado.
+
+**TAREAS A EVALUAR:**
+
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+
+1. Registro de una cuenta nueva en la Web App.
+2. Inicio de sesión con correo electrónico y contraseña.
+3. Visualización del panel principal (Overview) y de los indicadores ambientales.
+4. Navegación por la Landing Page (propuesta de valor, producto y precios).
+5. Consulta de los canales de contacto y soporte.
+6. Revisión del índice y de la estructura de capítulos del informe.
+7. Acceso a los videos y a los enlaces de los anexos del informe.
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+
+1. Flujo de pago real con Stripe (solo se verificó la disponibilidad de la configuración pública).
+2. Registro e inicio de sesión con Google SSO.
+3. Verificación de correo con OTP y recuperación de contraseña.
+4. Aplicación móvil (el alcance de esta auditoría fue la landing y la Web App).
+5. Pruebas internas del backend/API y de la suite E2E.
+6. Panel de administración y configuraciones avanzadas.
+
+**ESCALA DE SEVERIDAD:**
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+| :---: | :--- |
+| **1** | **Problema superficial:** puede ser fácilmente superado por el usuario u ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| **2** | **Problema menor:** puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| **3** | **Problema mayor:** ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| **4** | **Problema muy grave:** un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+**TABLA RESUMEN:**
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+| :---: | :--- | :---: | :--- |
+| 1 | El validador de contraseña rechaza contraseñas válidas y bloquea el registro y el inicio de sesión. | 4 | Usability: Prevención de errores / Ayuda para reconocer, diagnosticar y recuperarse de errores |
+| 2 | La narrativa del producto desplegado no coincide con la del informe y el panel mezcla datos simulados con lecturas reales sin señalizarlo. | 3 | Usability: Consistencia y estándares / Correspondencia entre el sistema y el mundo real |
+| 3 | El índice del informe no incluye los capítulos VI, VII y VIII, que sí existen en el repositorio. | 3 | Information Architecture: Is it findable? / Usability: Consistencia y estándares |
+| 4 | Numeración duplicada en encabezados de los capítulos II y VI (2.1.2 y 6.1.3.1). | 2 | Usability: Consistencia y estándares / Information Architecture: Is it findable? |
+| 5 | Los canales de contacto no coinciden entre el informe y la landing, y el teléfono publicado es un dato de ejemplo. | 2 | Usability: Consistencia y estándares / Information Architecture: Is it credible? |
+| 6 | Enlaces inconsistentes: la sección del video del equipo apunta al producto y dos anexos comparten la misma URL. | 2 | Information Architecture: Is it findable? / Usability: Consistencia y estándares |
+
+---
+
+**Nota de evidencia:** las capturas fueron tomadas el 10/11/2026 sobre el despliegue público de la landing y de la Web App, y sobre el repositorio del informe en su commit `042c321` de la rama `develop`.
+
+**DESCRIPCIÓN DE PROBLEMAS:**
+
+**PROBLEMA #1:** El validador de contraseña rechaza contraseñas válidas y bloquea el registro y el inicio de sesión.
+
+**Severidad:** 4
+**Heurística violada:** Usability - Prevención de errores / Ayuda para reconocer, diagnosticar y recuperarse de errores.
+
+**Problema:**
+Al probar el registro con la contraseña `Jair1237+`, que cumple con los requisitos indicados por la propia interfaz (al menos una mayúscula, una minúscula, un número, un carácter especial y ocho caracteres), el formulario mostró el mensaje "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character". La revisión del código de `clair-ui` permitió identificar la causa: la expresión regular de `password.value-object.ts` solo considera como especiales los caracteres `@$!%*?&`, por lo que el símbolo `+` —y otros igualmente válidos, como `-`, `_` o `.`— queda excluido. Además, la página de inicio de sesión reutiliza `createPassword()` antes de llamar al backend, de modo que una cuenta ya registrada con una contraseña que contenga esos símbolos tampoco puede iniciar sesión. El mismo comportamiento se reprodujo en ambas pantallas, lo que impide completar dos tareas esenciales del producto.
+
+<img src="./assets/auditor-6-4-1-3/PROBLEMA-R1A.png" width="1000">
+<img src="./assets/auditor-6-4-1-3/PROBLEMA-R1B.png" width="1000">
+
+**Recomendación:**
+Unificar la regla de contraseña entre frontend y backend. En lugar de una lista cerrada de símbolos, se sugiere aceptar cualquier carácter no alfanumérico (por ejemplo, `[^A-Za-z0-9]`) o una lista amplia que incluya `+ - _ . , ; : ! ?`. En el inicio de sesión no debería ejecutarse la validación de fortaleza: basta con verificar que el campo no esté vacío y dejar la decisión al backend. Finalmente, conviene agregar pruebas unitarias con contraseñas que contengan `+`, `-` y `_`, y mostrar junto al campo cuál requisito específico no se está cumpliendo.
+
+---
+
+**PROBLEMA #2:** La narrativa del producto desplegado no coincide con la del informe y el panel mezcla datos simulados con lecturas reales sin señalizarlo.
+
+**Severidad:** 3
+**Heurística violada:** Usability - Consistencia y estándares / Correspondencia entre el sistema y el mundo real.
+
+**Problema:**
+La landing pública presenta el producto como "CLAIR NIÑO" con el mensaje "Tu casa te avisa antes que El Niño", centrado en el riesgo de dengue, golpes de calor y humedad en Piura; el informe, en cambio, describe a Clair como una solución de monitoreo de calidad del aire interior en Lima Metropolitana. En la Web App, el panel muestra la etiqueta "EL NIÑO MODE ACTIVE" y la tarjeta "Simulated Scenario: Piura" con 85 % de humedad, 30 °C y riesgo de dengue alto (82), mientras que las tarjetas de contaminantes del mismo panel muestran 25 °C y 56.6 % de humedad, y el índice de calidad del aire indica 70 (moderado). Asimismo, el bloque de alertas indica "No alerts available" pese a que el escenario reporta riesgo alto. No se cuestiona la incorporación del modo El Niño como posible evolución del producto; el hallazgo se centra en que el informe no lo documenta y en que la interfaz no distingue con claridad qué datos son simulados y cuáles provienen de los sensores, lo que puede llevar al usuario a interpretar mal la información.
+
+<img src="./assets/auditor-6-4-1-3/PROBLEMA-R2A.png" width="1000">
+<img src="./assets/auditor-6-4-1-3/PROBLEMA-R2B.png" width="1000">
+
+**Recomendación:**
+Alinear la narrativa de la landing y del panel con el alcance vigente del producto, o bien documentar formalmente el modo El Niño en el informe y en la propia interfaz. Se recomienda mostrar una etiqueta visible y permanente cuando los datos sean simulados (por ejemplo, "Datos de demostración: escenario Piura"), indicar la fuente y la hora de cada lectura, y reconciliar los valores de la tarjeta de escenario con los de las tarjetas de sensores para que no se contradigan. También sería útil que el bloque de alertas refleje el riesgo alto que anuncia la tarjeta principal.
+
+---
+
+**PROBLEMA #3:** El índice del informe no incluye los capítulos VI, VII y VIII, que sí existen en el repositorio.
+
+**Severidad:** 3
+**Heurística violada:** Information Architecture - Is it findable? / Usability - Consistencia y estándares.
+
+**Problema:**
+El archivo `content.md`, que funciona como índice general del informe, termina la lista de capítulos en "Capítulo V: Product Implementation" y pasa directamente a "Conclusiones". Sin embargo, el repositorio contiene los archivos `chapter6.md`, `chapter7.md` y `chapter8.md`, y la carpeta `chapters/` los muestra junto a los cinco primeros. Un lector que navegue solo por el índice no encontrará la verificación, validación, el pipeline ni las conclusiones técnicas de los capítulos VI a VIII, por lo que puede interpretar que el informe termina en el capítulo V. Esta situación afecta la navegabilidad y la percepción de completitud del entregable.
+
+<img src="./assets/auditor-6-4-1-3/PROBLEMA-R3A.png" width="1000">
+<img src="./assets/auditor-6-4-1-3/PROBLEMA-R3B.png" width="1000">
+
+**Recomendación:**
+Agregar al índice los capítulos VI, VII y VIII con sus secciones y subsecciones, manteniendo el mismo formato y los mismos anclajes que los capítulos anteriores. Para evitar que vuelva a ocurrir, se sugiere generar el índice de forma automática a partir de los encabezados de los archivos o incluir una verificación en el flujo de integración que compare los archivos de `chapters/` con las entradas de `content.md`.
+
+---
+
+**PROBLEMA #4:** Numeración duplicada en encabezados de los capítulos II y VI (2.1.2 y 6.1.3.1).
+
+**Severidad:** 2
+**Heurística violada:** Usability - Consistencia y estándares / Information Architecture - Is it findable?.
+
+**Problema:**
+En `chapter2.md`, las líneas 113 y 115 contienen dos encabezados con el mismo número "2.1.2" y títulos casi idénticos ("Estrategias y tácticas frente a competidores." y "Estrategias y tácticas frente a competidores"). En `chapter6.md`, las líneas 728 y 730 repiten el número "6.1.3.1" en "Pruebas Unitarias" y "Core Entities Unit Tests". Además de la inconsistencia visual, la repetición dificulta las referencias cruzadas y los anclajes automáticos del índice, y puede confundir al lector sobre cuál es la sección vigente.
+
+<img src="./assets/auditor-6-4-1-3/PROBLEMA-R4A.png" width="1000">
+<img src="./assets/auditor-6-4-1-3/PROBLEMA-R4B.png" width="1000">
+
+**Recomendación:**
+Conservar un único encabezado por sección y renumerar las secciones siguientes cuando sea necesario. Se recomienda incorporar una validación automática (un script propio o una regla de lint de Markdown) que detecte números de sección repetidos y encabezados duplicados antes de publicar el informe.
+
+---
+
+**PROBLEMA #5:** Los canales de contacto no coinciden entre el informe y la landing, y el teléfono publicado es un dato de ejemplo.
+
+**Severidad:** 2
+**Heurística violada:** Usability - Consistencia y estándares / Information Architecture - Is it credible?.
+
+**Problema:**
+La página de contacto de la landing publica `sales@clair.com` y `support@clair.com`, junto con el teléfono `+51 (0) 123 456 7`, que tiene el formato típico de un dato de ejemplo. Por su parte, el Capítulo V del informe indica como canal de soporte legal `support@clair-iot.com`, un dominio que no resuelve. Los correos publicados usan `clair.com`, un dominio distinto que no se menciona en el informe ni se encuentra asociado al producto. Esta falta de alineación genera dudas sobre cuál es el canal oficial y puede provocar que un usuario interesado no logre comunicarse con el equipo.
+
+<img src="./assets/auditor-6-4-1-3/PROBLEMA-R5.png" width="1000">
+
+**Recomendación:**
+Definir un dominio y un conjunto de correos oficiales, y actualizarlos de forma consistente en la landing, el informe y el Acuerdo de Servicio. Se sugiere reemplazar el teléfono de ejemplo por un número real o retirarlo si aún no está disponible, añadir enlaces `mailto:` en los correos y, idealmente, incluir un formulario de contacto con confirmación de envío para que el usuario sepa que su mensaje fue recibido.
+
+---
+
+**PROBLEMA #6:** Enlaces inconsistentes: la sección del video del equipo apunta al producto y dos anexos comparten la misma URL.
+
+**Severidad:** 2
+**Heurística violada:** Information Architecture - Is it findable? / Usability - Consistencia y estándares.
+
+**Problema:**
+En `conclusions.md`, la sección "Video About-the-Team." contiene únicamente el enlace "About the Product: https://bit.ly/4olR1cf", por lo que el video del equipo no queda identificado y el lector es dirigido a un contenido distinto al que anuncia el título. En la sección de Anexos, las entradas "Diagramas C4" y "Diagramas de Clases" apuntan a la misma URL (`https://bit.ly/48eogr9`), que redirige al repositorio `bananawire/c4-diagrams`; de este modo, los diagramas de clases no son accesibles desde el enlace que les corresponde. La duplicidad también aparece en otros enlaces de la lista, lo que reduce la confiabilidad de los anexos como fuente de evidencia.
+
+<img src="./assets/auditor-6-4-1-3/PROBLEMA-R6A.png" width="1000">
+<img src="./assets/auditor-6-4-1-3/PROBLEMA-R6B.png" width="1000">
+
+**Recomendación:**
+Colocar en "Video About-the-Team." el enlace correcto del video del equipo y mantener "About the Product" en la sección que le corresponde. Asignar a cada anexo una URL única y verificar que el destino coincida con el contenido anunciado; para ello resulta útil ejecutar un verificador de enlaces antes de cada entrega y revisar que no haya entradas repetidas en la lista.
 
 ### 6.4.2. Auditoría recibida
 
 #### 6.4.2.1. Información del grupo auditor
 
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombre de la Startup (Auditora)** | Bananawire |
+| **Nombre del Producto (Auditor)** | Clair |
+| **Integrante 1** | Aleman Romano, Dante Mateo (u202319963) |
+| **Integrante 2** | Barturen, Iker (u202319025) |
+| **Integrante 3** | Huaco Oliva, Luis Alonso (u202417743) |
+| **Integrante 4** | Ortiz Alarcon, Victor Nicolas (u202312899) |
+| **Integrante 5** | Ventosilla Trujillo, Anderson Ricardo (u202319095) |
+| **Nombre de la Startup (Auditada)** | HuariApp |
+| **Nombre del Producto (Auditado)** | PuntoSabor |
+| **Repositorio del Informe Auditado** | https://github.com/HuariApp/puntosabor-report |
+| **Repositorio Landing Page** | https://github.com/HuariApp/PuntoSabor-Landing |
+| **Repositorio Frontend Web** | https://github.com/HuariApp/PuntoSabor-Front |
+| **Repositorio Backend/API** | https://github.com/HuariApp/PuntoSabor-Backend |
+| **URL Landing Page** | https://huariapp.github.io/PuntoSabor-Landing/ |
+| **URL Frontend Web** | https://punto-sabor-front.vercel.app |
+| **URL Backend/Swagger** | https://huariquehub-backend.up.railway.app/swagger |
+
 #### 6.4.2.2. Cronograma de auditoría recibida
+
+| Fecha | Hora Inicio | Hora Fin | Actividad Realizada | Duración | Auditores Participantes |
+|:---|:---|:---|:---|:---|:---|
+| `[10/11/2026]` | `[12:52]` | `[14:52]` | **Revisión de Landing Page:** Análisis de usabilidad, propuesta de valor, claridad en precios y formulario de contacto. | `[120] min` | `[Luis Huaco]` |
+| `[10/11/2026]` | `[13:29]` | `[15:24]` | **Prueba de User Flows (Frontend):** Navegación por la Web App (Búsqueda, mapa, reseñas, login) y evaluación de heurísticas de Nielsen. | `[120] min` | `[Mateo]` |
+| `[10/11/2026]` | `[16:00]` | `[18:00]` | **Prueba de Flujos de Dueño (Frontend):** Simulación de registro de huarique, selección de planes y gestión de perfil. | `[120] min` | `[Nicolas]` |
+| `[10/11/2026]` | `[17:00]` | `[19:00]` | **Revisión de Acuerdo de Servicio (SaaS):** Análisis de claridad legal, políticas de cancelación y transparencia de precios. | `[120] min` | `[Anderson]` |
+| `[10/11/2026]` | `[20:00]` | `[23:00]` | **Consolidación de hallazgos:** Redacción del documento de auditoría, asignación de severidades y propuestas de mitigación (Anexo D). | `[180] min` | `[Iker]` |
 
 #### 6.4.2.3. Contenido de auditoría recibida
 
+#### Anexo D. Formato para Evaluación de User Experience según Heurísticas
+
+**UX Heuristics & Principles Evaluation**
+**Usability – Inclusive Design – Information Architecture**
+
+| | |
+| :--- |:--- |
+| **CARRERA** | Ingeniería de Software |
+| **CURSO** | Diseño de Experimentos de Ingeniería de Software |
+| **NRC** | `[9112]` |
+| **PROFESORES** | Cenas Vasquez, Lennin Percy / Flores Morocco, Juan Antonio / Noriega Melendez, Julio Manuel / Sanchez Ponce, Alex Humberto / Yesn Paiba, Juan Fernando |
+| **AUDITOR** | Bananawire / Clair (Equipo auditor) |
+| **CLIENTE(S)** | HuariApp / PuntoSabor (Equipo auditado) |
+
+**SITE o APP A EVALUAR:**
+PuntoSabor (Landing Page, Web Application y Mobile Application).
+
+**TAREAS A EVALUAR:**
+
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas (basadas en los User Flows del equipo auditado):
+
+1. Iniciar sesión y registrarse como Explorador.
+2. Búsqueda y filtrado de huariques por categoría y precio (Explore).
+3. Visualización de huariques en el mapa e interacción con los marcadores.
+4. Publicación de una reseña y calificación en un huarique.
+5. Registro de un nuevo huarique (flujo para Dueños).
+6. Visualización y selección de planes de membresía (Basic, Premium, Exclusive).
+7. Guardar un huarique en la lista de favoritos.
+8. Enviar un mensaje a través del formulario de contacto (Landing Page).
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+
+1. Flujo de pago real de membresía con pasarela externa (Stripe/Niubiz).
+2. Recuperación de contraseña vía correo electrónico.
+3. Módulo de notificaciones push en tiempo real (debido a que requiere configuración del dispositivo).
+4. Panel de administración avanzado o estadísticas para el Dueño del huarique.
+
+**ESCALA DE SEVERIDAD:**
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+| :---: | :--- |
+| **1** | **Problema superficial:** puede ser fácilmente superado por el usuario u ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| **2** | **Problema menor:** puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| **3** | **Problema mayor:** ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| **4** | **Problema muy grave:** un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+**TABLA RESUMEN:**
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+| :---: | :--- | :---: | :--- |
+| 1 | Falta de feedback visual inmediato al intentar publicar una reseña duplicada o con errores de validación. | 3 | Usability: Prevención de errores / Visibilidad del estado del sistema |
+| 2 | El popup del mapa (Explore) muestra información básica, pero no incluye un botón de acción rápida para "Cómo llegar" (integración con Google Maps/Waze). | 3 | Information Architecture: Is it useful? / Usability: Flexibilidad y eficiencia de uso |
+| 3 | El formulario de registro de huarique para los dueños presenta múltiples campos obligatorios sin guardado automático, lo que puede causar pérdida de datos. | 3 | Usability: Libertad y control del usuario |
+| 4 | La transición entre el rol de "Explorador" y "Dueño" dentro de la misma cuenta no es evidente en la navegación principal. | 2 | Usability: Consistencia y estándares |
+| 5 | En la Landing Page, los precios de las membresías (Básico, Premium, Exclusivo) se muestran, pero los detalles sobre cómo se procesa el pago o si hay contratos de permanencia no son explícitos. | 2 | Information Architecture: Is it findable? |
+
+---
+
+**DESCRIPCIÓN DE PROBLEMAS:**
+
+**PROBLEMA #1:** Falta de feedback visual inmediato al intentar publicar una reseña duplicada o con errores de validación.
+
+**Severidad:** 3
+**Heurística violada:** Usability - Prevención de errores / Visibilidad del estado del sistema.
+
+**Problema:**
+En la User Story US07 ("Publicar reseñas"), el sistema establece que un usuario no puede publicar más de una reseña para el mismo huarique. Sin embargo, en la interfaz evaluada, si el usuario ya reseñó el local o deja campos vacíos, el sistema no muestra un mensaje de error claro o un estado visual que indique por qué la acción está bloqueada. El botón de "Publicar" simplemente no responde o recarga la página, lo que genera confusión y frustración en el explorador gastronómico.
+
+<img src="./assets/auditor-6-4-2-3/PROBLEMA-1.png" width="1000">
+
+**Recomendación:**
+Implementar validaciones en línea (inline validation). Si el usuario ya dejó una reseña, el formulario debe ocultarse y reemplazarse por un mensaje como "Ya has calificado este huarique". Si faltan campos, el botón debe deshabilitarse o mostrar un texto en rojo indicando exactamente qué campo falta (ej. "Por favor, escribe un comentario antes de enviar").
+
+---
+
+**PROBLEMA #2:** El popup del mapa (Explore) muestra información básica, pero no incluye un botón de acción rápida para "Cómo llegar".
+
+**Severidad:** 3
+**Heurística violada:** Information Architecture - Is it useful? / Usability - Flexibilidad y eficiencia de uso.
+
+**Problema:**
+En el flujo de "Visualizar huariques en mapa" (US02), al hacer clic en el marcador de un huarique, aparece un popup flotante con el nombre, dirección y calificación. Sin embargo, para un explorador cuya principal motivación es visitar el lugar (según el User Persona de Carla Dípes), el flujo se interrumpe, ya que debe copiar la dirección manualmente y abrir otra aplicación. La falta de un botón directo que abra la ruta en Google Maps o Waze añade fricción al "happy path" del usuario.
+
+<img src="./assets/auditor-6-4-2-3/PROBLEMA-2.png" width="1000">
+
+**Recomendación:**
+Agregar un botón principal o un ícono de "Ruta" dentro del popup del marcador. Al hacer clic, debe abrir una nueva pestaña o la app nativa de mapas con la latitud y longitud del huarique ya configuradas. Esto reduce la carga cognitiva y agiliza el proceso de visita.
+
+---
+
+**PROBLEMA #3:** El formulario de registro de huarique para los dueños presenta múltiples campos obligatorios sin guardado automático.
+
+**Severidad:** 3
+**Heurística violada:** Usability - Libertad y control del usuario.
+
+**Problema:**
+El User Persona del dueño (Don Luis) representa a un emprendedor con restricciones tecnológicas. En el flujo de "Registrar un nuevo huarique" (US04), el formulario solicita nombre, categoría, dirección, distrito, rango de precios, horarios, descripción y fotos. Si el dueño se distrae o su conexión a internet falla a mitad del proceso, al regresar perderá todo el progreso. No hay un mecanismo de "borrador" ni una forma fácil de regresar sin salir del formulario por completo.
+
+<img src="./assets/auditor-6-4-2-3/PROBLEMA-3.png" width="1000">
+
+**Recomendación:**
+Dividir el formulario en un proceso "Paso a Paso" (Wizard) de máximo 3 pasos (Información Básica, Horarios/Ubicación, Fotos). Además, implementar un guardado automático temporal en el `localStorage` o en la base de datos, de modo que si el usuario sale o recarga, pueda retomar donde lo dejó.
+
+---
+
+**PROBLEMA #4:** La transición entre el rol de "Explorador" y "Dueño" dentro de la misma cuenta no es evidente.
+
+**Severidad:** 2
+**Heurística violada:** Usability - Consistencia y estándares.
+
+**Problema:**
+El backend de PuntoSabor permite que un mismo usuario (a través de la entidad `User` con el campo `Role`) pueda ser explorador o dueño. Sin embargo, en la interfaz web y móvil, la navegación está diseñada como si el usuario fuera uno u otro. Si un usuario que exploró huariques decide registrar su propio negocio, no hay un botón claro en el menú de perfil que diga "Convertirme en Dueño" o "Panel de Propietario", lo que obliga al usuario a buscar opciones ocultas o registrarse de nuevo.
+
+<img src="./assets/auditor-6-4-2-3/PROBLEMA-4.png" width="1000">
+
+**Recomendación:**
+Añadir un "Toggle" (interruptor) o un botón en el menú de perfil (como "Modo Dueño") que permita al usuario alternar la vista de la aplicación. Si no tiene un huarique registrado, este botón debe llevarlo al flujo de registro (US04). Si ya lo tiene, debe llevarlo a su panel de gestión.
+
+---
+
+**PROBLEMA #5:** En la Landing Page, los precios de las membresías se muestran, pero la letra pequeña sobre la cancelación o el procesamiento de pagos no es explícita.
+
+**Severidad:** 2
+**Heurística violada:** Information Architecture - Is it findable?
+
+**Problema:**
+El Acuerdo de Servicio (sección 5.2.4) detalla claramente que los dueños pueden cancelar su membresía en cualquier momento y que no hay reembolsos, pero en la sección de precios de la Landing Page solo se muestran los montos ($35 y $50) y los beneficios. Para generar confianza (especialmente en microempresarios que rechazan comisiones abusivas), la información sobre la facilidad para cancelar o la ausencia de contratos forzosos debe estar visible antes de hacer clic en "Empezar".
+
+<img src="./assets/auditor-6-4-2-3/PROBLEMA-5.png" width="1000">
+
+**Recomendación:**
+Añadir un texto corto debajo de los botones de pago de los planes que diga: "Cancela en cualquier momento. Sin contratos forzosos". También se puede agregar un enlace directo al apartado de "Política de Cancelación" del Acuerdo de Servicio.
+
+---
+
 #### 6.4.2.4. Resumen de modificaciones para subsanar hallazgos
+
+| # | Hallazgo | Modificación propuesta | Impacto esperado | Prioridad |
+| :---: | :--- | :--- | :--- | :---: |
+| 1 | Falta de feedback en reseñas | Implementar validaciones en línea y reemplazar el formulario por un mensaje claro cuando el usuario ya haya reseñado el huarique. | Menos frustración y mayor claridad sobre el estado de la publicación. | Alta |
+| 2 | Popup del mapa sin acción rápida | Agregar un botón "Cómo llegar" que abra Google Maps o Waze con las coordenadas del huarique. | Un recorrido más corto y útil para el explorador. | Alta |
+| 3 | Formulario de huarique sin guardado automático | Convertir el registro en un asistente de tres pasos y guardar un borrador temporal. | Se evita la pérdida de datos y se reduce la carga del dueño. | Alta |
+| 4 | Transición de rol poco evidente | Incorporar un botón o interruptor "Modo Dueño" en el menú de perfil. | Mayor facilidad para convertirse en dueño y gestionar el negocio. | Media |
+| 5 | Precios sin condiciones de cancelación | Añadir el texto "Cancela en cualquier momento. Sin contratos forzosos" y un enlace a la política de cancelación. | Mayor transparencia y confianza antes de elegir un plan. | Media |
+
+Los cinco hallazgos son oportunidades de mejora que no comprometen la propuesta de valor de PuntoSabor. Se recomienda priorizar los hallazgos 1, 2 y 3 por su impacto directo en la confianza y en la continuidad del flujo del usuario, y abordar los hallazgos 4 y 5 en el siguiente release. La implementación de estas modificaciones permitirá que la experiencia de PuntoSabor sea más clara, segura y consistente con lo documentado en el informe.
 
 # Capítulo VII: DevOps Practices
 
