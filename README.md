@@ -1,4 +1,3 @@
-
 <div align="center">
   
 <img src="./assets/upc-logo.png" alt="UPC Logo" width="150px">  
@@ -746,19 +745,21 @@ A continuación se resumen los registros y evidencias cualitativas recolectadas 
 | **Foto entrevista** |  |
 | **Resumen** |  |
 
+
 #### **Registro de Entrevistas - Segmento 2: Dueño o administrador de huarique**
 
 | Campo | Detalle |
 | --- | --- |
-| **Nombre entrevistado** |  |
-| **Edad** |  |
-| **Departamento / Distrito** |  |
-| **Inicio del video** |  |
-| **Fin del video** |  |
-| **Duración** |  |
-| **Link del video** |  |
-| **Foto entrevista** |  |
-| **Resumen** |  |
+| **Nombre entrevistado** | Jocelyn |
+| **Edad** | 30 años |
+| **Departamento / Distrito** | Comas |
+| **Inicio del video** | 00:00 |
+| **Fin del video** | 04:36 |
+| **Duración** | 4:36 |
+| **Link del video** | [Entrevista SEG-2](https://drive.google.com/file/d/1p6QHqQCiERTBtlT1oT2lX6dui1ob99s_/view?usp=sharing) |
+| **Foto entrevista** | <img src="./assets/seg-2-validacion.png" alt="Entrevista de validación a Jocelyn" width="500"/> |
+| **Resumen** | La entrevistada considera que PuntoSabor podría contribuir a promocionar su negocio gastronómico y atraer nuevos clientes, complementando la difusión que actualmente realizan mediante redes sociales. Percibe la aplicación como una herramienta sencilla y destaca la utilidad de mostrar la ubicación, horarios, fotografías y platos disponibles. Considera que las promociones pueden ayudar a incrementar el interés de los consumidores, aunque señala que los planes de membresía deben presentar claramente sus precios y beneficios. Entre sus recomendaciones, propone destacar los horarios de atención y facilitar la actualización de los menús del día, debido a que los platos pueden variar constantemente. También considera útil contar con estadísticas sobre las visitas al perfil, consultas del menú y búsquedas de ubicación para evaluar la visibilidad obtenida. Finalmente, manifiesta disposición a probar PuntoSabor, siempre que su administración sea sencilla, y expresa preocupación por contratar una membresía pagada sin tener certeza de que genere nuevos clientes. |
+
 
 | Campo | Detalle |
 | --- | --- |
