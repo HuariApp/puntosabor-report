@@ -735,15 +735,15 @@ A continuación se resumen los registros y evidencias cualitativas recolectadas 
 
 | Campo | Detalle |
 | --- | --- |
-| **Nombre entrevistado** |  |
-| **Edad** |  |
-| **Departamento / Distrito** |  |
-| **Inicio del video** |  |
-| **Fin del video** |  |
-| **Duración** |  |
-| **Link del video** |  |
-| **Foto entrevista** |  |
-| **Resumen** |  |
+| **Nombre entrevistado** | Isabella Valenzuela |
+| **Edad** | 19 |
+| **Departamento / Distrito** | Lima / Jesús María |
+| **Inicio del video** | 00:00 |
+| **Fin del video** | 5:28 |
+| **Duración** | 5:25 |
+| **Link del video** | https://www.youtube.com/watch?v=CQZeJTUROJM |
+| **Foto entrevista** | <img src="./assets/Isabella_Valenzuela.png" alt="Entrevista a Isabella Valenzuela" width="500"/> |
+| **Resumen** | La entrevistada considera que PuntoSabor le ayudaría a encontrar huariques de forma más sencilla, porque hoy depende de redes sociales o de preguntar a amigos, y la app reúne todo en un solo lugar. Encuentra la pantalla principal clara y parecida a otras apps que ya usa. Valora poder buscar por categoría o por nombre, y considera que las fotos, el horario y el estado de apertura bastan para decidir, aunque le gustaría ver los precios de los platos. Le parece útil guardar favoritos para no olvidar los lugares que quiere probar, y afirma que las promociones cercanas la motivarían a abrir la app antes de salir a comer. Lo que más le gustó fue la búsqueda y el mapa. Como mejoras, sugiere más filtros (precio y distancia), ordenar por cercanía o calificación, y notificaciones de promociones. Recomendaría la app a sus amigos y compañeros, porque ayuda a conocer lugares locales y apoya a los negocios pequeños, y percibe las reseñas como confiables por ser de usuarios reales y no publicidad. Se imagina usando la app los fines de semana al salir con amigos o con su familia, y al almuerzo entre clases cerca de la universidad. |
 
 
 #### **Registro de Entrevistas - Segmento 2: Dueño o administrador de huarique**
@@ -763,15 +763,15 @@ A continuación se resumen los registros y evidencias cualitativas recolectadas 
 
 | Campo | Detalle |
 | --- | --- |
-| **Nombre entrevistado** |  |
-| **Edad** |  |
-| **Departamento / Distrito** |  |
-| **Inicio del video** |  |
-| **Fin del video** |  |
-| **Duración** |  |
-| **Link del video** |  |
-| **Foto entrevista** |  |
-| **Resumen** |  |
+| **Nombre entrevistado** |  Sofia Sevillano |
+| **Edad** | 21 años |
+| **Departamento / Distrito** | Lima / San Isidro |
+| **Inicio del video** | 00:00 |
+| **Fin del video** | 09:23 |
+| **Duración** | 9:20 |
+| **Link del video** | https://youtu.be/M-lanz-zgj4?si=W7CF9AMXlBUu_UkI |
+| **Foto entrevista** | <img src="./assets/seg-2-validacion_ Sofia Sevillano.png" alt="Entrevista de validación a  Sofia Sevillano" width="500"/> |
+| **Resumen** | Sofía Sevillano es hija del propietario de un huarique ubicado en San Isidro y conoce de cerca los desafíos que enfrentan este tipo de negocios para conseguir nuevos clientes. Comenta que su padre lleva años promocionando el local únicamente por boca a boca y una página de Facebook que casi no actualiza, por lo que cuando descubrió PuntoSabor sintió que era exactamente lo que necesitaban. Al explorar la plataforma le pareció muy fácil de manejar, mencionando que incluso su padre, quien no tiene mucha experiencia con tecnología, podría registrar y administrar el perfil del huarique sin mayor dificultad. Considera que los precios de los planes son accesibles y coherentes con lo que ofrecen, y los ve como una inversión real para negocios que no tienen presupuesto para publicidad en redes sociales o aplicaciones de delivery. Le gustó especialmente que la plataforma no cobra comisiones por cada venta, a diferencia de otras apps que según ella "se quedan con una parte importante de lo que gana el negocio". Destacó la sección de fotos y la posibilidad de mostrar el menú actualizado como elementos que generarían confianza en los clientes nuevos. Sugirió que sería útil incluir una opción para que los propietarios respondan públicamente las reseñas, ya que eso transmite seriedad y compromiso con el cliente. Afirma que si su padre se registra en PuntoSabor lo haría con el plan Premium desde el inicio, porque quiere que el huarique aparezca bien posicionado frente a la competencia del distrito. |
 
 ---
 
