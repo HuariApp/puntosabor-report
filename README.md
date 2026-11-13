@@ -830,6 +830,8 @@ El Product Backlog reúne las User Stories de la sección [3.1](#31-user-stories
 
 **Documento del Product Backlog y herramienta de gestión del avance.** El backlog se mantiene de forma viva en **Trello**, herramienta indicada para el control del proyecto, donde cada User Story es una tarjeta con su estimación, prioridad, responsable y estado (To-Do / In-Process / To-Review / Done). La tabla siguiente es la exportación de referencia de ese tablero al informe.
 
+![Trello](assets/3.3.Trello.png)
+
 - **Tablero de Trello (Product Backlog y control de sprints):** 
 https://trello.com/invite/b/6a3b6709fd34f6edb2cc21af/ATTI7be4b37d5e727ef6f2e8092804bf2c3192D51CB7/puntosabor-app
 - **Repositorio del informe (documento del backlog en Markdown):** <https://github.com/HuariApp/puntosabor-report>
