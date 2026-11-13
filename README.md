@@ -730,7 +730,7 @@ A continuación se resumen los registros y evidencias cualitativas recolectadas 
 | **Fin del video** | 05:12 |
 | **Duración** | 5:12 |
 | **Link del video** | https://drive.google.com/drive/folders/1xBtJhXHsqpL_TiywJfEhBjJBqbqaI6Vx?usp=sharing |
-| **Foto entrevista** | <img src="./assets/Erick Lopez.png" alt="Entrevista a Erick López" width="500"/> |
+| **Foto entrevista** | <img src="./assets/Erick_Lopez.png" alt="Entrevista a Erick López" width="500"/> |
 | **Resumen** | El entrevistado considera que PuntoSabor facilitaría encontrar huariques de forma centralizada, ya que actualmente depende de TikTok o recomendaciones de amigos sin certeza de que el lugar siga abierto. Encuentra la pantalla principal clara, aunque sugiere diferenciar mejor la sección "cerca de mí" de la general. Valora especialmente poder filtrar por categoría y ubicación, y considera que la información de horarios, fotos reales y estado de apertura es suficiente para decidir si visitar un local. Le parece útil guardar favoritos para sitios vistos en redes sociales que no visita de inmediato, y afirma que las promociones lo motivarían a usar la app con mayor frecuencia. Destaca el mapa interactivo como lo que más le gustó, y sugiere agregar un indicador visual de rango de precios y reseñas con fotos de los platos. Recomendaría la app a sus compañeros de universidad y percibe las reseñas como más confiables que las de otras plataformas por ser recientes y de visitas reales. Como mejora puntual, pidió un filtro de "abierto ahora" visible directamente en la lista de resultados. Se imagina usando la app los fines de semana al salir con amigos o entre semana cuando busca variar de los lugares habituales cerca de su casa en Breña. |
 
 | Campo | Detalle |
